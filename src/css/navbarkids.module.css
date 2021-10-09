@@ -1,0 +1,21 @@
+.collapsed2 {
+  width: 260px !important;
+  background-color: #ff8080;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.collapsed1 {
+  background-color: #ff8080;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.loader {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/loader-bg.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,306 @@
+@font-face {
+  font-family: "MyWebFont";
+  src: url("./fontawesome-webfont.woff");
+}
+body {
+  background-color: white !important;
+  background-image: none;
+}
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.btnHeader {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnHeader img {
+  width: 130px !important;
+}
+.btnHeader button {
+  background-color: #163aaf;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 900;
+  margin-left: 20px;
+}
+.card {
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.card:hover {
+  background-color: #404040 !important;
+}
+.card1 {
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease !important;
+}
+.card1:hover {
+  background: rgb(64, 64, 64) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(64, 64, 64, 1) 0%,
+    rgba(64, 64, 64, 1) 100%
+  ) !important;
+}
+.card img {
+  margin-top: 20px;
+}
+.card p {
+  margin-top: 20px;
+  color: white;
+}
+.card1 img {
+  margin-top: 20px;
+}
+.card1 p {
+  margin-top: 20px;
+  color: white;
+}
+
+.tourCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+.tourCard button {
+  background-color: #163aaf;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.heading {
+  padding-top: 30px !important;
+  padding-left: 60px !important;
+  padding-right: 30px !important;
+  position: relative;
+}
+.heading h1 {
+  font-size: 25px !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  font-weight: 400;
+  position: relative;
+}
+.heading h1::after {
+  content: "";
+  position: absolute;
+  top: 130%;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background-color: #163aaf;
+}
+.heading p {
+  margin-top: 30px;
+}
+.heading img {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  width: 45px;
+  height: 300px;
+}
+.heading span {
+  display: block;
+  margin-top: 50px !important;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+}
+.heading span a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+.heading span a:hover {
+  color: #163aaf;
+}
+.heading1 span a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+.heading1 span a:hover {
+  color: #163aaf;
+}
+.heading1 {
+  padding-top: 30px !important;
+  padding-left: 60px !important;
+  padding-right: 30px !important;
+  position: relative;
+}
+.heading1 h1 {
+  font-size: 25px !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  font-weight: 400;
+  position: relative;
+}
+.heading1 h1::after {
+  content: "";
+  position: absolute;
+  top: 130%;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background-color: #163aaf;
+}
+.heading1 p {
+  margin-top: 30px;
+}
+.heading1 .img1 {
+  position: absolute;
+  top: 27%;
+  right: 0%;
+  width: 20px;
+  height: 50%;
+}
+.heading1 .img2 {
+  position: absolute;
+  top: 27%;
+  right: -142.3%;
+  width: 50px;
+  height: 50%;
+}
+.heading1 span {
+  display: block;
+  margin-top: 50px !important;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+}
+
+@media screen and (max-width: 566px) {
+  .btnHeader {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btnHeader img {
+    width: 110px !important;
+  }
+  .btnHeader button {
+    font-size: 14px;
+  }
+  .card {
+    width: 33.4% !important;
+  }
+  .card:hover {
+    background-color: #404040 !important;
+  }
+  .card1 {
+    width: 33.2% !important;
+  }
+  .heading h1 {
+    margin-top: 20px;
+  }
+  .heading p {
+    margin-top: 30px;
+  }
+  .heading img {
+    display: none;
+  }
+  .heading1 .img1 {
+    display: none;
+  }
+  .heading1 .img2 {
+    display: none;
+  }
+  .heading1 span {
+    margin-bottom: 20px;
+    margin-top: 30px !important;
+  }
+}
+.loader {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/loader-bg.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sarlavha {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #163aaf;
+  color: rgba(0, 0, 0, 0.85) !important;
+  margin-bottom: 20px;
+  font-size: 2.1rem;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.sliderHomiy {
+  width: 100%;
+  height: max-content;
+  text-align: center;
+}
+.toolpat {
+  border-radius: 50%;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  margin: auto;
+  border: 1px solid lightgray;
+}
+.sliderHomiy p {
+  color: rgb(139, 139, 140);
+  font-size: 13px;
+  margin-top: 20px;
+  width: 80%;
+  margin-left: 10%;
+}
+.sliderHomiy img {
+  margin-bottom: 40px;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+
+.youtube {
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.9;
+}

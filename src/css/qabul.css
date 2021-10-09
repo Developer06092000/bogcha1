@@ -1,0 +1,146 @@
+.text1 {
+  width: 250px;
+  margin: auto;
+  text-align: center;
+  /* padding-bottom: 50px; */
+  padding-top: 50px;
+  box-sizing: border-box;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #ff8080;
+  font-family: "Calibri";
+  border-bottom: 2px solid #ff8080;
+}
+.info {
+  margin-top: 50px;
+  height: 300px;
+  width: 800px;
+  border-radius: 30px;
+  /* box-shadow: 0px 0px 10px grey; */
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  color: #ff8080;
+}
+.forInfo {
+  height: 300px;
+  padding: 60px;
+  box-sizing: border-box;
+  background-color: #ff8080;
+  border-radius: 30px 0px 0px 30px;
+  /* opacity: 0.4; */
+}
+.forFoto {
+  height: 300px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  border-radius: 0px 30px 30px 0px;
+  background-color: black;
+  /* opacity: 0.4; */
+  background-image: url("../img/qabul.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: rgb(191, 191, 191); */
+}
+.information {
+  background-color: white;
+  height: 500px;
+}
+
+.anima {
+  height: 35px;
+  width: 100%;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  /* height: 100vh; */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hujjat {
+  font-size: 25px;
+  /* color: rgb(208, 208, 208); */
+  color: white;
+  font-family: "Calibri";
+}
+
+@media (max-width: 321px) {
+  .information {
+    height: 930px;
+  }
+  .info {
+    width: 290px;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .forFoto {
+    border-radius: 0px 0px 30px 30px;
+  }
+  .forInfo {
+    border-radius: 30px 30px 0px 0px;
+    height: 420px;
+  }
+  * {
+    overflow-x: none;
+  }
+}
+
+@media (min-width: 322px) and (max-width: 426px) {
+  .information {
+    height: 930px;
+  }
+  .info {
+    width: 310px;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .forFoto {
+    border-radius: 0px 0px 30px 30px;
+  }
+  .forInfo {
+    border-radius: 30px 30px 0px 0px;
+    height: 420px;
+  }
+}
+
+@media(min-width:427px) and (max-width:577px){
+  .information{
+      height: 930px;
+  }
+  .info{
+      width: 310px;
+      margin: auto;
+      margin-top: 50px;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+
+  }
+  .forFoto{
+      border-radius: 0px 0px 30px 30px;
+  }
+  .forInfo{
+      border-radius: 30px 30px 0px 0px;
+      height: 420px;
+  }
+  
+}
+
+@media(min-width:578px) and (max-width:767px){
+  .information{
+    height: 650px;
+  }
+  .forFoto, .forInfo{
+    height: 400px;
+  }
+}

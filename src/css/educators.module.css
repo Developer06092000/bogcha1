@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+
+*{
+      margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: helvetica neue,Helvetica,Arial,sans-serif;
+}
+
+.body p{
+    font-size: 20px;
+}
+.body small{
+    font-size: 25px;
+    text-indent: 25px;
+    font-family: 'Dancing Script', cursive;
+}
+.headerImage{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter:brightness(80%);
+    z-index:5 !important;
+}
+.sliderHeader{
+    width: 100%;
+    height: 100vh;
+}
+.header{
+    width: 100%;
+    height: auto;
+}
+.title{
+    border-bottom: 2px solid #FF8080;
+    width: 285px;
+    margin: auto;
+    margin-top:40px ;
+    margin-bottom:40px ;
+   
+}
+.title h1{
+    letter-spacing: 1px;
+    font-size: 36px;
+    color: #585959;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    font-weight: 400;
+    text-align: center;
+}
+.title1{
+    border-bottom: 2px solid #FF8080;
+    width: 100%;
+    
+    margin-bottom:40px ;
+   
+}
+.title1 h1{
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 1px;
+    font-size: 28px;
+    color: #585959;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    font-weight: 400;
+  
+}
+
+.container {
+    position: relative;
+    
+  }
+  .contact {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #FF8080;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+  
+  .container:hover .contact {
+    height: 30%;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .textbg{
+   
+    width:50px;
+    height:50px;
+     border-radius:50px;
+      background-color:#FFF;
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 10px;
+  }
+
+  .textbg i{
+      color: #FF8080;
+  }
+  .loader{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/loader-bg.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,147 @@
+.footer{
+    background-color:#FF8080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer h1{
+    font-weight: 400;
+    position: relative;
+    font-size: 32px;
+}
+.footer h1::after{
+    content:'';
+    position: absolute;
+    top:150%;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background-color:white
+}
+.footer h2{
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.aloqa{
+    margin-top: 30px;
+}
+.aloqa span{
+    margin-right: 10px;
+}
+.adres{
+    margin-top: 20px;
+}
+.adres span{
+    margin-right: 5px;
+}
+.soat{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
+}
+.soat p{
+    margin-top: -10px;
+}
+.footer h3{
+    font-size: 25px;
+    font-weight: 400;
+}
+@media screen and (max-width:566px) {
+    .footer .tel{
+     margin-left: 200px;
+    }
+    .footer h1{
+        font-size: 30px;
+        color:white;
+    }
+    .footer h2{
+        font-size: 27px;
+        color:white;
+    }
+    .aloqa{
+        margin-top: 30px;
+    }
+    .aloqa span{
+        display: inline-block;
+        margin-right: 5px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .adres{
+        margin-top: 20px;
+    }
+    .adres span{
+        margin-right: 5px;
+    }
+    .soat{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center;
+    }
+    .soat p{
+        margin-top: -10px;
+    }
+    .footer h3{
+        font-size: 23px;
+        font-weight: 400;
+        color:white;
+    }
+}
+@media screen and (min-width:567px) {
+    .footer h1{
+        font-size: 30px;
+        color:white;
+    }
+    .footer h2{
+        font-size: 27px;
+        color:white;
+    }
+    .aloqa{
+        margin-top: 30px;
+    }
+    .aloqa span{
+        display: inline-block;
+        margin-right: 2px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .adres{
+        margin-top: 20px;
+    }
+    .adres span{
+        margin-right: 5px;
+    }
+    .soat{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center;
+    }
+    .soat p{
+        margin-top: -10px;
+    }
+    .footer h3{
+        font-size: 23px;
+        font-weight: 400;
+        color:white;
+    }
+}
+@media screen and (min-width:768px) {
+    .aloqa span{
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+}

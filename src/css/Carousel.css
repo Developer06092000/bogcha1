@@ -1,0 +1,18 @@
+
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: black;
+    padding: 19px;
+    border-radius: 50%;
+}
+.carousel-control-next-icon{
+    transform: translateX(40px);
+}
+.carousel-control-prev-icon{
+    transform: translateX(-40px);
+}
+@media screen and (max-width:800px) {
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+        opacity: 0;
+    }
+}
