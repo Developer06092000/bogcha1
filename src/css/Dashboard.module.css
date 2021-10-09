@@ -55,7 +55,9 @@ body {
   transition: all 0.5s ease;
 }
 .card:hover {
-  background-color: #404040 !important;
+  background-color: #163aafd8 !important;
+  border: 3px solid red;
+
 }
 .card1 {
   height: 170px;
@@ -66,12 +68,8 @@ body {
   transition: all 1s ease !important;
 }
 .card1:hover {
-  background: rgb(64, 64, 64) !important;
-  background: linear-gradient(
-    180deg,
-    rgba(64, 64, 64, 1) 0%,
-    rgba(64, 64, 64, 1) 100%
-  ) !important;
+  background-color: #163aafd8 !important;
+  border: 3px solid red !important;
 }
 .card img {
   margin-top: 20px;

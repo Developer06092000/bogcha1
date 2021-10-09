@@ -119,9 +119,9 @@ export default class Dashboard extends Component {
                     md={4}
                     sm={4}
                     style={{
-                      background: "rgb(247,107,106)",
+                      background: "#163aaf",
                       background:
-                        "linear-gradient(180deg, rgba(247,107,106,1) 0%, rgba(198,192,192,1) 100%)",
+                        "linear-gradient(180deg, #163aaf 0%, #00000064 100%)",
                     }}
                     className={styles.card1}
                   >
@@ -136,7 +136,7 @@ export default class Dashboard extends Component {
                     lg={2}
                     md={4}
                     sm={4}
-                    style={{ backgroundColor: "#F76B6A" }}
+                    style={{ backgroundColor: "#163aaf" }}
                     className={styles.card}
                   >
                     <img alt="" src={icon2} />
@@ -153,7 +153,7 @@ export default class Dashboard extends Component {
                     style={{
                       background: "#163aaf",
                       background:
-                        "linear-gradient(180deg, rgba(247,107,106,1) 0%, rgba(198,192,192,1) 100%)",
+                        "linear-gradient(180deg, #163aaf 0%, #00000064 100%)",
                     }}
                     className={styles.card1}
                   >
@@ -169,7 +169,7 @@ export default class Dashboard extends Component {
                     lg={2}
                     md={4}
                     sm={4}
-                    style={{ backgroundColor: "#F76B6A" }}
+                    style={{ backgroundColor: "#163aaf" }}
                     className={styles.card}
                   >
                     <img alt="" src={icon4} />
@@ -184,9 +184,9 @@ export default class Dashboard extends Component {
                     md={4}
                     sm={4}
                     style={{
-                      background: "rgb(247,107,106)",
+                      background: "#163aaf",
                       background:
-                        "linear-gradient(180deg, rgba(247,107,106,1) 0%, rgba(198,192,192,1) 100%)",
+                        "linear-gradient(180deg, #163aaf 0%, #00000064 100%)",
                     }}
                     className={styles.card1}
                   >
@@ -201,7 +201,7 @@ export default class Dashboard extends Component {
                     lg={2}
                     md={4}
                     sm={4}
-                    style={{ backgroundColor: "#F76B6A" }}
+                    style={{ backgroundColor: "#163aaf" }}
                     className={styles.card}
                   >
                     <img alt="" src={icon6} />
@@ -244,7 +244,7 @@ export default class Dashboard extends Component {
                             style={{
                               padding: "10px 15px",
                               color: "white",
-                              backgroundColor: "#f76b6a",
+                              backgroundColor: "#163aaf",
                               borderRadius: "7px",
                             }}
                           >
@@ -283,7 +283,7 @@ export default class Dashboard extends Component {
                             style={{
                               padding: "10px 15px",
                               color: "white",
-                              backgroundColor: "#f76b6a",
+                              backgroundColor: "#163aaf",
                               borderRadius: "7px",
                             }}
                           >
@@ -331,7 +331,7 @@ export default class Dashboard extends Component {
                             style={{
                               padding: "10px 15px",
                               color: "white",
-                              backgroundColor: "#f76b6a",
+                              backgroundColor: "#163aaf",
                               borderRadius: "7px",
                             }}
                           >
@@ -377,7 +377,7 @@ export default class Dashboard extends Component {
                             style={{
                               padding: "10px 15px",
                               color: "white",
-                              backgroundColor: "#f76b6a",
+                              backgroundColor: "#163aaf",
                               borderRadius: "7px",
                             }}
                           >
