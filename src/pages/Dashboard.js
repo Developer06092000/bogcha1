@@ -28,6 +28,7 @@ import rasm6 from "../img/love.jpg";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import './Dashboard.css'
 import Dashboardnews from "./Dashboardnews";
 import Dashboardtadbir from "./Dashboardtadbir";
 import Carousel from "react-multi-carousel";
@@ -38,7 +39,7 @@ import her4 from "../img/h4.jpg";
 import her5 from "../img/h5.png";
 import her6 from "../img/h6.png";
 import YouTube from "@u-wave/react-youtube";
-
+import loadew from '../img/loader-bg.png'
 export default class Dashboard extends Component {
   state = {
     loader: true,
@@ -74,17 +75,51 @@ export default class Dashboard extends Component {
     return (
       <div>
         {this.state.loader ? (
+          <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
           <div className={styles.loader}>
-            <PacmanLoader
-              size={20}
-              color={"#163aaf"}
-              loading={this.state.loader}
-            />
-          </div>
+  <span></span>
+  <span></span>
+  <span></span>
+          </div></div>
         ) : (
           <div>
             <div className={styles.header}>
               <Navbar />
+
+              {/* <header>
+                <div class="overlay"></div>
+                <video
+                  playsinline="playsinline"
+                  autoplay="autoplay"
+                  muted="muted"
+                  loop="loop"
+                >
+                  <source src={kinder} type="video/mp4" />
+                </video>
+                <div class="container h-100">
+                  <div class="d-flex h-100 text-white text-center align-items-center">
+                    <div class="w-100 ">
+                      <div class="container">
+                        <p class="text">
+                          O`zbekiston Respublikasi Jizzaxt viloyati xalq ta`lim
+                          boshqarmasi
+                        </p>
+                      </div>
+                    </div>
+                    <br />
+                  </div>
+                </div>
+              </header> */}
+
+
+
+
+
+
+
+
+
+
               <div className={styles.youtube}>
                 <YouTube
                   video="Vjkedan2rxA"
@@ -225,7 +260,7 @@ export default class Dashboard extends Component {
                   >
                     <Row>
                       <Col lg={7} style={{ padding: "0" }}>
-                        <img alt="" src={rasm6} style={{ width: "100%" }} />
+                        <img alt="" src={rasm6} style={{ width: "100%",borderRadius:'10px', }} />
                       </Col>
                       <Col lg={5} className={styles.heading}>
                         <h1>Mehribon va tarbiyalovchi muhit</h1>
@@ -251,7 +286,7 @@ export default class Dashboard extends Component {
                             Batafsil
                           </Link>
                         </span>
-                        <img alt="" src={border} />
+                       
                       </Col>
                     </Row>
                   </Col>
@@ -290,11 +325,11 @@ export default class Dashboard extends Component {
                             Batafsil
                           </Link>
                         </span>
-                        <img alt="" src={border} className={styles.img1} />
+                       
                       </Col>
 
                       <Col lg={7} style={{ padding: "0" }}>
-                        <img alt="" src={rasm3} style={{ width: "100%" }} />
+                        <img alt="" src={rasm3} style={{ width: "100%",borderRadius:'10px' }} />
                       </Col>
                     </Row>
                   </Col>
@@ -309,7 +344,7 @@ export default class Dashboard extends Component {
                     <Dashboardnews />
                     <Row style={{ border: "1px solid rgba(0,0,0,0.1)" }}>
                       <Col lg={7} style={{ padding: "0" }}>
-                        <img alt="" src={rasm4} style={{ width: "100%" }} />
+                        <img alt="" src={rasm4} style={{ width: "100%",borderRadius:'10px' }} />
                       </Col>
                       <Col lg={5} className={styles.heading}>
                         <h1>G'ayrat. Nishon. Etakchilik</h1>
@@ -338,7 +373,7 @@ export default class Dashboard extends Component {
                             Batafsil
                           </Link>
                         </span>
-                        <img alt="" src={border} />
+                       
                       </Col>
                     </Row>
                   </Col>
@@ -384,10 +419,10 @@ export default class Dashboard extends Component {
                             Batafsil
                           </Link>
                         </span>
-                        <img alt="" src={border} className={styles.img1} />
+                       
                       </Col>
                       <Col lg={7} style={{ padding: "0" }}>
-                        <img alt="" src={rasm7} style={{ width: "100%" }} />
+                        <img alt="" src={rasm7} style={{ width: "100%",borderRadius:'10px' }} />
                       </Col>
                     </Row>
                   </Col>
@@ -514,7 +549,7 @@ export default class Dashboard extends Component {
                       style={{ backgroundColor: "white" }}
                     >
                       <a href="https://ittower.uz/" target="_blank">
-                        <img alt="" src={her6} style={{ width: "100%" }} />
+                        <img alt="" src={her6} style={{ width: "100%",borderRadius:'10px' }} />
                       </a>
                     </div>
                     <p>IT Tower firmasi </p>

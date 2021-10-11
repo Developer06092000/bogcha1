@@ -15,7 +15,7 @@ body{
     font-family: helvetica neue,Helvetica,Arial,sans-serif;
 }
 .title{
-    border-bottom: 2px solid #FF8080;
+    border-bottom: 2px solid #163aaf;
     width: 285px;
     margin: auto;
     margin-top:40px ;
@@ -53,7 +53,7 @@ body{
 }
 
 .newtitle{
-    border-bottom: 2px solid #FF8080;
+    border-bottom: 2px solid #163aaf;
     width: 285px;
     margin: auto;
    padding-top: 130px;

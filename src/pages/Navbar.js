@@ -67,7 +67,7 @@ export default class Navbar extends Component {
               <div className={styles.navbar}>
                 <span>
                   <Link to="/dashboard/uz">
-                    <FaHome style={{ color: "#163aaf", fontSize: "23px" }} />
+                    <FaHome style={{ color: "white", fontSize: "23px" }} />
                   </Link>
                 </span>
                 <span style={{ fontSize: "25px" }}>|</span>
@@ -133,28 +133,28 @@ export default class Navbar extends Component {
                 <span style={{ marginLeft: "40px" }}>
                   <a href="tel:+998335093874">
                     <FaPhoneAlt
-                      style={{ color: "##163aaf", fontSize: "18px" }}
+                      style={{ color: "white", fontSize: "18px" }}
                     />
                   </a>
                 </span>
                 <span>
                   <a href="http://t.me/Karshiyeva_N">
                     <FaTelegramPlane
-                      style={{ color: "##163aaf", fontSize: "23px" }}
+                      style={{ color: "white", fontSize: "23px" }}
                     />
                   </a>
                 </span>
                 <span>
                   <a href="http://t.me/Karshiyeva_N">
                     <FaInstagram
-                      style={{ color: "##163aaf", fontSize: "23px" }}
+                      style={{ color: "white", fontSize: "23px" }}
                     />
                   </a>
                 </span>
                 <span>
                   <a href="http://t.me/Karshiyeva_N">
                     <FaFacebook
-                      style={{ color: "##163aaf", fontSize: "23px" }}
+                      style={{ color: "white", fontSize: "23px" }}
                     />
                   </a>
                 </span>

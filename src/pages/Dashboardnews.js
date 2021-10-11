@@ -74,10 +74,10 @@ export default class Dashboardnews extends Component {
                             <p
                               style={{
                                 color: "white",
-                                backgroundColor: "#f76b6a",
+                                backgroundColor: "blue",
                                 width: "70px",
                                 padding: "3px 10px",
-                                border: "1px solid #f76b6a",
+                                border: "1px solid blue",
                                 borderRadius: "10px",
                               }}
                             >
@@ -110,10 +110,10 @@ export default class Dashboardnews extends Component {
                             <p
                               style={{
                                 color: "white",
-                                backgroundColor: "#f76b6a",
+                                backgroundColor: "blue",
                                 width: "70px",
                                 padding: "3px 10px",
-                                border: "1px solid #f76b6a",
+                                border: "1px solid blue",
                                 borderRadius: "10px",
                               }}
                             >
@@ -151,10 +151,10 @@ export default class Dashboardnews extends Component {
                             <p
                               style={{
                                 color: "white",
-                                backgroundColor: "#f76b6a",
+                                backgroundColor: "blue",
                                 width: "70px",
                                 padding: "3px 10px",
-                                border: "1px solid #f76b6a",
+                                border: "1px solid blue",
                                 borderRadius: "10px",
                               }}
                             >
@@ -187,10 +187,10 @@ export default class Dashboardnews extends Component {
                             <p
                               style={{
                                 color: "white",
-                                backgroundColor: "#f76b6a",
+                                backgroundColor: "blue",
                                 width: "70px",
                                 padding: "3px 10px",
-                                border: "1px solid #f76b6a",
+                                border: "1px solid blue",
                                 borderRadius: "10px",
                               }}
                             >
