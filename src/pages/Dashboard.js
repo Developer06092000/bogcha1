@@ -332,6 +332,7 @@ export default class Dashboard extends Component {
                       </Col>
                     </Row>
                   </Col>
+                   <Col lg={12} sm={12}><Dashboardnews /></Col>
                   <Col
                     lg={12}
                     style={{
@@ -340,7 +341,7 @@ export default class Dashboard extends Component {
                       marginBottom: "50px",
                     }}
                   >
-                    <Dashboardnews />
+                   
                     <Row style={{ border: "1px solid rgba(0,0,0,0.1)" }}>
                       <Col lg={7} style={{ padding: "0" }}>
                         <img alt="" src={rasm4} style={{ width: "100%",borderRadius:'10px' }} />
