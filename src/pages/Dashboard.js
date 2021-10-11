@@ -28,7 +28,6 @@ import rasm6 from "../img/love.jpg";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import './Dashboard.css'
 import Dashboardnews from "./Dashboardnews";
 import Dashboardtadbir from "./Dashboardtadbir";
 import Carousel from "react-multi-carousel";
