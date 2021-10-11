@@ -104,7 +104,7 @@ h1 {
     margin: 40px;
     position: relative;
     width: 300px;
-   height: 430px;
+   height: 400px;
     box-shadow: 0 40px 60px -6px black;
   }
   
@@ -161,7 +161,7 @@ h1 {
       .card {
           margin:0px;
           width: 100%;
-        
+      margin-bottom: 40px;        
       }
 
       .cardtitle {
