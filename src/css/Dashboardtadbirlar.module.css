@@ -1,0 +1,178 @@
+.blogcard {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    box-shadow: 0 3px 7px -1px rgba(0, 0, 0, .1);
+    margin-bottom: 1.6%;
+    background: #fff;
+    line-height: 1.4;
+    font-family: sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 0;
+}
+.blogcard a {
+    color: inherit;
+}
+.blogcard a:hover {
+    color: #163aaf;
+}
+.blogcard:hover .photo {
+    transform: scale(1.3) rotate(3deg);
+}
+.blogcard .meta {
+    position: relative;
+    z-index: 0;
+    height: 400px;
+}
+.blogcard .photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s;
+}
+.blogcard .details, .blogcard .details ul {
+    margin: auto;
+    padding: 0;
+    list-style: none;
+}
+.blogcard .details {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    margin: auto;
+    transition: left 0.2s;
+    background: #163aaf9a;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+.blogcard .details a {
+    text-decoration: dotted underline;
+}
+.blogcard .details ul li {
+    display: inline-block;
+}
+.blogcard .details .author:before {
+    font-family: FontAwesome;
+    margin-right: 10px;
+    content: "\f007";
+}
+.blogcard .details .date:before {
+    font-family: FontAwesome;
+    margin-right: 10px;
+    content: "\f133";
+}
+.blogcard .details .tags ul:before {
+    font-family: FontAwesome;
+    content: "\f02b";
+    margin-right: 10px;
+}
+.blogcard .details .tags li {
+    margin-right: 2px;
+}
+.blogcard .details .tags li:first-child {
+    margin-left: -4px;
+}
+.blogcard .description {
+    padding: 1rem;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+.blogcard .description h1, .blogcard .description h2 {
+    font-family: Poppins, sans-serif;
+}
+.blogcard .description h1 {
+    line-height: 1;
+    margin: 0;
+    font-size: 1.7rem;
+}
+.blogcard .description h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #a2a2a2;
+    margin-top: 5px;
+}
+.blogcard .description .read-more {
+    margin:auto;
+    text-align: right;
+}
+.blogcard .description .read-more a {
+    color: #163aaf;
+    display: inline-block;
+    position: relative;
+}
+.blogcard .description .read-more a:after {
+    content: "\f061";
+    font-family: FontAwesome;
+    margin-left: -10px;
+    opacity: 0;
+    vertical-align: middle;
+    transition: margin 0.3s, opacity 0.3s;
+}
+.blogcard .description .read-more a:hover:after {
+    margin-left: 5px;
+    opacity: 1;
+}
+.blogcard p {
+    position: relative;
+    margin: 1rem 0 0;
+}
+.blogcard p:first-of-type {
+    margin-top: 1.25rem;
+}
+.blogcard p:first-of-type:before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    background: #163aaf;
+    width: 35px;
+    top: -0.75rem;
+    border-radius: 3px;
+}
+.blogcard:hover .details {
+    left: 0%;
+}
+@media (min-width: 640px) {
+    .blogcard {
+        flex-direction: row;
+        max-width: 700px;
+   }
+    .blogcard .meta {
+        flex-basis: 40%;
+        height: auto;
+   }
+    .blogcard .description {
+        flex-basis: 60%;
+   }
+    .blogcard .description:before {
+        transform: skewX(-3deg);
+        content: "";
+        background: #fff;
+        width: 30px;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+   }
+    .alt {
+        flex-direction: row-reverse;
+   }
+    .alt .description:before {
+        left: inherit;
+        right: -10px;
+        transform: skew(3deg);
+   }
+    .alt .details {
+        padding-left: 25px;
+   }
+}

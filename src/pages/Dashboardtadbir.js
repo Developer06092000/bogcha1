@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
-import styles from "../css/news.module.css";
+import styles from "../css/Dashboardtadbirlar.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import news1 from "../img/kinder6.png";
@@ -20,7 +20,7 @@ import {
 import { Link } from "react-router-dom";
 import { BsGeoAlt } from "react-icons/bs";
 import "react-multi-carousel/lib/styles.css";
-import { FaCalendarAlt } from "react-icons/fa";
+import { FaCalendarAlt, FaRegCalendarAlt, FaUserTie } from "react-icons/fa";
 export default class Dashboardtadbir extends Component {
   render() {
     const responsive = {
@@ -42,211 +42,72 @@ export default class Dashboardtadbir extends Component {
     };
     return (
       <div>
-        <Container>
-          <body>
+   
             <div className={styles.body}>
               <div data-aos="fade-up" className={styles.title}>
-                <h1>Tadbirlar</h1>
+                <h1 style={{color:'black'}}>Tadbirlar</h1>
               </div>
-              <Carousel
-                responsive={responsive}
-                autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                autoPlaySpeed={5000}
-                infinite={true}
-              >
-                <div>
-                  <MDBCol style={{ margin: "10px" }}>
-                    <MDBCard className="h-100" className={styles.card}>
-                      <MDBCardImage
-                        src={news1}
-                        className={styles.img}
-                        alt="..."
-                        position="top"
-                      />
-                      <MDBCardBody>
-                        <MDBCardTitle>
-                          Bog'chamizga Prezident tashrif buyirdi
-                        </MDBCardTitle>
-                        <MDBCardText>
-                          <p>
-                            <FaCalendarAlt
-                              style={{ fontSize: "17px", color: "#163aaf" }}
-                            />{" "}
-                            <span>14/08/2020</span>
-                          </p>
-                          <p>
-                            <BsGeoAlt
-                              style={{ fontSize: "17px", color: "#163aaf" }}
-                            />{" "}
-                            <span>133-bog'cha</span>
-                          </p>
-                          <Link to="/tadbir/uz">
-                            <p
-                              style={{
-                                color: "white",
-                                backgroundColor: "blue",
-                                width: "70px",
-                                padding: "3px 10px",
-                                border: "1px solid blue",
-                                borderRadius: "10px",
-                                position:'relative',
-                                top:'2px',
-                              }}
-                            >
-                              Batafsil
-                            </p>
-                          </Link>
-                        </MDBCardText>
-                      </MDBCardBody>
-                    </MDBCard>
-                  </MDBCol>
-                </div>
-                <div>
-                  <MDBCol style={{ margin: "10px" }}>
-                    <MDBCard className="h-100" className={styles.card}>
-                      <MDBCardImage
-                        src={news1}
-                        className={styles.img}
-                        alt="..."
-                        position="top"
-                      />
-                      <MDBCardBody>
-                        <MDBCardTitle>
-                          Bog'chamizga Prezident tashrif buyirdi
-                        </MDBCardTitle>
-                        <MDBCardText>
-                          <p>
-                            <FaCalendarAlt
-                              style={{ fontSize: "17px", color: "#163aaf" }}
-                            />{" "}
-                            <span>14/08/2020</span>
-                          </p>
-                          <p>
-                            <BsGeoAlt
-                              style={{ fontSize: "17px", color: "#163aaf" }}
-                            />{" "}
-                            <span>133-bog'cha</span>
-                          </p>
-                          <Link to="/tadbir/uz">
-                            <p
-                              style={{
-                                color: "white",
-                                backgroundColor: "blue",
-                                width: "70px",
-                                padding: "3px 10px",
-                                border: "1px solid blue",
-                                borderRadius: "10px",
-                                position:'relative',
-                                top:'2px',
-                              }}
-                            >
-                              Batafsil
-                            </p>
-                          </Link>
-                        </MDBCardText>
-                      </MDBCardBody>
-                    </MDBCard>
-                  </MDBCol>
-                </div>
-                <div>
-                  <MDBCol style={{ margin: "10px" }}>
-                    <MDBCard className="h-100" className={styles.card}>
-                      <MDBCardImage
-                        src={news1}
-                        className={styles.img}
-                        alt="..."
-                        position="top"
-                      />
-                      <MDBCardBody>
-                        <MDBCardTitle>
-                          Bog'chamizga Prezident tashrif buyirdi
-                        </MDBCardTitle>
-                        <MDBCardText>
-                          <p>
-                            <FaCalendarAlt
-                              style={{ fontSize: "17px", color: "#163aaf" }}
-                            />{" "}
-                            <span>14/08/2020</span>
-                          </p>
-                          <p>
-                            <BsGeoAlt
-                              style={{ fontSize: "17px", color: "#163aaf" }}
-                            />{" "}
-                            <span>133-bog'cha</span>
-                          </p>
-                          <Link to="/tadbir/uz">
-                            <p
-                              style={{
-                                color: "white",
-                                backgroundColor: "blue",
-                                width: "70px",
-                                padding: "3px 10px",
-                                border: "1px solid blue",
-                                borderRadius: "10px",
-                                position:'relative',
-                                top:'2px',
-                              }}
-                            >
-                              Batafsil
-                            </p>
-                          </Link>
-                        </MDBCardText>
-                      </MDBCardBody>
-                    </MDBCard>
-                  </MDBCol>
-                </div>
-                <div>
-                  <MDBCol style={{ margin: "10px" }}>
-                    <MDBCard className="h-100" className={styles.card}>
-                      <MDBCardImage
-                        src={news1}
-                        className={styles.img}
-                        alt="..."
-                        position="top"
-                      />
-                      <MDBCardBody>
-                        <MDBCardTitle>
-                          Bog'chamizga Prezident tashrif buyirdi
-                        </MDBCardTitle>
-                        <MDBCardText>
-                          <p>
-                            <FaCalendarAlt
-                              style={{ fontSize: "17px", color: "#163aaf" }}
-                            />{" "}
-                            <span>14/08/2020</span>
-                          </p>
-                          <p>
-                            <BsGeoAlt
-                              style={{ fontSize: "17px", color: "#163aaf" }}
-                            />{" "}
-                            <span>133-bog'cha</span>
-                          </p>
-                          <Link to="/tadbir/uz">
-                            <p
-                              style={{
-                                color: 'white',
-                                backgroundColor: 'blue',
-                                width: '70px',
-                                padding: '3px 10px',
-                                border: '1px solid blue',
-                                borderRadius: '10px',
-                              }}
-                            >
-                              Batafsil
-                            </p>
-                          </Link>
-                        </MDBCardText>
-                      </MDBCardBody>
-                    </MDBCard>
-                  </MDBCol>
-                </div>
-              </Carousel>
-              <br />
-              <br />
-              <br />
-            </div>
-          </body>
-        </Container>
+              <Container><Row><Col lg={6} md={12}>
+              <div className={styles.blogcard} style={{scale:'1'}} >
+    <div className={styles.meta}>
+      <div className={styles.photo} style={{backgroundImage: 'url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)'}}></div>
+      <ul className={styles.details}>
+        <li ><a href="#"><FaUserTie style={{marginRight:'10px'}}/>John Doe</a></li>
+        <li > <FaRegCalendarAlt style={{marginRight:'10px'}} />Aug. 24, 2015</li>
+        <li className={styles.tags}>
+        </li>
+      </ul>
+    </div>
+    <div className={styles.description}>
+      <h2>Ochiq eshiklar kuni</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p className={styles.readmore}>
+        <a href="#">Batafsil</a>
+      </p>
+    </div>
+  </div></Col>
+  <Col lg={6} md={12}>
+              <div className={styles.blogcard} style={{scale:'1'}} >
+    <div className={styles.meta}>
+      <div className={styles.photo} style={{backgroundImage: 'url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)'}}></div>
+      <ul className={styles.details}>
+        <li ><a href="#"><FaUserTie style={{marginRight:'10px'}}/>John Doe</a></li>
+        <li > <FaRegCalendarAlt style={{marginRight:'10px'}} />Aug. 24, 2015</li>
+        <li className={styles.tags}>
+        </li>
+      </ul>
+    </div>
+    <div className={styles.description}>
+      <h2>Ochiq eshiklar kuni</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p className={styles.readmore}>
+        <Link to='/tadbir/uz'><a href="/tadbir/uz">Batafsil</a></Link>
+      </p>
+    </div>
+  </div></Col>
+  <Col lg={6} md={12}>
+              <div className={styles.blogcard} style={{scale:'1'}} >
+    <div className={styles.meta}>
+      <div className={styles.photo} style={{backgroundImage: 'url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)'}}></div>
+      <ul className={styles.details}>
+        <li ><a href="#"><FaUserTie style={{marginRight:'10px'}}/>John Doe</a></li>
+        <li > <FaRegCalendarAlt style={{marginRight:'10px'}} />Aug. 24, 2015</li>
+        <li className={styles.tags}>
+        </li>
+      </ul>
+    </div>
+    <div className={styles.description}>
+      <h2>Ochiq eshiklar kuni</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p className={styles.readmore}>
+        <a href="#">Batafsil</a>
+      </p>
+    </div>
+  </div></Col>
+  
+  </Row></Container>
+  </div>
+        
       </div>
     );
   }
