@@ -179,7 +179,7 @@ export default class Dashboard extends Component {
                         Musiqa
                       </Link>
                     </p>
-                  </Col>
+                  </Col> 
                   <Col
                     lg={2}
                     md={4}

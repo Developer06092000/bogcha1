@@ -14,7 +14,7 @@ export default class Educators extends Component {
   state={
      loader:true
   }
-
+ 
   componentDidMount(){
     setInterval(()=>{
       this.setState({
@@ -27,8 +27,14 @@ export default class Educators extends Component {
         return (
             <div>
               {
-                this.state.loader? <div className={styles.loader}><PacmanLoader  size={20} color={'#FF8080'}  loading={this.state.loader} /></div>
-              :
+                this.state.loader? (
+                <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+                <div className={styles.loader}>
+        <span></span>
+        <span></span>
+        <span></span>
+                </div></div>
+             ) :(
               <div>
  <header>
                <div className={styles.header}>
@@ -42,99 +48,68 @@ export default class Educators extends Component {
                <div className={styles.body}>
                    <div data-aos="fade-up" className={styles.title}><h1>Yangiliklar</h1></div>
                    <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
+
+
+
       <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage 
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText>
-              <p><i class="fas fa-calendar-alt"></i> 14/08/2020</p>
-              <Link to='/yangilik/uz'><p>Batafsil</p></Link>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
+      <div className={styles.cards}>
+  <div className={styles.card}>
+    <h2 className={styles.card_title}>Prezident tashrifi 
+    <div className={styles.date}>14/08/2020</div></h2>
+    <img src={news1} alt=""/>
+    <p className={styles.card_desc}>Pinnipeds, commonly known as seals,[a] are a widely distributed and diverse clade of carnivorous, fin-footed, semiaquatic marine mammals. They comprise the extant families Odobenidae (whose only living member is the walrus), Otariidae (the eared seals: sea lions and fur seals), and Phocidae (the earless seals, or true seals).</p>
+  </div>
+</div>
       </MDBCol>
       <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText><p><i class="fas fa-calendar-alt"></i> 14/08/2020</p>
-            <Link to='/yangilik/uz'><p>Batafsil</p></Link></MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
+      <div className={styles.cards}>
+  <div className={styles.card}>
+    <h2 className={styles.card_title}>Prezident tashrifi 
+    <div className={styles.date}>14/08/2020</div></h2>
+    <img src={news1} alt=""/>
+    <p className={styles.card_desc}>Pinnipeds, commonly known as seals,[a] are a widely distributed and diverse clade of carnivorous, fin-footed, semiaquatic marine mammals. They comprise the extant families Odobenidae (whose only living member is the walrus), Otariidae (the eared seals: sea lions and fur seals), and Phocidae (the earless seals, or true seals).</p>
+  </div>
+</div>
       </MDBCol>
       <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText>
-            <p><i class="fas fa-calendar-alt"></i> 14/08/2020</p>
-            <Link to='/yangilik/uz'><p>Batafsil</p></Link>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
+      <div className={styles.cards}>
+  <div className={styles.card}>
+    <h2 className={styles.card_title}>Prezident tashrifi 
+    <div className={styles.date}>14/08/2020</div></h2>
+    <img src={news1} alt=""/>
+    <p className={styles.card_desc}>Pinnipeds, commonly known as seals,[a] are a widely distributed and diverse clade of carnivorous, fin-footed, semiaquatic marine mammals. They comprise the extant families Odobenidae (whose only living member is the walrus), Otariidae (the eared seals: sea lions and fur seals), and Phocidae (the earless seals, or true seals).</p>
+  </div>
+</div>
       </MDBCol>
       <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText>
-              <p><i class="fas fa-calendar-alt"></i> 14/08/2020</p>
-              <Link to='/yangilik/uz'><p>Batafsil</p></Link>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
+      <div className={styles.cards}>
+  <div className={styles.card}>
+    <h2 className={styles.card_title}>Prezident tashrifi 
+    <div className={styles.date}>14/08/2020</div></h2>
+    <img src={news1} alt=""/>
+    <p className={styles.card_desc}>Pinnipeds, commonly known as seals,[a] are a widely distributed and diverse clade of carnivorous, fin-footed, semiaquatic marine mammals. They comprise the extant families Odobenidae (whose only living member is the walrus), Otariidae (the eared seals: sea lions and fur seals), and Phocidae (the earless seals, or true seals).</p>
+  </div>
+</div>
       </MDBCol>
       <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText>
-            <p><i class="fas fa-calendar-alt"></i> 14/08/2020</p>
-            <Link to='/yangilik/uz'><p>Batafsil</p></Link>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
+      <div className={styles.cards}>
+  <div className={styles.card}>
+    <h2 className={styles.card_title}>Prezident tashrifi 
+    <div className={styles.date}>14/08/2020</div></h2>
+    <img src={news1} alt=""/>
+    <p className={styles.card_desc}>Pinnipeds, commonly known as seals,[a] are a widely distributed and diverse clade of carnivorous, fin-footed, semiaquatic marine mammals. They comprise the extant families Odobenidae (whose only living member is the walrus), Otariidae (the eared seals: sea lions and fur seals), and Phocidae (the earless seals, or true seals).</p>
+  </div>
+</div>
       </MDBCol>
       <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText>
-              <p><i class="fas fa-calendar-alt"></i> 14/08/2020</p>
-              <Link to='/yangilik/uz'><p>Batafsil</p></Link>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
+      <div className={styles.cards}>
+  <div className={styles.card}>
+    <h2 className={styles.card_title}>Prezident tashrifi 
+    <div className={styles.date}>14/08/2020</div></h2>
+    <img src={news1} alt=""/>
+    <p className={styles.card_desc}>Pinnipeds, commonly known as seals,[a] are a widely distributed and diverse clade of carnivorous, fin-footed, semiaquatic marine mammals. They comprise the extant families Odobenidae (whose only living member is the walrus), Otariidae (the eared seals: sea lions and fur seals), and Phocidae (the earless seals, or true seals).</p>
+  </div>
+</div>
       </MDBCol>
     </MDBRow><br/><br/><br/>
                </div>
@@ -142,7 +117,7 @@ export default class Educators extends Component {
              </Container>
              <Footer/>
                 </div>
-              }
+              )}
                  
             </div>
         )
