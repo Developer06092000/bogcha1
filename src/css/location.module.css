@@ -7,7 +7,7 @@ body{
     font-family: helvetica neue,Helvetica,Arial,sans-serif;
 }
 .title{
-    border-bottom: 2px solid #FF8080;
+    border-bottom: 2px solid #163aaf;
     width: 285px;
     margin: auto;
     margin-top:160px ;
@@ -35,14 +35,14 @@ body{
 }
 
 .map{
-    background-color: #FF8080;
+    background-color: #163aaf;
     margin-bottom: 30px;
     padding: 10px 20px 40px 0px !important;
     
 }
 
 .footer{
-    background-color:#FF8080;
+    background-color:#163aaf;
     /* display: flex;
     justify-content: center;
     align-items: center; */

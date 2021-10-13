@@ -36,7 +36,7 @@ body{
     height: auto;
 }
 .title{
-    border-bottom: 2px solid #FF8080;
+    border-bottom: 2px solid #163aaf;
     width: 285px;
     margin: auto;
     margin-top:40px ;
@@ -54,7 +54,7 @@ body{
     text-align: center;
 }
 .title1{
-    border-bottom: 2px solid #FF8080;
+    border-bottom: 2px solid #163aaf;
     width: 100%;
     
     margin-bottom:40px ;
@@ -81,7 +81,7 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #FF8080;
+    background-color: #163aaf;
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -117,7 +117,7 @@ body{
   }
 
   .textbg i{
-      color: #FF8080;
+      color: #163aaf;
   }
   .loader{
     width: 100%;

@@ -47,8 +47,8 @@ export default class Dashboardtadbir extends Component {
               <div data-aos="fade-up" className={styles.title}>
                 <h1 style={{color:'black'}}>Tadbirlar</h1>
               </div>
-              <Container><Row><Col lg={6} md={12}>
-              <div className={styles.blogcard} style={{scale:'1'}} >
+              <Container><Row><Col lg={6} md={12} >
+              <div className={styles.blogcard} style={{scale:'1',margin:'10px'}} >
     <div className={styles.meta}>
       <div className={styles.photo} style={{backgroundImage: 'url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)'}}></div>
       <ul className={styles.details}>
@@ -66,8 +66,8 @@ export default class Dashboardtadbir extends Component {
       </p>
     </div>
   </div></Col>
-  <Col lg={6} md={12}>
-              <div className={styles.blogcard} style={{scale:'1'}} >
+  <Col lg={6} md={12} >
+              <div className={styles.blogcard} style={{scale:'1',margin:'10px'}} >
     <div className={styles.meta}>
       <div className={styles.photo} style={{backgroundImage: 'url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)'}}></div>
       <ul className={styles.details}>
@@ -85,8 +85,8 @@ export default class Dashboardtadbir extends Component {
       </p>
     </div>
   </div></Col>
-  <Col lg={6} md={12}>
-              <div className={styles.blogcard} style={{scale:'1'}} >
+  <Col lg={6} md={12} >
+              <div className={styles.blogcard} style={{scale:'1',margin:'10px'}} >
     <div className={styles.meta}>
       <div className={styles.photo} style={{backgroundImage: 'url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)'}}></div>
       <ul className={styles.details}>

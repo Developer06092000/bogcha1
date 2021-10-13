@@ -36,13 +36,13 @@
     }
     .btn1:hover{
         background-color: white;
-        border:1px solid #F76B6A;
-        color:#F76B6A;
+        border:1px solid #163aaf;
+        color:#163aaf;
     }
     .btn2:hover{
         background-color: white;
-        border:1px solid #F76B6A;
-        color:#F76B6A;
+        border:1px solid #163aaf;
+        color:#163aaf;
     }
     .logo1{
         width: 100vw;
@@ -63,11 +63,11 @@
         position: relative;
     }
     .navbar a{
-        color:#F76B6A;
+        color:#163aaf;
         text-decoration: none;
     }
     .navbar a:hover{
-        color:#F76B6A;
+        color:#163aaf;
         text-decoration: underline;
     }
     .logo1 img{
@@ -75,7 +75,7 @@
         margin-left: 20px;
     }
     .navbar span{
-      color:#F76B6A;
+      color:#163aaf;
       font-size:14px;
       margin-right: 10px;
       text-transform: uppercase;
@@ -97,7 +97,7 @@
         background-color:rgba(255,255,255,0.9);
         padding:5px 20px;
         text-align: left;
-        border-top: 3px solid #F76B6A;
+        border-top: 3px solid #163aaf;
         padding-top: 15px;
         z-index:1111111;
         width: 200px;
@@ -116,7 +116,7 @@
         text-decoration: underline;
     }
     .icon1{
-        color: #F76B6A;
+        color: #163aaf;
         position: absolute;
         top: -7%;
         left:25%;
@@ -136,7 +136,7 @@
         background-color:rgba(255,255,255,0.9);
         padding:5px 20px;
         text-align: left;
-        border-top: 3px solid #F76B6A;
+        border-top: 3px solid #163aaf;
         padding-top: 15px;
         z-index:1111111;
         width: 200px;
@@ -155,7 +155,7 @@
         text-decoration: underline;
     }
     .icon2{
-        color: #F76B6A;
+        color: #163aaf;
         position: absolute;
         top: -12%;
         left:25%;
@@ -301,7 +301,7 @@
 }
 
 .btn1{
-    background-color: #F76B6A;
+    background-color: #163aaf;
     color:white;
     border-radius: 5px;
     padding:5px 30px;
@@ -312,14 +312,14 @@
 }
 .btn2{
     border:none;
-    background-color: #F76B6A;
+    background-color: #163aaf;
     color:white;
     border-radius: 5px;
     padding:5px 30px;
     font-size: 16px;
     font-weight: 600;
     margin-right: 20px;
-    border:1px solid #F76B6A;
+    border:1px solid #163aaf;
 
 }
 .openNav{
@@ -359,7 +359,7 @@
       display: block;
       width: 100vw;
       height: 100vh;
-      background-color: #F76B6A;
+      background-color: #163aaf;
       overflow-y: scroll;
       transition: all 0.3s;
       z-index:11111111111111111 !important;
@@ -371,7 +371,7 @@
         display: block;
         width: 110vw;
         height: 100vh;
-        background-color: #F76B6A;
+        background-color: #163aaf;
         overflow-y: scroll;
         transition: all 0.3s;
          z-index:111111111111111112111111 !important;
@@ -436,7 +436,7 @@
   display: block;
   width: 100vw;
   height: 100vh;
-  background-color: #F76B6A;
+  background-color: #163aaf;
   overflow-y: scroll;
   transition: all 0.3s;
   z-index:11111111111111111 !important;
@@ -448,7 +448,7 @@
     display: block;
     width: 110vw;
     height: 100vh;
-    background-color: #F76B6A;
+    background-color: #163aaf;
     overflow-y: scroll;
     transition: all 0.3s;
      z-index:111111111111111112111111 !important;
