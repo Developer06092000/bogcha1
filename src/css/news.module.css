@@ -20,7 +20,10 @@ body{
     margin: auto;
     margin-top:40px ;
     margin-bottom:40px ;
-   
+}
+
+.Navbar_logo {
+    background-color: #163aafc2; 
 }
 .title h1{
     letter-spacing: 1px;
@@ -99,6 +102,19 @@ body{
     padding: 10px 0;
     line-height: 200%;
 } */
+/* * {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+  } */
+  
+  /* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #34495e;
+  } */
 
 .cards {
     width: 100%;
@@ -110,12 +126,12 @@ body{
   .card {
     margin: 40px;
     position: relative;
-    width: 320px;
-   height: 370px;
+    width: 300px;
+   height: 350px;
     box-shadow: 0 40px 60px -6px black;
   }
   
-  .cardtitle {
+  .card_title {
     display: block;
     text-align: center;
     color: #fff;
@@ -125,6 +141,15 @@ body{
     border-top-left-radius: 4px;
     font-size: 18px;
   }
+
+  .img {
+      background-size: cover;
+  }
+
+  .date {
+      font-size: 15px;
+      margin: auto;
+  }
   
   .card img {
     width: 100%;
@@ -132,9 +157,10 @@ body{
     object-fit: cover;
     display: block;
     position: relative;
+    
   }
   
-  .carddesc {
+  .card_desc {
     display: block;
     font-size: 1.0rem;
     position: absolute;
@@ -147,17 +173,11 @@ body{
     transition: 0.8s ease;
   }
   
-  .card:hover .carddesc {
+  .card:hover .card_desc {
     opacity: 1;
     height: 100%;
   }
-  
-  h1 {
-    font-size: 2.8rem;
-    color: #fff;
-    margin: 40px 0 20px 0;
-    text-align: center;
-  }
+
 
   @media (max-width:400px) {
       .carddesc {
@@ -171,9 +191,76 @@ body{
       margin-bottom: 40px;        
       }
 
-      .cardtitle {
+      .card_title {
           font-size: 15px;
       }
+
+      .date {
+        font-size: 12px;
+      }
+
+      .card_desc {
+          font-size: 13px;
+      }
+
+      .cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin: 40px;
+  position: relative;
+  max-width: 250px;
+  max-height: 350px;
+  box-shadow: 0 40px 60px -6px black;
+}
+
+.card_title {
+  display: block;
+  text-align: center;
+  color: #fff;
+  background-color: #6184a8;
+  padding: 2%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.card img {
+  width: 100%;
+  height: 98%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.card-desc {
+  display: block;
+  font-size: 1.2rem;
+  position: absolute;
+  height: 0;
+  top: 0;
+  opacity: 0;
+  padding: 18px 8%;
+  background-color: white;
+  overflow-y: scroll;
+  transition: 0.8s ease;
+}
+
+.card:hover .card-desc {
+  opacity: 1;
+  height: 100%;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin: 40px 0 20px 0;
+  text-align: center;
+}
+
       
   }
   
