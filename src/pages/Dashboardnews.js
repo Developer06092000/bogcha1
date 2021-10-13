@@ -41,15 +41,14 @@ export default class Dashboardnews extends Component {
     };
     return (
       <div>
-        <Container>
-          <body>
+       
 
 
 
           <div data-aos="fade-up" className={styles.title}>
                 <h1>Yangiliklar</h1>
               </div>
-<div className={styles.cards} >
+<div className={styles.cards} style={{marginBottom:'50px'}}>
   <div className={styles.card} style={{marginTop:"40px"}}>
     <h2 className={styles.cardtitle}>Prezident tashrifi <br/>  <div style={{margin:'auto', fontSize:"10px",marginRight:'10px'}}> 14/08/2020 </div></h2>
     <img src={news1}  alt=""/>
@@ -128,11 +127,11 @@ export default class Dashboardnews extends Component {
 
 
 
-            <div className={styles.body}>
+            {/* <div className={styles.body}>
               <div data-aos="fade-up" className={styles.title}>
                 <h1>Yangiliklar</h1>
               </div>
-              <Carousel
+              {/* <Carousel
                 responsive={responsive}
                 autoPlay={this.props.deviceType !== "mobile" ? true : false}
                 autoPlaySpeed={5000}
@@ -287,7 +286,7 @@ export default class Dashboardnews extends Component {
                     </MDBCard>
                   </MDBCol>
                 </div>
-              </Carousel>
+              </Carousel> */}
               {/* <MDBRow className="row-cols-1 row-cols-md-3 g-4">
                 <MDBCol>
                   <MDBCard className="h-100" className={styles.card}>
@@ -427,13 +426,12 @@ export default class Dashboardnews extends Component {
                     </MDBCardBody>
                   </MDBCard>
                 </MDBCol>
-              </MDBRow> */}
+              </MDBRow> 
               <br />
               <br />
               <br />
-            </div>
-          </body>
-        </Container>
+            </div> */}
+        
       </div>
     );
   }
