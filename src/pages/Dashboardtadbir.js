@@ -1,26 +1,10 @@
 import React, { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Carousel from "react-multi-carousel";
 import styles from "../css/Dashboardtadbirlar.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import PacmanLoader from "react-spinners/PacmanLoader";
-import news1 from "../img/kinder6.png";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import {
-  MDBCard,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardBody,
-  MDBCardImage,
-  MDBRow,
-  MDBCol,
-  MDBCardFooter,
-} from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
-import { BsGeoAlt } from "react-icons/bs";
 import "react-multi-carousel/lib/styles.css";
-import { FaCalendarAlt, FaRegCalendarAlt, FaUserTie } from "react-icons/fa";
+import {FaRegCalendarAlt, FaUserTie } from "react-icons/fa";
 export default class Dashboardtadbir extends Component {
   render() {
     const responsive = {
@@ -43,7 +27,7 @@ export default class Dashboardtadbir extends Component {
     return (
       <div>
    
-            <div className={styles.body}>
+           
               <div data-aos="fade-up" className={styles.title}>
                 <h1 style={{color:'black'}}>Tadbirlar</h1>
               </div>
@@ -106,7 +90,7 @@ export default class Dashboardtadbir extends Component {
   </div></Col>
   
   </Row></Container>
-  </div>
+
         
       </div>
     );

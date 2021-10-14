@@ -180,7 +180,7 @@ body{
 
 
   @media (max-width:400px) {
-      .carddesc {
+      .card_desc {
           font-size: 10px;
           /* padding-top: -20px; */
       }
