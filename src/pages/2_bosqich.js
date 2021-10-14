@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import style from "../css/Steam.module.css"
+import styles from "../css/loader.module.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -44,9 +45,13 @@ export default class Bosqich2 extends Component {
         return (
             <div className={style.mat}>
                 {
-        this.state.loader ?
-        <div className={style.loader}><PacmanLoader  size={20} color={'#FF8080'}  loading={this.state.loader} /></div>
-         :
+        this.state.loader ?(   <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+        <div className={styles.loader}>
+     <span></span>
+     <span></span>
+     <span></span>
+             </div></div>)
+         :(
          <div>
              
              <Navbar />
@@ -94,7 +99,7 @@ export default class Bosqich2 extends Component {
                 </div>
                 <br />
                 <Footer />
-             </div>
+             </div>)
     }
             </div>
         )

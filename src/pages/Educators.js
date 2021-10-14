@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import Carousel from 'react-multi-carousel'
 import styles from '../css/educators.module.css'
+import style from '../css/loader.module.css'
 import educators1 from '../img/educators1.jpg'
 import educators2 from '../img/educators2.jpg'
 import educators3 from '../img/educators3.jpg'
@@ -47,8 +48,13 @@ export default class Educators extends Component {
         return (
             <div>
               {
-                this.state.loader? <div className={styles.loader}><PacmanLoader  size={30} color={'#FF8080'}  loading={this.state.loader} /></div>
-              :
+                this.state.loader? (  
+                  <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+               <div className={style.loader}>
+            <span></span>
+            <span></span>
+            <span></span>
+                    </div></div>):
               <div>
  <header>
                <div className={styles.header}>

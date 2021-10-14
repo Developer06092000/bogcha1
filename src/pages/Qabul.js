@@ -1,12 +1,24 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
 import "../css/qabul.css";
+import style from '../css/loader.module.css';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "../css/about_us.module.css";
+import style1 from "../css/loader.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Navbar from "./Navbar";
 export default class Qabul extends Component {
+  state={
+    loader:true
+}
+componentDidMount() {
+  setInterval(()=>{
+      this.setState({
+          loader:false
+      })
+  },2000)
+}
   render() {
     const responsive = {
         superLargeDesktop: {
@@ -28,7 +40,13 @@ export default class Qabul extends Component {
         },
       };
     return (
-      <div>
+      <div>  {
+        this.state.loader? (   <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+        <div className={style.loader}>
+     <span></span>
+     <span></span>
+     <span></span>
+             </div></div>):<div>
         <Navbar />
         {/* <div className="registratsiya"></div> */}
         <Carousel
@@ -78,7 +96,8 @@ export default class Qabul extends Component {
           </div> */}
 <div className='anima'></div>
 
-        <Footer />
+        <Footer /></div>
+        }
       </div>
     );
   }

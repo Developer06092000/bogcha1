@@ -179,7 +179,7 @@ export default class Navbar extends Component {
               >
                 <FaBars
                   onClick={this.openNav}
-                  style={{ color: "#F76B6A", fontSize: "30px" }}
+                  style={{ color: "#163aaf", fontSize: "30px" }}
                 />
               </div>
               <div
@@ -192,7 +192,7 @@ export default class Navbar extends Component {
                     onClick={this.handleClick}
                     style={{
                       width: 256,
-                      backgroundColor: "#F76B6A",
+                      backgroundColor: "#163aaf",
                       border: "none",
                       textAlign: "center",
                       fontSize: "18px",
@@ -202,7 +202,7 @@ export default class Navbar extends Component {
                     defaultOpenKeys={["sub1"]}
                     mode="inline"
                   >
-                    <Menu.Item key="1" style={{ backgroundColor: "#F76B6A" }}>
+                    <Menu.Item key="1" style={{ backgroundColor: "#163aaf" }}>
                       <span>
                         <Link to="/dashboard/uz">
                           <FaHome
@@ -214,7 +214,7 @@ export default class Navbar extends Component {
                     <SubMenu
                       key="sub1"
                       title="Biz haqimizda"
-                      style={{ backgroundColor: "#F76B6A", color: "white" }}
+                      style={{ backgroundColor: "#163aaf", color: "white" }}
                     >
                       <Menu.ItemGroup
                         key="g1"
@@ -261,7 +261,7 @@ export default class Navbar extends Component {
                     </SubMenu>
                     <Menu.Item
                       key="10"
-                      style={{ color: "white", backgroundColor: "#F76B6A" }}
+                      style={{ color: "white", backgroundColor: "#163aaf" }}
                     >
                       <Link to="/curriculm/uz" style={{ color: "white" }}>
                         Qabul
@@ -269,7 +269,7 @@ export default class Navbar extends Component {
                     </Menu.Item>
                     <Menu.Item
                       key="11"
-                      style={{ color: "white", backgroundColor: "#F76B6A" }}
+                      style={{ color: "white", backgroundColor: "#163aaf" }}
                     >
                       <Link style={{ color: "white" }} to="/yangiliklar/uz">
                         Yangiliklar
@@ -277,7 +277,7 @@ export default class Navbar extends Component {
                     </Menu.Item>
                     <Menu.Item
                       key="12"
-                      style={{ color: "white", backgroundColor: "#F76B6A" }}
+                      style={{ color: "white", backgroundColor: "#163aaf" }}
                     >
                       <Link style={{ color: "white" }} to="/tadbirlar/uz">
                         Tadbirlar
@@ -285,19 +285,19 @@ export default class Navbar extends Component {
                     </Menu.Item>
                     {/* <Menu.Item
                       key="12"
-                      style={{ color: "white", backgroundColor: "#F76B6A" }}
+                      style={{ color: "white", backgroundColor: "#163aaf" }}
                     >
                       <button
                         style={{
                           border: "none",
                           backgroundColor: "white",
-                          color: "#F76B6A",
+                          color: "#163aaf",
                           borderRadius: "25px",
                           padding: "10px 30px",
                         }}
                       >
                         <Link
-                          style={{ color: "#F76B6A", fontWeight: "800" }}
+                          style={{ color: "#163aaf", fontWeight: "800" }}
                           to="/login"
                         >
                           Kirish

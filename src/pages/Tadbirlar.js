@@ -9,6 +9,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol, MDBCardFooter } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
+import style from '../css/loader.module.css'
 import {BsGeoAlt} from 'react-icons/bs'
 import {FaCalendarAlt} from 'react-icons/fa'
 export default class Tadbirlar extends Component {
@@ -28,8 +29,12 @@ export default class Tadbirlar extends Component {
         return (
             <div>
               {
-                this.state.loader? <div className={styles.loader}><PacmanLoader  size={20} color={'#FF8080'}  loading={this.state.loader} /></div>
-              :
+                this.state.loader?  (   <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+                <div className={style.loader}>
+             <span></span>
+             <span></span>
+             <span></span>
+                     </div></div>):
               <div>
  <header>
                <div className={styles.header}>

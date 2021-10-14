@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from '../css/mini.module.css'
+import style from '../css/loader.module.css'
 import kinder1 from'../img/kinder4.jpg'
 import kinder2 from '../img/kinder5.jpg'
 import kinder3 from '../img/kinder6.png'
@@ -44,9 +45,13 @@ componentDidMount() {
         return (
             <div>
               {
-        this.state.loader ?
-        <div className={styles.loader}><PacmanLoader  size={20} color={'#FF8080'}  loading={this.state.loader} /></div>
-         :
+        this.state.loader ?(  
+          <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+       <div className={style.loader}>
+    <span></span>
+    <span></span>
+    <span></span>
+            </div></div>):
          <div>
 <Navbar/>
                 <Carousel

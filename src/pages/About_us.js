@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from '../css/about_us.module.css'
+import style from '../css/loader.module.css'
 import about1 from '../img/about1.jpg'
 import about2 from '../img/about2.jpg'
 import about3 from '../img/about3.jpg'
@@ -47,9 +48,12 @@ export default class About_us extends Component {
         return (
            <div> 
                {
-        this.state.loader ?
-        <div className={styles.loader}><PacmanLoader  size={20} color={'#FF8080'}  loading={this.state.loader} /></div>
-         :<div>
+        this.state.loader ?(   <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+        <div className={style.loader}>
+     <span></span>
+     <span></span>
+     <span></span>
+             </div></div>):<div>
 <header>
                <div className={styles.header}>
                  <Navbar/>

@@ -15,6 +15,7 @@ import {
   YMaps,
   ZoomControl,
 } from "react-yandex-maps";
+import style from '../css/loader.module.css'
 import PacmanLoader from "react-spinners/PacmanLoader";
 import rasm5 from "../img/logo-dark.png";
 import { Link } from "react-router-dom";
@@ -75,14 +76,12 @@ export default class Location extends Component {
 
     return (
       <div>
-        {this.state.loader ? (
-          <div className={styles.loader}>
-            <PacmanLoader
-              size={20}
-              color={"#FF8080"}
-              loading={this.state.loader}
-            />
-          </div>
+        {this.state.loader ?  (   <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+                <div className={style.loader}>
+             <span></span>
+             <span></span>
+             <span></span>
+                     </div></div>
         ) : (
           <div>
             <div className={styles.one}>
@@ -95,7 +94,7 @@ export default class Location extends Component {
                     <span>
                       <Link to="/dashboard/uz">
                         <FaHome
-                          style={{ color: "#FF8080", fontSize: "23px" }}
+                          style={{ color: "#163aaf", fontSize: "23px" }}
                         />
                       </Link>
                     </span>
@@ -162,28 +161,28 @@ export default class Location extends Component {
                     <span style={{ marginLeft: "40px" }}>
                       <a href="tel:+998335093874">
                         <FaPhoneAlt
-                          style={{ color: "#FF8080", fontSize: "18px" }}
+                          style={{ color: "#163aaf", fontSize: "18px" }}
                         />
                       </a>
                     </span>
                     <span>
                       <a href="http://t.me/Karshiyeva_N">
                         <FaTelegramPlane
-                          style={{ color: "#FF8080", fontSize: "23px" }}
+                          style={{ color: "#163aaf", fontSize: "23px" }}
                         />
                       </a>
                     </span>
                     <span>
                       <a href="http://t.me/Karshiyeva_N">
                         <FaInstagram
-                          style={{ color: "#FF8080", fontSize: "23px" }}
+                          style={{ color: "#163aaf", fontSize: "23px" }}
                         />
                       </a>
                     </span>
                     <span>
                       <a href="http://t.me/Karshiyeva_N">
                         <FaFacebook
-                          style={{ color: "#FF8080", fontSize: "23px" }}
+                          style={{ color: "#163aaf", fontSize: "23px" }}
                         />
                       </a>
                     </span>
@@ -205,7 +204,7 @@ export default class Location extends Component {
                   >
                     <FaBars
                       onClick={this.openNav}
-                      style={{ color: "#FF8080", fontSize: "30px" }}
+                      style={{ color: "#163aaf", fontSize: "30px" }}
                     />
                   </div>
                   <div

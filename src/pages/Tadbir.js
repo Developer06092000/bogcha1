@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import style from '../css/loader.module.css'
 import news1 from '../img/kinder6.png'
 import styles from '../css/news.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,8 +26,12 @@ export default class Tadbir extends Component {
         return (
             <div>
                 {
-                this.state.loader? <div className={styles.loader}><PacmanLoader  size={20} color={'#FF8080'}  loading={this.state.loader} /></div>
-              :
+                this.state.loader? (   <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+                <div className={style.loader}>
+             <span></span>
+             <span></span>
+             <span></span>
+                     </div></div>):
             <div>
                   <header className={styles.newbg}>
                   <Navbar/>

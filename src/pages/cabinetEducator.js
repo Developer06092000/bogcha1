@@ -14,7 +14,7 @@ import {
 import "../App.css";
 import styles from "../css/navbarkids.module.css";
 import PacmanLoader from "react-spinners/PacmanLoader";
-
+import style from "../css/loader.module.css";
 import { Menu, Button } from "antd";
 import {
   AppstoreOutlined,
@@ -47,15 +47,13 @@ export default class CabinetEducator extends Component {
     const { SubMenu } = Menu;
     return (
       <div>
-        {this.state.loader ? (
-          <div className={styles.loader}>
-            <PacmanLoader
-              size={20}
-              color={"#FF8080"}
-              loading={this.state.loader}
-            />
-          </div>
-        ) : (
+        {this.state.loader ? (  
+           <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+        <div className={style.loader}>
+     <span></span>
+     <span></span>
+     <span></span>
+             </div></div>) : (
           <div>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <BrowserRouter>

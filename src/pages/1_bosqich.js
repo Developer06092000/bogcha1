@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import img1 from "../img/r1.jpg"
-
+import styles from "../css/loader.module.css"
 import img4 from "../img/r4.jpeg"
 import img5 from "../img/r5.jpeg"
 import PacmanLoader from "react-spinners/PacmanLoader";
@@ -47,9 +47,14 @@ export default class Bosqich1 extends Component {
         return (
             <div className={style.mat}>
                 {
-        this.state.loader ?
-        <div className={style.loader}><PacmanLoader  size={20} color={'#FF8080'}  loading={this.state.loader} /></div>
-         :
+        this.state.loader ?(  
+        <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+   <div className={styles.loader}>
+<span></span>
+<span></span>
+<span></span>
+        </div></div>
+         ):(
          <div>
            <Navbar />
            <Carousel
@@ -93,7 +98,7 @@ export default class Bosqich1 extends Component {
                 </div>
                 <br/>
                 <Footer/>
-            </div>
+            </div>)
     }
     </div>
         )

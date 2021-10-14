@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import PulseLoader from "react-spinners/PacmanLoader";
 import { Link } from 'react-router-dom';
-import styles from '../css/loader.module.css'
+import style from '../css/loader.module.css'
 import Location from './Location';
 export default function Loader() {
 
@@ -16,8 +16,11 @@ export default function Loader() {
        
     }, [])
     return (
-        <div >       
-        <div className={styles.loader}><PacmanLoader  size={20} color={'#FF8080'}  loading={loading} /></div>
-        </div>
+         <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+                <div className={style.loader}>
+             <span></span>
+             <span></span>
+             <span></span>
+                     </div></div>
     )
 }
