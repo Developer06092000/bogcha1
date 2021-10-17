@@ -60,7 +60,7 @@ export default class Dasturlar extends Component {
                              this.state.nav? <img src={rasm5} />:<img src={rasm1}/>
                          }   
                          <div className={style.navbar}>
-                         <span><Link to="/dashboard/uz"><FaHome style={{color:'#FF8080',fontSize:'23px'}}/></Link></span> 
+                         <span><Link to="/dashboard/uz"><FaHome style={{color:'blue',fontSize:'23px'}}/></Link></span> 
                          <span style={{fontSize:'25px'}}>|</span> 
                          <span className={style.sub1}><Link to="/bizhaqimizda/uz">Biz haqimizda</Link></span> 
                          <div className={style.subNav1}>
@@ -87,8 +87,8 @@ export default class Dasturlar extends Component {
                          <span><Link to="/yangiliklar/uz">Yangiliklar</Link></span>  
                          <span style={{fontSize:'25px'}}>|</span>
                          <span><Link to="/tadbirlar/uz">Tadbirlar</Link></span>
-                         <span style={{marginLeft:'40px'}}><a href="tel:+998335093874"><FaPhoneAlt style={{color:'#FF8080',fontSize:'18px'}}/></a></span>
-                         <span><a href="http://t.me/Karshiyeva_N"><FaTelegramPlane style={{color:'#FF8080',fontSize:'23px'}}/></a></span>
+                         <span style={{marginLeft:'40px'}}><a href="tel:+998335093874"><FaPhoneAlt style={{color:'blue',fontSize:'18px'}}/></a></span>
+                         <span><a href="http://t.me/Karshiyeva_N"><FaTelegramPlane style={{color:'blue',fontSize:'23px'}}/></a></span>
                          <Link to="/login"><button className={this.state.nav? style.btn1 :style.btn2}>Kirish</button></Link>                        
                         </div>    
                     </div>
@@ -101,7 +101,7 @@ export default class Dasturlar extends Component {
                          {
                              this.state.nav? <img src={rasm5} />:<img src={rasm1}/>
                          }   
-                         <div className={this.state.nav? style.openNav1:style.openNav}>
+                          <div className={this.state.nav? style.openNav1:style.openNav}>
                         <FaBars onClick={this.openNav} style={{color:'#FF8080',fontSize:'30px'}}/>    
                          </div>   
                          <div className={this.state.open? style.navWrapper1:style.navWrapper}>
@@ -160,7 +160,7 @@ export default class Dasturlar extends Component {
         </div>
                 </div>
                 <h2 className={style.sarlavha}>Dasturlar</h2>
-                <div style={{ width: "200px", height: "2px", margin: "auto", backgroundColor: "#FF8080" }}></div>
+                <div style={{ width: "200px", height: "2px", margin: "auto", backgroundColor: "blue" }}></div>
                 <div className={style.oyna}>
                     <div className={style.rasm}>
                         <img src={img1} />
@@ -170,7 +170,7 @@ export default class Dasturlar extends Component {
                     </div>
                     <div className={style.content}>
                         <h4>1-bosqich</h4>
-                        <div style={{ width: "140px", height: "1px", backgroundColor: "#FF8080", margin: "16px 0px 12px" }}></div>
+                        <div style={{ width: "140px", height: "1px", backgroundColor: "blue", margin: "16px 0px 12px" }}></div>
                         <p>
                             The sweetest and youngest of all at Flamingo are approximately 12 months- 24 months.
                             At this stage in our learning journey, everything is an amazing discovery.
@@ -182,7 +182,7 @@ export default class Dasturlar extends Component {
                 <div className={style.oyna, style.oyna1}>
                     <div className={style.content1}>
                         <h4>2-bosqich</h4>
-                        <div style={{ width: "140px", height: "1px", backgroundColor: "#FF8080", margin: "16px 0px 12px" }}></div>
+                        <div style={{ width: "140px", height: "1px", backgroundColor: "blue", margin: "16px 0px 12px" }}></div>
                         <p>
                         Oﬀ like a rocket at 2-years old, our toddler classroom is all about exploration. 
                         Sensory activities are a huge part of our everyday learning. 
@@ -208,7 +208,7 @@ export default class Dasturlar extends Component {
                     </div>
                     <div className={style.content}>
                         <h4>3-bosqich</h4>
-                        <div style={{ width: "140px", height: "1px", backgroundColor: "#FF8080", margin: "16px 0px 12px" }}></div>
+                        <div style={{ width: "140px", height: "1px", backgroundColor: "blue", margin: "16px 0px 12px" }}></div>
                         <p>
                         A world of monsters and fairies await when we enter our 3’s class. 
                         Pretend play rules this age group from the fearless Batman to a newfound fear of the dark. 
