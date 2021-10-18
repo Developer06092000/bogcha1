@@ -7,7 +7,7 @@ body{
     font-family: helvetica neue,Helvetica,Arial,sans-serif;
 }
 .bodyl{
-    background-image:url('../img/loader-bg.png')
+ background-color: white;
 }
 .btn1{
     background-color:#163aaf;
@@ -86,11 +86,11 @@ body{
         position: relative;
     }
     .navbar a{
-        color:#F76B6A;
+        color:#163aafbb;
         text-decoration: none;
     }
     .navbar a:hover{
-        color:#F76B6A;
+        color:#163aafbb;
         text-decoration: underline;
     }
     .logo1 img{
@@ -98,7 +98,7 @@ body{
         margin-left: 20px;
     }
     .navbar span{
-      color:#F76B6A;
+      color:#163aafbb;
       font-size:14px;
       margin-right: 10px;
       text-transform: uppercase;
@@ -212,14 +212,14 @@ body{
         left:-45%;
         width: 210%;
         height: 2px;
-        background-color:#F76B6A
+        background-color:#163aafbb
     }
     .form{
         text-align: left;
         margin-top: 50px;
         width: 450px;
         height: 320px;
-        background-color:#FF9999;
+        background-color:#163aafbb;
         border-radius: 10px;
         border:2px solid black;
         padding: 40px 20px;
@@ -250,12 +250,12 @@ body{
     .btn1:hover{
         background-color: white;
         border:1px solid#163aaf;
-        color:#F76B6A;
+        color:#163aafbb;
     }
     .btn2:hover{
         background-color: white;
         border:1px solid#163aaf;
-        color:#F76B6A;
+        color:#163aafbb;
     }
     .openNav{
         display: block;
