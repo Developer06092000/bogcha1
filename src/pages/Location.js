@@ -91,27 +91,34 @@ export default class Location extends Component {
 
 
 <Navbar/>        
-
-
-
-
-
-
-
             <Container style={{ marginTop: "0px", marginBottom: "50px" }}>
               <body>
                 <div className={styles.body} style={{ overflowY: "hidden" }}>
                   <div className={styles.title}>
                     <h1>Joylashuv</h1>
                   </div>
-                  <div className={styles.content}>
-                    <Row>
-                      <Col
-                        lg={4}
-                        className={styles.footer}
-                        style={{ height: "700px" }}
-                      >
-                        <div className={styles.logo3}>
+
+
+
+<div className={styles.ikkisi}> 
+ <div className={styles.maps1}> <YMaps>
+                          <div>
+                            <Map
+                              defaultState={{
+                                center: [41.299258, 69.206181],
+                                zoom: 6,
+                              }}
+                              width="100%"
+                              height='500px'
+                            >
+                              <Placemark geometry={[41.299258, 69.206181]} />
+                              <FullscreenControl options={{ float: "right" }} />
+                              <GeolocationControl options={{ float: "left" }} />
+                              <ZoomControl options={{ float: "right" }} />
+                            </Map>
+                          </div>
+                        </YMaps></div>
+  <div className={styles.call1}> <div className={styles.logo3}>
                           <img src={rasm1} />
                         </div>
                         <div className={styles.aloqa}>
@@ -150,29 +157,15 @@ export default class Location extends Component {
                         <div className={styles.soat}>
                           <p>Qabul soatlari</p>
                           <p>7:00 dan 18:00 gacha</p>
-                        </div>
-                      </Col>
-                      <Col lg={8} sm={12} className={styles.map}>
-                        <YMaps>
-                          <div>
-                            <Map
-                              defaultState={{
-                                center: [41.299258, 69.206181],
-                                zoom: 6,
-                              }}
-                              width="680px"
-                              height="575px"
-                            >
-                              <Placemark geometry={[41.299258, 69.206181]} />
-                              <FullscreenControl options={{ float: "right" }} />
-                              <GeolocationControl options={{ float: "left" }} />
-                              <ZoomControl options={{ float: "right" }} />
-                            </Map>
-                          </div>
-                        </YMaps>
-                      </Col>
-                    </Row>
-                  </div>
+                        </div></div>
+
+</div>
+
+
+
+
+
+                 
                 </div>
               </body>
             </Container>

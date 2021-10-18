@@ -85,7 +85,8 @@ body{
 }
 .soat p{
     margin-top: -10px;
-    font-size: 18px
+    font-size: 18px;
+    color:white;
 }
 .footer a{
     color: #FFF;
@@ -144,14 +145,7 @@ body{
         background-color:transparent;
         position: relative;
     }
-    .navbar a{
-        color:#163aaf;
-        text-decoration: none;
-    }
-    .navbar a:hover{
-        color:#163aaf;
-        text-decoration: underline;
-    }
+  
     .logo1 img{
         width: 110px !important;
         margin-left: 20px;
@@ -517,4 +511,55 @@ body{
     .navbar{
      margin-left: 200px !important;
     }   
+    }
+
+    .ikkisi{
+        padding:20px;
+
+display: flex;
+width: 100%;
+background-color: #163aaf;
+    }
+    .call1{
+        padding:5%;
+        background-color: #163aaf;
+       
+width: 50%;
+    }
+    .maps1{
+        padding: 5%;
+        background-color: #163aaf;
+      
+width: 50%;
+    }  
+     .ikkisi a{
+        color:white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .ikkisi a:hover{
+        color:white;
+        text-decoration: underline;
+    }
+    @media (max-width:991px) {
+        .ikkisi{
+            padding:20px;
+   
+    display: block;
+    width: 100%;
+    background-color: #163aaf;
+        }
+        .call1{
+            padding:5%;
+            background-color: #163aaf;
+           
+    width: 100%;
+        }
+        .maps1{
+            padding: 5%;
+            background-color: #163aaf;
+           
+    width: 100%;
+        } 
+        
     }
