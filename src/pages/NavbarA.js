@@ -59,13 +59,13 @@ export default class Navbar extends Component {
   render() {
     const { SubMenu } = Menu;
     return (
-      <div>
-        <div className={styles.one}>
-          <div className={this.state.nav ? styles.nav1_active : styles.nav1}>
-            <div className={this.state.nav ? styles.logo1 : styles.logo}>
+      <div style={{backgroundColor:'#163aafc2'}} >
+        <div className={styles.one} style={{backgroundColor:'#163aafc2'}} >
+          <div className={this.state.nav ? styles.nav1_active : styles.nav1} style={{backgroundColor:'#163aafc2'}} >
+            <div className={this.state.nav ? styles.logo1 : styles.logo} style={{backgroundColor:'#163aafc2'}} >
               {this.state.nav ? <img src={rasm1} /> : <img src={rasm1} />}
-              <div className={styles.navbar}>
-                <span>
+              <div className={styles.navbar}  >
+                <span >
                   <Link to="/dashboard/uz">
                     <FaHome style={{ color: "white", fontSize: "23px" }} />
                   </Link>
@@ -170,16 +170,16 @@ export default class Navbar extends Component {
           </div>
         </div>
 
-        <div className={styles.second}>
+        <div style={{backgroundColor:'#163aafc2'}} className={styles.second}>
           <div className={this.state.nav ? styles.nav1_active : styles.nav1}>
-            <div className={this.state.nav ? styles.logo1 : styles.logo}>
+            <div className={this.state.nav ? styles.logo1 : styles.logo} style={{backgroundColor:'#163aafc2'}} >
               {this.state.nav ? <img src={rasm1} /> : <img src={rasm1} />}
               <div
                 className={this.state.nav ? styles.openNav1 : styles.openNav}
               >
                 <FaBars
                   onClick={this.openNav}
-                  style={{ color: "#163aaf", fontSize: "30px" }}
+                  style={{ color: "white", fontSize: "30px" }}
                 />
               </div>
               <div

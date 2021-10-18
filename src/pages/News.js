@@ -5,7 +5,7 @@ import styles from '../css/news.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PacmanLoader from "react-spinners/PacmanLoader";
 import news1 from '../img/kinder6.png'
-import Navbar from './Navbar'
+import NavbarA from './NavbarA'
 import Footer from './Footer'
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol, MDBCardFooter } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
@@ -37,8 +37,8 @@ export default class Educators extends Component {
              ) :(
               <div>
  <header>
-               <div className={styles.header}>
-                 <Navbar/>
+               <div className={styles.header} style={{paddingBottom:'100px'}}>
+                 <NavbarA/>
                 
                </div>
              </header>
