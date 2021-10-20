@@ -8,6 +8,7 @@ import styles from "../css/about_us.module.css";
 import style1 from "../css/loader.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Navbar from "./Navbar";
+import minion from '../img/sinf1/minion1.png'
 export default class Qabul extends Component {
   state={
     loader:true
@@ -59,9 +60,6 @@ componentDidMount() {
                   showDots={false}
                 >
                   <div>
-                    <img src='https://vestikavkaza.ru/upload/2016-02-25/ea3d4df1467f5cee7d2653de33b3ad64.jpg' className={styles.headerImage} />
-                  </div>
-                  <div>
                     <img src='https://static.sof.uz/crop/1/3/826__90_136688611.jpg' className={styles.headerImage} />
                   </div>
                   <div>
@@ -76,20 +74,22 @@ componentDidMount() {
           {/* <div class="d-flex flex-column justify-content-center w-100 h-100">
             <div class="d-flex flex-column justify-content-center align-items-center"> */}
           <h1 className="text1">QABUL</h1>
-          <Container className="info">
-            <Row>
-              <Col className="forInfo">
-                <div>
-                  <ul className="hujjat">
+          <Container>
+<div className="qabul1">
+
+<div className="forInfo1">
+                  <ul className="hujjat1">
                     <li>Shaxisni tasdiqlovchi hujjat nusxasi</li>
                     <li>Ota-ona ish joyidan ma'lumotnoma</li>
                     <li>3x4 rasm 4 ta</li>
                   </ul>
                 </div>
-              </Col>
-              <Col className="forFoto"></Col>
-            </Row>
-          </Container>
+              <div className="qabulimg"> <img style={{height:'100%',opacity:'0.9',height:'400px'}} src={minion}/></div>
+</div>
+</Container>
+
+
+       
         </div>
         
         {/* </div>
