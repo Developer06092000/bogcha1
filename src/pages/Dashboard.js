@@ -251,13 +251,17 @@ export default class Dashboard extends Component {
                   <Col
                     lg={12}
                     style={{
-                      border: "1px solid rgba(0,0,0,0.1)",
+                     
                       width: "95%",
                       marginLeft: "2.5%",
                       marginBottom: "50px",
                     }}
                   >
-                    <Row>
+                    <Container>
+                    <Row style={{ border: "1px solid rgba(0,0,0,0.1)",borderRadius:'10px',}}
+                    data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" >
                       <Col lg={7} style={{ padding: "0" }}>
                         <img alt="" src={rasm6} style={{ width: "100%",borderRadius:'10px', }} />
                       </Col>
@@ -287,18 +291,18 @@ export default class Dashboard extends Component {
                         </span>
                        
                       </Col>
-                    </Row>
+                    </Row></Container>
                   </Col>
                   <Col
                     lg={12}
                     style={{
-                      border: "1px solid rgba(0,0,0,0.1)",
+                     
                       width: "95%",
                       marginLeft: "2.5%",
                       marginBottom: "50px",
                     }}
-                  >
-                    <Row>
+                  ><Container>
+                    <Row style={{ border: "1px solid rgba(0,0,0,0.1)",borderRadius:'10px',}}>
                       <Col lg={5} className={styles.heading1}>
                         <h1>Ajoyib / qiziquvchanlik</h1>
                         <p>
@@ -330,7 +334,7 @@ export default class Dashboard extends Component {
                       <Col lg={7} style={{ padding: "0" }}>
                         <img alt="" src={rasm3} style={{ width: "100%",borderRadius:'10px' }} />
                       </Col>
-                    </Row>
+                    </Row></Container>
                   </Col>
                    <Col lg={12} sm={12}><Dashboardnews /></Col>
                   <Col
@@ -341,8 +345,8 @@ export default class Dashboard extends Component {
                       marginBottom: "50px",
                     }}
                   >
-                   
-                    <Row style={{ border: "1px solid rgba(0,0,0,0.1)" }}>
+                   <Container>
+                    <Row style={{ border: "1px solid rgba(0,0,0,0.1)",borderRadius:'10px',}}>
                       <Col lg={7} style={{ padding: "0" }}>
                         <img alt="" src={rasm4} style={{ width: "100%",borderRadius:'10px' }} />
                       </Col>
@@ -375,7 +379,7 @@ export default class Dashboard extends Component {
                         </span>
                        
                       </Col>
-                    </Row>
+                    </Row></Container>
                   </Col>
                   <Col
                     lg={12}
@@ -387,7 +391,7 @@ export default class Dashboard extends Component {
                   >
                     {" "}
                     <Dashboardtadbir />
-                    <Row style={{ border: "1px solid rgba(0,0,0,0.1)" }}>
+                  <Container>  <Row style={{ border: "1px solid rgba(0,0,0,0.1)",borderRadius:'10px',}}>
                       <Col lg={5} className={styles.heading1}>
                         <h1>
                           Bizning dunyomizni bir vaqtning o'zida bitta bolani
@@ -424,7 +428,7 @@ export default class Dashboard extends Component {
                       <Col lg={7} style={{ padding: "0" }}>
                         <img alt="" src={rasm7} style={{ width: "100%",borderRadius:'10px' }} />
                       </Col>
-                    </Row>
+                    </Row></Container>
                   </Col>
                 </Row>
               </Container>
