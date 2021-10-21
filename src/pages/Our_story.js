@@ -87,7 +87,7 @@ export default class Our_story extends Component {
                       niyatlaringiz ichkaridan haydaladigan bo'lsa, siz
                       uzoqlashasiz, qanchalik uzoqqa borasiz, hech kim bilmaydi
                       ... nega bu muhim? Faqat siz qancha masofani bilasiz…</p>
-                      <img style={{width:'80%',margin:'10%',textAlign:'center'}} src={story1}/>
+                      <img style={{width:'80%',margin:'10%',textAlign:'center',borderRadius:'10px'}} src={story1}/>
 
 </div>
 
