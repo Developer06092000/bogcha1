@@ -74,27 +74,28 @@ export default class Our_story extends Component {
                 </Carousel>
               </div>
             </header>
-            <Container>
+           
               <body>
                 <div className={styles.body}>
-                  <div className={styles.title}>
-                    <h1>Bizning tarix</h1>
-                  </div>
-                  <div className={styles.text}>
-                    <p>
-                      Bu g'oya sifatida boshlandi ... yaxshi. Ko'p fikrlar bor
+ <div className={styles.container}>
+<h1 style={{borderBottom:'1px solid blue'}}>Bizning tarix</h1>
+
+<p> Bu g'oya sifatida boshlandi ... yaxshi. Ko'p fikrlar bor
                       edi, lekin bilasizmi ... bitta narsa ajralib chiqdi,
                       chunki u umumiy belgiga ega edi va bu SEVGI edi. Axir
                       sizga faqat SEVGI kerak. Agar sizning g'oyalaringiz va
                       niyatlaringiz ichkaridan haydaladigan bo'lsa, siz
                       uzoqlashasiz, qanchalik uzoqqa borasiz, hech kim bilmaydi
-                      ... nega bu muhim? Faqat siz qancha masofani bilasiz…
-                    </p>
-                  </div>
+                      ... nega bu muhim? Faqat siz qancha masofani bilasiz…</p>
+                      <img style={{width:'80%',margin:'10%',textAlign:'center'}} src={story1}/>
+
+</div>
+
+               
                   <br />
                 </div>
               </body>
-            </Container>
+          
             <Footer />
           </div>
         )}
