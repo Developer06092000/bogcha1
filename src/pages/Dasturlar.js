@@ -74,13 +74,7 @@ export default class Dasturlar extends Component {
                            <p><Link to="/manzil/uz">Manzil</Link></p>
                        </div> 
                          <span style={{fontSize:'25px'}}>|</span>  
-                         <span className={style.sub2}><Link to="/dasturlar/uz">Dasturlar</Link></span>  
-                         <div className={style.subNav2}>
-                         <span><BsFillTriangleFill className={style.icon2}/></span>
-                           <p><Link to="/dastur_1/uz">1-bosqich</Link></p>
-                           <p><Link to="/dastur_2/uz">2-bosqich</Link></p>
-                           <p><Link to="/dastur_3/uz">3-bosqich</Link></p>
-                       </div> 
+                         <span ><Link to="/dasturlar/uz">Dasturlar</Link></span>  
                          <span style={{fontSize:'25px'}}>|</span>  
                          <span><Link to="/curriculm/uz">Qabul</Link></span>  
                          <span style={{fontSize:'25px'}}>|</span>  
@@ -126,13 +120,8 @@ export default class Dasturlar extends Component {
                                     <Menu.Item key="6"><Link to="/manzil/uz">Manzil</Link></Menu.Item>
                                 </Menu.ItemGroup>
                                 </SubMenu>
-                                <SubMenu key="sub2" title="Dasturlar" style={{color:'white',}}>
-                               <Menu.ItemGroup style={{borderTop:'3px solid rgba(0,0,0,0.4)'}}>
-                               <Menu.Item key="7"><Link to="/dastur_1/uz">1-dastur</Link></Menu.Item>
-                                <Menu.Item key="8"><Link to="/dastur_2/uz">2-dastur</Link></Menu.Item>
-                                <Menu.Item key="9"><Link to="/dastur_3/uz">3-dastur</Link></Menu.Item>
-                               </Menu.ItemGroup>
-                                </SubMenu>
+                               <Menu.Item key="7" style={{color:'white',backgroundColor:'blue'}}>
+                                   <Link to="/dasturlar/uz">Dasturlar</Link></Menu.Item>
                                 <Menu.Item key="10" style={{color:'white',backgroundColor:'blue'}}>
                                 <Link to="/curriculm/uz" style={{color:'white'}}>Qabul</Link>
                                 </Menu.Item>
@@ -165,13 +154,11 @@ export default class Dasturlar extends Component {
                     <div className={style.rasm}>
                         <img src={img1} />
                     </div>
-                    <div className={style.border}>
-                        <img src={img}/>
-                    </div>
-                    <div className={style.content}>
-                        <h4>1-bosqich</h4>
-                        <div style={{ width: "140px", height: "1px", backgroundColor: "blue", margin: "16px 0px 12px" }}></div>
-                        <p>
+                   
+                    <div className={style.content} style={{padding:'30px'}}>
+                        <h4 style={{fontFamily:'Courier',fontWeight:'600'}}>1-bosqich</h4>
+                       
+                        <p style={{fontFamily:'Courier'}}>
                             The sweetest and youngest of all at Flamingo are approximately 12 months- 24 months.
                             At this stage in our learning journey, everything is an amazing discovery.
                             From Old MacDonald songs to our puppets during circle time, learning is truly a joy!
@@ -182,7 +169,7 @@ export default class Dasturlar extends Component {
                 <div className={style.oyna, style.oyna1}>
                     <div className={style.content1}>
                         <h4>2-bosqich</h4>
-                        <div style={{ width: "140px", height: "1px", backgroundColor: "blue", margin: "16px 0px 12px" }}></div>
+                       
                         <p>
                         Oﬀ like a rocket at 2-years old, our toddler classroom is all about exploration. 
                         Sensory activities are a huge part of our everyday learning. 
@@ -191,9 +178,7 @@ export default class Dasturlar extends Component {
                         <span><Link to="/dastur_2/uz">Batafsil</Link></span>
 
                     </div>
-                    <div className={style.border}>
-                        <img src={img}/>
-                    </div>
+                   
                     <div className={style.rasm}>
                         <img src={img2} />
                     </div>
@@ -203,12 +188,10 @@ export default class Dasturlar extends Component {
                     <div className={style.rasm}>
                         <img src={img3} />
                     </div>
-                    <div className={style.border}>
-                        <img src={img}/>
-                    </div>
+                   
                     <div className={style.content}>
                         <h4>3-bosqich</h4>
-                        <div style={{ width: "140px", height: "1px", backgroundColor: "blue", margin: "16px 0px 12px" }}></div>
+                       
                         <p>
                         A world of monsters and fairies await when we enter our 3’s class. 
                         Pretend play rules this age group from the fearless Batman to a newfound fear of the dark. 
