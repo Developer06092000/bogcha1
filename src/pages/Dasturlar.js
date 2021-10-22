@@ -102,21 +102,21 @@ export default class Dasturlar extends Component {
                              this.state.nav? <img src={rasm5} />:<img src={rasm1}/>
                          }   
                           <div className={this.state.nav? style.openNav1:style.openNav}>
-                        <FaBars onClick={this.openNav} style={{color:'#FF8080',fontSize:'30px'}}/>    
+                        <FaBars onClick={this.openNav} style={{color:'blue',fontSize:'30px'}}/>    
                          </div>   
                          <div className={this.state.open? style.navWrapper1:style.navWrapper}>
                          <div className={style.clicknav}>
                          <Menu
                                 onClick={this.handleClick}
-                                style={{ width: 256, backgroundColor:'#F76B6A',border:'none',textAlign:'center',fontSize:'18px',marginTop:'100px'}}
+                                style={{ width: 256, backgroundColor:'blue',border:'none',textAlign:'center',fontSize:'18px',marginTop:'100px'}}
                                 defaultSelectedKeys={['1']}
                                 defaultOpenKeys={['sub1']}
                                 mode="inline"
                             >
-                                    <Menu.Item key="1" style={{backgroundColor:'#F76B6A'}}>
+                                    <Menu.Item key="1" style={{backgroundColor:'blue'}}>
                              <span><Link to="/dashboard/uz"><FaHome style={{color:'white',fontSize:'23px'}}/></Link></span> 
                                     </Menu.Item>
-                                <SubMenu key="sub1" title="Biz haqimizda" style={{backgroundColor:'#F76B6A',color:'white'}}>
+                                <SubMenu key="sub1" title="Biz haqimizda" style={{backgroundColor:'blue',color:'white'}}>
                                 <Menu.ItemGroup key="g1" style={{borderTop:'3px solid rgba(0,0,0,0.4)'}}>
                                     <Menu.Item  key="2"><Link to="/bizningtarix/uz">Bizning tarix</Link></Menu.Item>
                                     <Menu.Item key="3"><Link to="/nimauchunbiz/uz">Nima uchun biz</Link></Menu.Item> 
@@ -133,17 +133,17 @@ export default class Dasturlar extends Component {
                                 <Menu.Item key="9"><Link to="/dastur_3/uz">3-dastur</Link></Menu.Item>
                                </Menu.ItemGroup>
                                 </SubMenu>
-                                <Menu.Item key="10" style={{color:'white',backgroundColor:'#F76B6A'}}>
+                                <Menu.Item key="10" style={{color:'white',backgroundColor:'blue'}}>
                                 <Link to="/curriculm/uz" style={{color:'white'}}>Qabul</Link>
                                 </Menu.Item>
-                                <Menu.Item key="11" style={{color:'white',backgroundColor:'#F76B6A'}}>
+                                <Menu.Item key="11" style={{color:'white',backgroundColor:'blue'}}>
                                <Link style={{color:'white'}} to="/yangiliklar/uz">Yangiliklar</Link>
                                 </Menu.Item>
-                                <Menu.Item key="12" style={{color:'white',backgroundColor:'#F76B6A'}}>
+                                <Menu.Item key="12" style={{color:'white',backgroundColor:'blue'}}>
                                <Link style={{color:'white'}} to="/tadbirlar/uz">Tadbirlar</Link>
                                 </Menu.Item>
-                                <Menu.Item key="12" style={{color:'white',backgroundColor:'#F76B6A'}}>
-                               <button style={{border:'none',backgroundColor:'white',color:'#F76B6A',borderRadius:'25px',padding:'10px 30px'}}><Link style={{color:'#F76B6A',fontWeight:'800'}} to="/login">Kirish</Link></button>
+                                <Menu.Item key="12" style={{color:'white',backgroundColor:'blue'}}>
+                               <button style={{border:'none',backgroundColor:'white',color:'blue',borderRadius:'25px',padding:'10px 30px'}}><Link style={{color:'blue',fontWeight:'800'}} to="/login">Kirish</Link></button>
                                 </Menu.Item>
                                 <Menu.Item>
                                 <span><a href="tel:+998335093874"><FaPhoneAlt style={{color:'white',fontSize:'18px'}}/></a></span>

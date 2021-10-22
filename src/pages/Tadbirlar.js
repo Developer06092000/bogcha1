@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import style from '../css/loader.module.css'
 import {BsGeoAlt} from 'react-icons/bs'
 import {FaCalendarAlt} from 'react-icons/fa'
+import Dashboardtadbir from './Dashboardtadbir'
 export default class Tadbirlar extends Component {
   state={
      loader:true
@@ -42,118 +43,9 @@ export default class Tadbirlar extends Component {
                 
                </div>
              </header>
-
-             <Container>
-             <body>
-               <div className={styles.body}>
-                   <div data-aos="fade-up" className={styles.title}><h1>Tadbirlar</h1></div>
-                   <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
-      <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage 
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText>
-              <p><FaCalendarAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>14/08/2020</span></p>
-              <p><BsGeoAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>133-bog'cha</span></p>
-              <Link to='/tadbir/uz'><p style={{color:'rgba(0,0,0,0.6)'}}>Batafsil</p></Link>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText>
-            <p><FaCalendarAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>14/08/2020</span></p>
-              <p><BsGeoAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>133-bog'cha</span></p>
-              <Link to='/tadbir/uz'><p style={{color:'rgba(0,0,0,0.6)'}}>Batafsil</p></Link>
-              </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText>
-            <p><FaCalendarAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>14/08/2020</span></p>
-              <p><BsGeoAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>133-bog'cha</span></p>
-              <Link to='/tadbir/uz'><p style={{color:'rgba(0,0,0,0.6)'}}>Batafsil</p></Link>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText>
-            <p><FaCalendarAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>14/08/2020</span></p>
-              <p><BsGeoAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>133-bog'cha</span></p>
-              <Link to='/tadbir/uz'><p style={{color:'rgba(0,0,0,0.6)'}}>Batafsil</p></Link>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText>
-            <p><FaCalendarAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>14/08/2020</span></p>
-              <p><BsGeoAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>133-bog'cha</span></p>
-              <Link to='/tadbir/uz'><p style={{color:'rgba(0,0,0,0.6)'}}>Batafsil</p></Link>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      <MDBCol>
-        <MDBCard className='h-100' className={styles.card}>
-          <MDBCardImage
-            src={news1} className={styles.img}
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Bog'chamizga Prezident tashrif buyirdi</MDBCardTitle>
-            <MDBCardText>
-            <p><FaCalendarAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>14/08/2020</span></p>
-              <p><BsGeoAlt style={{fontSize:'17px',color:'#FF8080'}}/> <span>133-bog'cha</span></p>
-              <Link to='/tadbir/uz'><p style={{color:'rgba(0,0,0,0.6)'}}>Batafsil</p></Link>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-    </MDBRow><br/><br/><br/>
-               </div>
-             </body>
-             </Container>
+             <div style={{marginBottom:'40px'}}>
+<Dashboardtadbir/>
+            </div>
              <Footer/>
                 </div>
               }
