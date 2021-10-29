@@ -159,7 +159,7 @@ export default class Navbar extends Component {
         <div className={styles.second}>
           <div className={this.state.nav ? styles.nav1_active : styles.nav1}>
             <div className={this.state.nav ? styles.logo1 : styles.logo}>
-              {this.state.nav ? <img src={rasm1} /> : <img src={rasm1} />}
+              {this.state.nav ? <img src={rasm1} /> : <img src={rasm5} />}
               <div
                 className={this.state.nav ? styles.openNav1 : styles.openNav}
               >
