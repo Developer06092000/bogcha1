@@ -13,6 +13,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 import { Menu } from 'antd';
 import 'antd/dist/antd.css';
 import {Link} from 'react-router-dom'
+import Header from "./Header"
 
 export default class Dasturlar extends Component {
     state = {
@@ -52,6 +53,7 @@ export default class Dasturlar extends Component {
 
         return (
             <>
+            <Header/>
             <div className={style.mat}>
             <div className={style.one}>
                 <div className={this.state.nav? style.nav1_active:style.nav1}>
@@ -121,8 +123,8 @@ export default class Dasturlar extends Component {
                                 </Menu.ItemGroup>
                                 </SubMenu>
                                <Menu.Item key="7" style={{color:'white',backgroundColor:'blue'}}>
-                                   <Link to="/dasturlar/uz">Dasturlar</Link></Menu.Item>
-                                <Menu.Item key="10" style={{color:'white',backgroundColor:'blue'}}>
+                                   <Link to="/dasturlar/uz"  style={{color:'white'}}>Dasturlar</Link></Menu.Item>
+                                <Menu.Item key="10"  style={{color:'white',backgroundColor:'blue'}}>
                                 <Link to="/curriculm/uz" style={{color:'white'}}>Qabul</Link>
                                 </Menu.Item>
                                 <Menu.Item key="11" style={{color:'white',backgroundColor:'blue'}}>
@@ -168,9 +170,9 @@ export default class Dasturlar extends Component {
                 </div>
                 <div className={style.oyna, style.oyna1}>
                     <div className={style.content1}>
-                        <h4>2-bosqich</h4>
+                        <h4  style={{fontFamily:'Courier',fontWeight:'600'}}>2-bosqich</h4>
                        
-                        <p>
+                        <p style={{fontFamily:'Courier',fontSize:'20px'}}>
                         Oﬀ like a rocket at 2-years old, our toddler classroom is all about exploration. 
                         Sensory activities are a huge part of our everyday learning. 
                         This classroom is created to promote independence and encourages discovery as a child realizes there's a huge world out there!
@@ -190,9 +192,9 @@ export default class Dasturlar extends Component {
                     </div>
                    
                     <div className={style.content}>
-                        <h4>3-bosqich</h4>
+                        <h4 style={{fontFamily:'Courier',fontWeight:'600'}}>3-bosqich</h4>
                        
-                        <p>
+                        <p style={{fontFamily:'Courier'}}>
                         A world of monsters and fairies await when we enter our 3’s class. 
                         Pretend play rules this age group from the fearless Batman to a newfound fear of the dark. 
                         At Flamingo, we are all now fully potty-trained and focused on higher level academics such as geography, writing, and gardening!

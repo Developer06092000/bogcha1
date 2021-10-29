@@ -104,20 +104,6 @@ export default class Navbar extends Component {
                 <span className={styles.sub2}>
                   <Link to="/dasturlar/uz">Dasturlar</Link>
                 </span>
-                <div className={styles.subNav2}>
-                  <span>
-                    <BsFillTriangleFill className={styles.icon2} />
-                  </span>
-                  <p>
-                    <Link to="/dastur_1/uz">1-bosqich</Link>
-                  </p>
-                  <p>
-                    <Link to="/dastur_2/uz">2-bosqich</Link>
-                  </p>
-                  <p>
-                    <Link to="/dastur_3/uz">3-bosqich</Link>
-                  </p>
-                </div>
                 <span style={{ fontSize: "25px" }}>|</span>
                 <span>
                   <Link to="/curriculm/uz">Qabul</Link>
@@ -240,25 +226,18 @@ export default class Navbar extends Component {
                         </Menu.Item>
                       </Menu.ItemGroup>
                     </SubMenu>
-                    <SubMenu
-                      key="sub2"
-                      title="Dasturlar"
-                      style={{ color: "white" }}
+                  
+
+                    <Menu.Item
+                      key="10"
+                      style={{ color: "white", backgroundColor: "#163aaf" }}
                     >
-                      <Menu.ItemGroup
-                        style={{ borderTop: "3px solid rgba(0,0,0,0.4)" }}
-                      >
-                        <Menu.Item key="7">
-                          <Link to="/dastur_1/uz">1-dastur</Link>
-                        </Menu.Item>
-                        <Menu.Item key="8">
-                          <Link to="/dastur_2/uz">2-dastur</Link>
-                        </Menu.Item>
-                        <Menu.Item key="9">
-                          <Link to="/dastur_3/uz">3-dastur</Link>
-                        </Menu.Item>
-                      </Menu.ItemGroup>
-                    </SubMenu>
+                      <Link to="/dasturlar/uz" style={{ color: "white" }}>
+                      Dasturlar
+                      </Link>
+                    </Menu.Item>
+                  
+
                     <Menu.Item
                       key="10"
                       style={{ color: "white", backgroundColor: "#163aaf" }}

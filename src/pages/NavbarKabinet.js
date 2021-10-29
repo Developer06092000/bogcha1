@@ -74,7 +74,7 @@ export default class NavbarKabinet extends Component {
                   onClick={this.handleClick}
                   style={{
                     width: 256,
-                    backgroundColor: "#F76B6A",
+                    backgroundColor: "163aaf",
                     border: "none",
                     textAlign: "center",
                     fontSize: "18px",
@@ -84,7 +84,7 @@ export default class NavbarKabinet extends Component {
                   defaultOpenKeys={["sub1"]}
                   mode="inline"
                 >
-                  <Menu.Item key="1" style={{ backgroundColor: "#F76B6A" }}>
+                  <Menu.Item key="1" style={{ backgroundColor: "163aaf" }}>
                     <span>
                       <Link to="/dashboard/uz">
                         <FaHome style={{ color: "white", fontSize: "23px" }} />
@@ -94,7 +94,7 @@ export default class NavbarKabinet extends Component {
                   <SubMenu
                     key="sub1"
                     title="Biz haqimizda"
-                    style={{ backgroundColor: "#F76B6A", color: "white" }}
+                    style={{ backgroundColor: "163aaf", color: "white" }}
                   >
                     <Menu.ItemGroup
                       key="g1"
@@ -117,28 +117,17 @@ export default class NavbarKabinet extends Component {
                       </Menu.Item>
                     </Menu.ItemGroup>
                   </SubMenu>
-                  <SubMenu
-                    key="sub2"
-                    title="Dasturlar"
-                    style={{ color: "white" }}
-                  >
-                    <Menu.ItemGroup
-                      style={{ borderTop: "3px solid rgba(0,0,0,0.4)" }}
+                  <Menu.Item
+                      key="10"
+                      style={{ color: "white", backgroundColor: "#163aaf" }}
                     >
-                      <Menu.Item key="7">
-                        <Link to="/dastur_1/uz">1-dastur</Link>
-                      </Menu.Item>
-                      <Menu.Item key="8">
-                        <Link to="/dastur_2/uz">2-dastur</Link>
-                      </Menu.Item>
-                      <Menu.Item key="9">
-                        <Link to="/dastur_3/uz">3-dastur</Link>
-                      </Menu.Item>
-                    </Menu.ItemGroup>
-                  </SubMenu>
+                      <Link to="/dasturlar/uz" style={{ color: "white" }}>
+                      Dasturlar
+                      </Link>
+                    </Menu.Item>
                   <Menu.Item
                     key="10"
-                    style={{ color: "white", backgroundColor: "#F76B6A" }}
+                    style={{ color: "white", backgroundColor: "163aaf" }}
                   >
                     <Link to="/curriculm/uz" style={{ color: "white" }}>
                       Qabul
@@ -146,7 +135,7 @@ export default class NavbarKabinet extends Component {
                   </Menu.Item>
                   <Menu.Item
                     key="11"
-                    style={{ color: "white", backgroundColor: "#F76B6A" }}
+                    style={{ color: "white", backgroundColor: "163aaf" }}
                   >
                     <Link style={{ color: "white" }} to="/yangiliklar/uz">
                       Yangiliklar
@@ -154,14 +143,14 @@ export default class NavbarKabinet extends Component {
                   </Menu.Item>
                   <Menu.Item
                     key="12"
-                    style={{ color: "white", backgroundColor: "#F76B6A" }}
+                    style={{ color: "white", backgroundColor: "163aaf" }}
                   >
                     <Link style={{ color: "white" }} to="/tadbirlar/uz">
                       Tadbirlar
                     </Link>
                   </Menu.Item>
-                  {/* <Menu.Item key="12" style={{color:'white',backgroundColor:'#F76B6A'}}>
-                               <button style={{border:'none',backgroundColor:'white',color:'#F76B6A',borderRadius:'25px',padding:'10px 30px'}}><Link style={{color:'#F76B6A',fontWeight:'800'}} to="/login/uz">Kirish</Link></button>
+                  {/* <Menu.Item key="12" style={{color:'white',backgroundColor:'163aaf'}}>
+                               <button style={{border:'none',backgroundColor:'white',color:'163aaf',borderRadius:'25px',padding:'10px 30px'}}><Link style={{color:'163aaf',fontWeight:'800'}} to="/login/uz">Kirish</Link></button>
                                 </Menu.Item> */}
                   <Menu.Item>
                     <span>

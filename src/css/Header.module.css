@@ -1,0 +1,96 @@
+.all1{
+    padding-top: 140px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: url("https://done3d.com/wp-content/uploads/2018/03/Cartoon_forest_2.jpg");
+    background-repeat: no-repeat;
+   background-size: cover;
+}
+.text1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.one {
+    border:solid 5px hsla(0, 95%, 35%, 1);
+  }
+
+
+  .one p{
+    display:inline-block;
+    width:20%;
+    margin:5% auto;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    line-height:1.5em;
+    background:hsla(67, 95%, 95%, 1);
+  }
+  .text2{
+    display:block;
+    width:70%;
+    background-color:rgba(46, 46, 90, 0.402);
+    padding:30px; 
+    border: 2px solid white;
+    border-radius: 20px;
+    transform: rotate(10deg);
+  }
+  .text2 p,h1{
+      color: white;
+  }
+  .text2 p{
+   
+    font-size: 18px;
+}
+  @media (max-width:1400px) and (min-width:'991px') {
+    .text2{
+        display:block;
+        width:70%;
+        background-color:rgba(46, 46, 90, 0.402);
+        padding:30px; 
+        border: 2px solid white;
+        border-radius: 20px;
+        transform: rotate(10deg);
+      }
+      .text2 p,h1{
+          color: white;
+      }  
+      .text2 p{
+          font-size: 12px;
+      }
+
+  }
+
+  @media (max-width:991px){
+
+
+.text1{
+    display: none;
+}
+.video1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all1{
+    padding-top: 140px;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background: url("https://done3d.com/wp-content/uploads/2018/03/Cartoon_forest_2.jpg");
+    background-repeat: no-repeat;
+   background-size: cover;
+}
+
+  }
