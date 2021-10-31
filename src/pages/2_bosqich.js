@@ -7,7 +7,6 @@ import Footer from "./Footer";
 import img1 from "../img/r2.jpg"
 import img4 from "../img/r4.jpeg"
 import img5 from "../img/r5.jpeg"
-import PacmanLoader from "react-spinners/PacmanLoader";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 export default class Bosqich2 extends Component {
@@ -64,13 +63,13 @@ export default class Bosqich2 extends Component {
                           showDots={false}
                         >
                        <div>
-                       <img src={img1} className={style.sliderImage}/>                   
+                       <img alt=" " src={img1} className={style.sliderImage}/>                   
                        </div>
                        <div>
-                           <img src={img4} className={style.sliderImage}/>                         
+                           <img alt=" " src={img4} className={style.sliderImage}/>                         
                        </div>
                        <div>
-                           <img src={img5} className={style.sliderImage}/>                
+                           <img alt=" " src={img5} className={style.sliderImage}/>                
                        </div>
                     </Carousel>
                 <div className={style.matn}>

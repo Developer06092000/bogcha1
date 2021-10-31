@@ -1,7 +1,9 @@
 .all1{
-    padding-top: 140px;
+    padding-top: 140px;  
+    min-height: 600px;
     width: 100vw;
     height: 100vh;
+  
     display: flex;
     background: url("https://done3d.com/wp-content/uploads/2018/03/Cartoon_forest_2.jpg");
     background-repeat: no-repeat;
@@ -94,5 +96,24 @@
 }
 .box12{
   
+}
+  }
+  @media (max-width:360px) {
+    .all1{
+      padding-top: 140px;
+      width: 100vw;
+      height: 170vh;
+      display: block;
+      background: url("https://done3d.com/wp-content/uploads/2018/03/Cartoon_forest_2.jpg");
+      background-repeat: no-repeat;
+     background-size: cover;
+  } 
+  .video1{
+    margin-top: 100px;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
   }

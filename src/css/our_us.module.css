@@ -1,0 +1,67 @@
+.abbas{
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/41114/plan1.png');
+    background-size: cover;
+}
+.frame {
+    background-image: url('https://s3-us-west-2amazonawscom/s.cdpn.io/41114/plan1.png');
+    border-radius: 3px;
+    box-shadow: 0 0 50px black;
+    height: 698px;
+    left: 50%;
+    margin-bottom: 300px;
+    overflow: hidden;
+    position: relative;
+    top: 100px;
+    transform: translateX(-50%);
+    width: 550px;
+}
+.frame img {
+    position: absolute;
+    transform-origin: 50%;
+    width: 100%;
+    transition: 2s ease;
+}
+.frame:hover .pic1 {
+    transform: scale(1.2);
+    filter: blur(4px);
+}
+.frame:hover .pic2 {
+    transform: scale(1.4);
+    filter: blur(2px);
+}
+.frame:hover .pic3 {
+    transform: scale(1.6);
+    filter: blur(1px);
+}
+.frame:hover .pic4 {
+    transform: scale(1.8);
+}
+.frame:hover .pic5 {
+    transform: scale(2);
+}
+.frame:hover .mist {
+    transform: translateX(-100%);
+}
+.frame:hover .mist2 {
+    transform: translateX(100%);
+}
+.frame .mist {
+    height: 200px;
+    position: absolute;
+    top: 500px;
+    width: 2000px;
+  filter: blur(2px);
+    transition: 60s linear;
+}
+.frame .mist2 {
+    height: 200px;
+    position: absolute;
+    top: 300px;
+    left: -100%;
+    width: 2000px;
+   filter: blur(2px);
+    transition: 60s linear;
+}

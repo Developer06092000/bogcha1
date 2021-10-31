@@ -1,4 +1,4 @@
-body{
+.body{
     background-color:white !important
 }
 .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
@@ -27,7 +27,6 @@ body{
   @media (max-width:991px) {
     .box12 {
       position: relative;
-      max-width: 600px;
       width: 100%;
       height: 400px;
       background: #fff;

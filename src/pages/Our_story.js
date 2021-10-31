@@ -11,6 +11,7 @@ import story2 from "../img/ourstorybanner.jpg";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import stayle from "../css/our_us.module.css";
 import style from '../css/loader.module.css'
 export default class Our_story extends Component {
   state = {
@@ -53,34 +54,25 @@ export default class Our_story extends Component {
                      </div></div>
         ) : (
           <div>
-            <header>
-              <div className={styles.header}>
-                <Navbar />
-                <Carousel
-                  className={styles.sliderHeader}
-                  responsive={responsive}
-                  infinite={true}
-                  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                  autoPlaySpeed={3000}
-                  keyBoardControl={false}
-                  showDots={false}
-                >
-                  <div>
-                    <img src={story1} className={styles.headerImage} />
-                  </div>
-                  <div>
-                    <img src={story2} className={styles.headerImage} />
-                  </div>
-                </Carousel>
-              </div>
-            </header>
+            <Navbar/>
+            <div className={stayle.abbas}>
+          <div className={stayle.frame}>
+ <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41114/plan1.png" alt="sky" className={stayle.pic1}/>
+ <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41114/2.png" alt="sky" className={stayle.pic2}/>
+ <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41114/3.png" alt="sky" className={stayle.pic3}/>
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41114/mist.png" alt="sky" className={stayle.mist2}/>
+ <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41114/4.png" alt="sky" className={stayle.pic4}/>
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41114/mist.png" alt="sky" className={stayle.mist}/>
+ <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41114/5.png" alt="sky" className={stayle.pic5}/>
+</div>
+</div>
            
               <body>
                 <div className={styles.body}>
  <div className={styles.container}>
-<h1 style={{borderBottom:'1px solid blue'}}>Bizning tarix</h1>
+<h1 style={{borderBottom:'1px solid blue'}} className={styles.satrh1}>Bizning tarix</h1>
 
-<p> Bu g'oya sifatida boshlandi ... yaxshi. Ko'p fikrlar bor
+<p className={styles.satrA}> Bu g'oya sifatida boshlandi ... yaxshi. Ko'p fikrlar bor
                       edi, lekin bilasizmi ... bitta narsa ajralib chiqdi,
                       chunki u umumiy belgiga ega edi va bu SEVGI edi. Axir
                       sizga faqat SEVGI kerak. Agar sizning g'oyalaringiz va

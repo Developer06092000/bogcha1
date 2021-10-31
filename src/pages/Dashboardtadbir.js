@@ -5,7 +5,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "react-multi-carousel/lib/styles.css";
 import {FaRegCalendarAlt, FaUserTie } from "react-icons/fa";
+import axios from "axios";
 export default class Dashboardtadbir extends Component {
+state={
+data:'',
+};
+//  getBogcha=()=>{
+//   axios.get('https://bogcha.herokuapp.com/kg-info/1/').then(res=>{
+// console.log(res.data)
+//   }).catch(err=>{
+//     console.log("bemanilik")
+//   })
+// }
+// componentDidMount(){
+//   this.getBogcha()
+// }
   render() {
     const responsive = {
       desktop: {

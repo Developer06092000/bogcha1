@@ -9,7 +9,6 @@ import img1 from "../img/r3.jpg"
 import styles from "../css/loader.module.css"
 import img4 from "../img/r4.jpeg"
 import img5 from "../img/r5.jpeg"
-import PacmanLoader from "react-spinners/PacmanLoader";
 
 export default class Bosqich3 extends Component {
     state={
@@ -64,13 +63,13 @@ export default class Bosqich3 extends Component {
                           showDots={false}
                         >
                        <div>
-                       <img src={img1} className={style.sliderImage}/>                   
+                       <img src={img1} alt=" " className={style.sliderImage}/>                   
                        </div>
                        <div>
-                           <img src={img4} className={style.sliderImage}/>                         
+                           <img src={img4} alt=" " className={style.sliderImage}/>                         
                        </div>
                        <div>
-                           <img src={img5} className={style.sliderImage}/>                
+                           <img src={img5} alt=" " className={style.sliderImage}/>                
                        </div>
                     </Carousel>
                 <div className={style.matn}>

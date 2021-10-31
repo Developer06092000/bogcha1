@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "../css/Dashboard.module.css";
-import kinder from "../video/kinder.mp4";
-import rasm1 from "../img/ftr-logo.png";
-import rasm2 from "../img/heart-btn.png";
 import icon1 from "../img/icon1.png";
 import icon2 from "../img/icon2.png";
 import icon3 from "../img/icon3.png";
@@ -11,23 +8,13 @@ import icon4 from "../img/icon4.png";
 import icon5 from "../img/icon5.png";
 import icon6 from "../img/icon6.png";
 import rasm3 from "../img/1.jpg";
-import border from "../img/border.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  FaHome,
-  FaPhoneAlt,
-  FaInstagram,
-  FaTelegramPlane,
-} from "react-icons/fa";
 import style from '../css/Header.module.css';
 import '../App.css';
-import rasm5 from "../img/logo-dark.png";
-import { BsFillTriangleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import rasm4 from "../img/3s-Photo-3.jpg";
 import rasm7 from "../img/engagement.jpg";
 import rasm6 from "../img/love.jpg";
-import PacmanLoader from "react-spinners/PacmanLoader";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Dashboardnews from "./Dashboardnews";
@@ -39,8 +26,6 @@ import her3 from "../img/h3.jpg";
 import her4 from "../img/h4.jpg";
 import her5 from "../img/h5.png";
 import her6 from "../img/h6.png";
-import YouTube from "@u-wave/react-youtube";
-import loadew from '../img/loader-bg.png'
 export default class Dashboard extends Component {
   state = {
     loader: true,
@@ -119,20 +104,14 @@ export default class Dashboard extends Component {
 <div className={style.text1}>
     <div className={style.text2}>
 <h1 style={{fontFamily:'sans-serif'}} >Farzandingiz kelajagini biz bilan quring</h1>
-<p style={{fontFamily:'sans-serif',}}> XHTML Tutorial
-
-XHTML tutorial provides basic and advanced concepts of XHTML. Our XHTML tutorial is designed for beginners and professionals.
-
-XHTML is a short form of eXtensible HyperText Markup Language. It is a stricter form of HTML.
-
-Our XHTML tutorial includes all topics of XHTML language such as syntax, example, on events, doctype, attributes. etc.</p>
+<p style={{fontFamily:'sans-serif',}}> Flamingoning talabalari juda yaxshi ko'rishadi. Biz o'zimizni bolalar, o'qituvchilar va ma'murlardan iborat g'amxo'r o'quv jamoasini yaratishga bag'ishlaymiz.</p>
     </div>
     
      </div>
 <div className={style.video1}>
 <div style={{display:'block',width:'100%'}}>
 <div class="box12">
-<iframe width="100%" height="100%"
+<iframe title=" " width="100%" height="100%"
 src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop=1">
 </iframe> 
   <div class="ribbon ribbon-top-left"><span>2020</span></div>
@@ -187,8 +166,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                     sm={4}
                     style={{
                       background: "#163aaf",
-                      background:
-                        "linear-gradient(180deg, #163aaf 0%, #00000064 100%)",
+                      background:"linear-gradient(180deg, #163aaf 0%, #00000064 100%)",
                     }}
                     className={styles.card1}
                   >

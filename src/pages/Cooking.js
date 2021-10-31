@@ -9,7 +9,6 @@ import kinder2 from '../img/kinder5.jpg'
 import kinder3 from '../img/kinder6.png'
 import {Container,Row,Col } from 'react-bootstrap';
 import Footer from './Footer'
-import PacmanLoader from "react-spinners/PacmanLoader";
 
 export default class Wonder extends Component {
   state={
@@ -63,13 +62,13 @@ componentDidMount() {
                           showDots={false}
                         >
                        <div>
-                       <img src={kinder1} className={styles.sliderImage}/>                   
+                       <img alt=" " src={kinder1} className={styles.sliderImage}/>                   
                        </div>
                        <div>
-                           <img src={kinder2} className={styles.sliderImage}/>                         
+                           <img alt=" " src={kinder2} className={styles.sliderImage}/>                         
                        </div>
                        <div>
-                           <img src={kinder3} className={styles.sliderImage}/>                
+                           <img alt=" " src={kinder3} className={styles.sliderImage}/>                
                        </div>
                     </Carousel>
                     <Container fluid style={{padding:'0'}}>

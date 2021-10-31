@@ -1,4 +1,4 @@
-import { httpRequest, url } from "./Host";
+import { httpRequest, url, } from "./Host";
 
 export const getRahbariyat = () => {
   var config = {

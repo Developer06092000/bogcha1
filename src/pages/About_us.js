@@ -12,7 +12,6 @@ import about2 from '../img/about2.jpg'
 import about3 from '../img/about3.jpg'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import PacmanLoader from "react-spinners/PacmanLoader";
 
 export default class About_us extends Component {
   state={
@@ -66,13 +65,13 @@ export default class About_us extends Component {
                         showDots={false}
                         >
                        <div>
-                       <img src={about1} className={styles.headerImage}/>                   
+                       <img src={about1} alt=" " className={styles.headerImage}/>                   
                        </div>
                        <div>
-                           <img src={about2} className={styles.headerImage}/>                         
+                           <img src={about2} alt=" " className={styles.headerImage}/>                         
                        </div>
                        <div>
-                           <img src={about3} className={styles.headerImage}/>                
+                           <img src={about3} alt=" " className={styles.headerImage}/>                
                        </div>
                       
                     </Carousel>

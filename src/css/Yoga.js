@@ -58,13 +58,13 @@ componentDidMount() {
                           showDots={false}
                         >
                        <div>
-                       <img src={kinder1} className={styles.sliderImage}/>                   
+                       <img alt=" " src={kinder1} className={styles.sliderImage}/>                   
                        </div>
                        <div>
-                           <img src={kinder2} className={styles.sliderImage}/>                         
+                           <img alt=" " src={kinder2} className={styles.sliderImage}/>                         
                        </div>
                        <div>
-                           <img src={kinder3} className={styles.sliderImage}/>                
+                           <img alt=" " src={kinder3} className={styles.sliderImage}/>                
                        </div>
                     </Carousel>
                     <Container fluid style={{padding:'0'}}>

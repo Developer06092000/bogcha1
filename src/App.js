@@ -7,9 +7,9 @@ import Leadership from "./pages/Leadership";
 import Changing from "./pages/Changing";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Location from "./pages/Location";
-import Why_us from "./pages/Why_us";
-import Our_story from "./pages/Our_story";
-import About_us from "./pages/About_us";
+import Whyus from "./pages/Why_us";
+import Ourstory from "./pages/Our_story";
+import Aboutus from "./pages/About_us";
 import Bosqich1 from "./pages/1_bosqich";
 import Bosqich2 from "./pages/2_bosqich";
 import Bosqich3 from "./pages/3_bosqich";
@@ -19,7 +19,6 @@ import Oshxona from "./pages/oshxona";
 import Login from "./pages/Login";
 import CabinetEducator from "./pages/cabinetEducator";
 import Yoga from "./css/Yoga";
-import Kids from "./pages/kids";
 import Musiqa from "./pages/Musiqa";
 import Garden from "./pages/Garden";
 import Steam from "./pages/Steam";
@@ -34,7 +33,7 @@ import Rahbariyat from "./pages/Rahbariyat";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Qabul from "./pages/Qabul";
 import Galereya from "./pages/Galereya";
-import Rahbarlar from "./pages/Rahbarlar";
+
 function App() {
   return (
     <BrowserRouter>
@@ -61,13 +60,13 @@ function App() {
           <Location />
         </Route>
         <Route exact path="/nimauchunbiz/uz">
-          <Why_us />
+          <Whyus />
         </Route>
         <Route exact path="/bizhaqimizda/uz">
-          <About_us />
+          <Aboutus />
         </Route>
         <Route exact path="/bizningtarix/uz">
-          <Our_story />
+          <Ourstory />
         </Route>
         <Route exact path="/galereya/uz">
           <Galereya />

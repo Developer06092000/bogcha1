@@ -8,7 +8,6 @@ import kinder2 from '../img/kinder11.jpg'
 import kinder3 from '../img/kinder13.jpg'
 import {Container,Row,Col } from 'react-bootstrap';
 import Footer from './Footer'
-import PacmanLoader from "react-spinners/PacmanLoader";
 import style from "../css/loader.module.css";
 export default class Changing extends Component {
   state={
@@ -62,13 +61,13 @@ export default class Changing extends Component {
                           showDots={false}
                         >
                        <div>
-                       <img src={kinder1} className={styles.sliderImage}/>                   
+                       <img alt=" " src={kinder1} className={styles.sliderImage}/>                   
                        </div>
                        <div>
-                           <img src={kinder2} className={styles.sliderImage}/>                         
+                           <img alt=" " src={kinder2} className={styles.sliderImage}/>                         
                        </div>
                        <div>
-                           <img src={kinder3} className={styles.sliderImage}/>                
+                           <img alt=" " src={kinder3} className={styles.sliderImage}/>                
                        </div>
                     </Carousel>
                     <Container fluid style={{padding:'0'}}>

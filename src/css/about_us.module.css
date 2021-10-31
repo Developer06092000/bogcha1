@@ -96,6 +96,15 @@ body{
 .container p{
     font-family: monospace;
 }  
+@media (max-width:991px) {
+    .satrA{
+   font-size: 10px;     
+    }   
+    .satrh1{
+        font-size: 15px;
+    }
+       
+   }
 
 
 

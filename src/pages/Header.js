@@ -9,13 +9,7 @@ export default class Header extends Component {
 <div className={style.text1}>
     <div className={style.text2}>
 <h1 style={{fontFamily:'sans-serif'}} >Farzandingiz kelajagini biz bilan quring</h1>
-<p style={{fontFamily:'sans-serif',}}> XHTML Tutorial
-
-XHTML tutorial provides basic and advanced concepts of XHTML. Our XHTML tutorial is designed for beginners and professionals.
-
-XHTML is a short form of eXtensible HyperText Markup Language. It is a stricter form of HTML.
-
-Our XHTML tutorial includes all topics of XHTML language such as syntax, example, on events, doctype, attributes. etc.</p>
+<p style={{fontFamily:'sans-serif',}}> Flamingoning talabalari juda yaxshi ko'rishadi. Biz o'zimizni bolalar, o'qituvchilar va ma'murlardan iborat g'amxo'r o'quv jamoasini yaratishga bag'ishlaymiz.</p>
     </div>
     
      </div>
