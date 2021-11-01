@@ -6,7 +6,30 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import news1 from "../img/kinder6.png";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
+import Global from "../host/Global";
+import { getBogcha } from "../host/Config";
+import { url } from "../host/Host";
 export default class Dashboardnews extends Component {
+state={
+  news:[],
+}
+
+
+componentDidMount(){
+  if (Global.kg === null) {
+    getBogcha()
+      .then((res) => {
+        Global.kg = res.data;
+    this.setState({ news:res.data.yangilik})
+      })
+      .catch((err) => console.log(err));
+  }
+
+
+}
+
+
+
   render() {
     const responsive = {
       desktop: {
@@ -35,10 +58,14 @@ export default class Dashboardnews extends Component {
                 <h1>Yangiliklar</h1>
               </div>
 <div className={styles.cards} style={{marginBottom:'50px'}}>
-  <div className={styles.card} style={{marginTop:"40px"}}>
-    <h2 className={styles.card_title}>Prezident tashrifi <br/>  <div style={{margin:'auto', fontSize:"10px",marginRight:'10px'}}> 14/08/2020 </div></h2>
-    <img src={news1}  alt=""/>
-    <p className={styles.card_desc}>Pinnipeds, commonly known as seals,[a] are a widely distributed and diverse clade of carnivorous, fin-footed, semiaquatic marine mammals. They comprise the extant families Odobenidae (whose only living member is the walrus), Otariidae (the eared seals: sea lions and fur seals), and Phocidae (the earless seals, or true seals).  <p>
+
+{ 
+this.state.news.map((item)=>{
+  return(
+ <div className={styles.card} style={{marginTop:"40px"}}>
+    <h2 className={styles.card_title}>{item.title}<br/>  <div style={{margin:'auto', fontSize:"10px",marginRight:'10px'}}> {item.date} </div></h2>
+    <img src={url+item.image}  alt=""/>
+    <p className={styles.card_desc}>{item.text}  <p>
   
                           </p>
                           <Link to="/yangilik/uz">
@@ -60,50 +87,17 @@ export default class Dashboardnews extends Component {
                           </Link></p>
   </div>
 
-  <div className={styles.card} style={{marginTop:"40px"}}>
-    <h2 className={styles.card_title}>Prezident tashrifi <br/> <div style={{margin:'auto', fontSize:"10px",marginRight:'10px'}}>14/08/2020 </div></h2>
-    <img src={news1}  alt=""/>
-    <p className={styles.card_desc}>The lion (Panthera leo) is a species in the family Felidae and a member of the genus Panthera. It has a muscular, deep-chested body, short, rounded head, round ears, and a hairy tuft at the end of its tail. It is sexually dimorphic; adult male lions have a prominent mane.  <Link to="/yangilik/uz">
-                            <p
-                              style={{
-                                color: "white",
-                                backgroundColor: "blue",
-                                width: "70px",
-                                padding: "3px 10px",
-                                border: "1px solid blue",
-                                borderRadius: "10px",
-                                position:'absolute',
-                                right:'20px',
-                                bottom:'8px'
-                              }}
-                            >
-                              Batafsil
-                            </p>
-                          </Link></p>
-  </div>
 
-  <div className={styles.card} style={{marginTop:'40px'}}>
-    <h2 className={styles.card_title}>Prezident tashrifi <br/>   <div style={{margin:'auto', fontSize:"10px",marginRight:'10px'}}>14/08/2020 </div></h2>
-    <img  src={news1} alt=""/>
-    <p className={styles.card_desc}>Hawks are a group of medium-sized diurnal birds of prey of the family Accipitridae. Hawks are widely distributed and vary greatly in size.
-      The subfamily Accipitrinae includes goshawks, sparrowhawks, sharp-shinned hawks and others. This subfamily are mainly woodland birds with long tails and high visual acuity. They hunt by dashing suddenly from a concealed perch.  <Link to="/yangilik/uz">
-                            <p
-                              style={{
-                                color: "white",
-                                backgroundColor: "blue",
-                                width: "70px",
-                                padding: "3px 10px",
-                                border: "1px solid blue",
-                                borderRadius: "10px",
-                                position:'absolute',
-                                right:'20px',
-                                bottom:'8px'
-                              }}
-                            >
-                              Batafsil
-                            </p>
-                          </Link></p>
-  </div>
+  )
+})
+
+
+
+}
+
+
+ 
+
 </div>
 
 

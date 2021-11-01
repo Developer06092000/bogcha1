@@ -1,4 +1,4 @@
-import { httpRequest, url, } from "./Host";
+import { httpRequest, idBogcha, url, } from "./Host";
 
 export const getRahbariyat = () => {
   var config = {
@@ -46,6 +46,14 @@ export const deleteXodim = (id) => {
   var config = {
     url: `${url}/xodim/${id}/`,
     method: "delete",
+  };
+  return httpRequest(config);
+};
+
+export const getBogcha = () => {
+  var config = {
+    url: `${url}/kg-info/${idBogcha}`,
+    method: "get",
   };
   return httpRequest(config);
 };

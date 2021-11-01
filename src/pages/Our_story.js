@@ -12,17 +12,26 @@ import PacmanLoader from "react-spinners/PacmanLoader";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import stayle from "../css/our_us.module.css";
+import {getBogcha} from  '../host/Config'
 import style from '../css/loader.module.css'
 export default class Our_story extends Component {
   state = {
     loader: true,
+    our_history:"",
   };
-  componentDidMount() {
+
+
+  componentDidMount() { 
+ getBogcha().then((res)=>{
+  this.setState({our_history:res.data.our_history})
+ }
+  )
     setInterval(() => {
       this.setState({
         loader: false,
       });
-    }, 2000);
+    }, 2000)
+   
   }
   render() {
     const responsive = {
@@ -55,6 +64,8 @@ export default class Our_story extends Component {
         ) : (
           <div>
             <Navbar/>
+            
+
             <div className={stayle.abbas}>
           <div className={stayle.frame}>
  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41114/plan1.png" alt="sky" className={stayle.pic1}/>
@@ -72,13 +83,7 @@ export default class Our_story extends Component {
  <div className={styles.container}>
 <h1 style={{borderBottom:'1px solid blue'}} className={styles.satrh1}>Bizning tarix</h1>
 
-<p className={styles.satrA}> Bu g'oya sifatida boshlandi ... yaxshi. Ko'p fikrlar bor
-                      edi, lekin bilasizmi ... bitta narsa ajralib chiqdi,
-                      chunki u umumiy belgiga ega edi va bu SEVGI edi. Axir
-                      sizga faqat SEVGI kerak. Agar sizning g'oyalaringiz va
-                      niyatlaringiz ichkaridan haydaladigan bo'lsa, siz
-                      uzoqlashasiz, qanchalik uzoqqa borasiz, hech kim bilmaydi
-                      ... nega bu muhim? Faqat siz qancha masofani bilasiz…</p>
+<p className={styles.satrA}>{this.state.our_history} </p>
                       <img style={{width:'80%',margin:'10%',textAlign:'center',borderRadius:'10px'}} src={story1}/>
 
 </div>

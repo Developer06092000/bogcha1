@@ -26,6 +26,8 @@ import her3 from "../img/h3.jpg";
 import her4 from "../img/h4.jpg";
 import her5 from "../img/h5.png";
 import her6 from "../img/h6.png";
+import {getBogcha} from "../host/Config"
+import Global from "../host/Global";
 export default class Dashboard extends Component {
   state = {
     loader: true,
@@ -36,6 +38,12 @@ export default class Dashboard extends Component {
         loader: false,
       });
     }, 2000);
+  getBogcha()
+        .then((res) => {
+          Global.kg = res.data;
+        })
+        .catch((err) => console.log(err));
+    
   }
 
   render() {
