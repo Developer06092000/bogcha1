@@ -29,32 +29,32 @@ export default class Footer extends Component {
         <div className={styles.footer}>
           <h1>Biz bilan bog'laning</h1>
           <h2>Aloqada bo'lish</h2>
-          <img src={url+this.state.mail.logo} />
-          <div className={styles.aloqa}>
+          <img src={url+this.state.mail.logo} alt=" " />
+          <div className={styles.aloqa}> 
+           <a style={{textDecoration:'none',color:'white'}} href="tel:{this.state.mail.phone}">
             <span>
-              <a href={this.state.mail.phone}>
                 <img src={aloqa4} style={{ width: "30px" }} />
-              </a>
             </span>
-            <span>{this.state.mail.phone}</span>
-            <span>|</span>
+            <span>{this.state.mail.phone}</span> </a>
+            <span>|</span> 
+            <a style={{textDecoration:'none',color:'white'}} href="mailto:{this.state.mail.email}">
             <span>
-              <a href="mailto:{this.state.mail.email}">
+             
                 <img src={aloqa3} style={{ width: "30px" }} />
-              </a>
+              
             </span>
-            <span>{this.state.mail.email}</span>
+            <span>{this.state.mail.email}</span></a>
             <span> |</span>
             <span className={styles.tel}>
               <img src={aloqa1} style={{ width: "30px" }} />
             </span>
-            <span>{this.state.mail.phone}</span>
+            <span>{this.state.mail.viloyat} {this.state.mail.tuman}</span>
           </div>
           <div className={styles.adres}>
             <span>
               <img src={aloqa2} style={{ width: "30px" }} />
             </span>
-            <span>Amir Temur shox ko'chasi, 13-uy</span>
+            <span>{this.state.mail.address}</span>
           </div>
           <div className={styles.soat}>
             <p>Qabul soatlari</p>
@@ -63,7 +63,7 @@ export default class Footer extends Component {
           <h3>Bizni kuzatib boring</h3>
           <div>
             <span style={{ marginLeft: "40px", color: "white" }}>
-              <a href="tel:+998335093874">
+              <a href="tel:{this.state.mail.phone}">
                 <FaPhoneAlt
                   style={{
                     color: "white",
@@ -74,7 +74,7 @@ export default class Footer extends Component {
               </a>
             </span>
             <span style={{ color: "white" }}>
-              <a href="http://t.me/Karshiyeva_N">
+              <a href={this.state.mail.telegram}>
                 <FaTelegramPlane
                   style={{
                     color: "white",
@@ -85,7 +85,7 @@ export default class Footer extends Component {
               </a>
             </span>
             <span style={{ color: "white" }}>
-              <a href="http://t.me/Karshiyeva_N">
+              <a href={this.state.mail.instagram}>
                 <FaInstagram
                   style={{
                     color: "white",
@@ -96,7 +96,7 @@ export default class Footer extends Component {
               </a>
             </span>
             <span style={{ color: "white" }}>
-              <a href="http://t.me/Karshiyeva_N">
+              <a href={this.state.mail.facebook}>
                 <FaFacebook
                   style={{
                     color: "white",

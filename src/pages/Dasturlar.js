@@ -65,7 +65,7 @@ export default class Dasturlar extends Component {
                 <div className={this.state.nav? style.nav1_active:style.nav1}>
                  <div className={this.state.nav? style.logo1:style.logo}>
                          {
-                             this.state.nav? <img src={rasm5} />:<img src={rasm1}/>
+                             this.state.nav? <img src={url+this.state.dastur.logo} alt=" " />:<img src={url+this.state.dastur.logo} alt=" "/>
                          }   
                          <div className={style.navbar}>
                          <span><Link to="/dashboard/uz"><FaHome style={{color:'blue',fontSize:'23px'}}/></Link></span> 
@@ -89,8 +89,8 @@ export default class Dasturlar extends Component {
                          <span><Link to="/yangiliklar/uz">Yangiliklar</Link></span>  
                          <span style={{fontSize:'25px'}}>|</span>
                          <span><Link to="/tadbirlar/uz">Tadbirlar</Link></span>
-                         <span style={{marginLeft:'40px'}}><a href="tel:+998335093874"><FaPhoneAlt style={{color:'blue',fontSize:'18px'}}/></a></span>
-                         <span><a href="http://t.me/Karshiyeva_N"><FaTelegramPlane style={{color:'blue',fontSize:'23px'}}/></a></span>
+                         <span style={{marginLeft:'40px'}}><a href="tel:{this.state.dastur.phone}"><FaPhoneAlt style={{color:'blue',fontSize:'18px'}}/></a></span>
+                         <span><a href={this.state.dastur.telegram}><FaTelegramPlane style={{color:'blue',fontSize:'23px'}}/></a></span>
                          <Link to="/login"><button className={this.state.nav? style.btn1 :style.btn2}>Kirish</button></Link>                        
                         </div>    
                     </div>
@@ -101,7 +101,7 @@ export default class Dasturlar extends Component {
                 <div className={this.state.nav? style.nav1_active:style.nav1}>
                  <div className={this.state.nav? style.logo1:style.logo}>
                          {
-                             this.state.nav? <img src={rasm5} />:<img src={rasm1}/>
+                             this.state.nav? <img src={url+this.state.dastur.logo} alt=" " />:<img src={url+this.state.dastur.logo} alt=" "/>
                          }   
                           <div className={this.state.nav? style.openNav1:style.openNav}>
                         <FaBars onClick={this.openNav} style={{color:'blue',fontSize:'30px'}}/>    
@@ -143,8 +143,8 @@ export default class Dasturlar extends Component {
                                <button style={{border:'none',backgroundColor:'white',color:'blue',borderRadius:'25px',padding:'10px 30px'}}><Link style={{color:'blue',fontWeight:'800'}} to="/login">Kirish</Link></button>
                                 </Menu.Item>
                                 <Menu.Item>
-                                <span><a href="tel:+998335093874"><FaPhoneAlt style={{color:'white',fontSize:'18px'}}/></a></span>
-                                <span><a href="http://t.me/Karshiyeva_N"><FaTelegramPlane style={{color:'white',fontSize:'23px',marginLeft:'10px'}}/></a></span>
+                                <span><a href="tel:this.state.dastur.phone"><FaPhoneAlt style={{color:'white',fontSize:'18px'}}/></a></span>
+                                <span><a href={this.state.dastur.telegram}><FaTelegramPlane style={{color:'white',fontSize:'23px',marginLeft:'10px'}}/></a></span>
                                 </Menu.Item>
                             </Menu>
                             <div className={style.close}>
@@ -169,7 +169,7 @@ export default class Dasturlar extends Component {
                         <p style={{fontFamily:'Courier'}}>
                            {this.state.dastur.program1}
                         </p>
-                        <span><Link to="/dastur_1/uz">Batafsil</Link></span>
+                       
                     </div>
                 </div>
                 <div className={style.oyna, style.oyna1}>
@@ -179,7 +179,7 @@ export default class Dasturlar extends Component {
                         <p style={{fontFamily:'Courier',fontSize:'20px'}}>
                         {this.state.dastur.program2}
                         </p>
-                        <span><Link to="/dastur_2/uz">Batafsil</Link></span>
+                       
 
                     </div>
                    
@@ -199,7 +199,7 @@ export default class Dasturlar extends Component {
                         <p style={{fontFamily:'Courier'}}>
                         {this.state.dastur.program3}
                         </p>
-                        <span><Link to="/dastur_3/uz">Batafsil</Link></span>
+                       
 
                     </div>
                 </div>

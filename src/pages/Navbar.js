@@ -23,8 +23,11 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import { AiOutlineClose } from "react-icons/ai";
+import { getBogcha } from "../host/Config";
+import { url } from "../host/Host";
 export default class Navbar extends Component {
   state = {
+    logo:[],
     nav: false,
     open: false,
     close: false,
@@ -51,6 +54,9 @@ export default class Navbar extends Component {
     });
   };
   componentDidMount() {
+    getBogcha().then((res)=>{
+      this.setState({logo:res.data})
+    })
     window.addEventListener("scroll", this.change);
   }
   handleClick = (e) => {
@@ -63,7 +69,7 @@ export default class Navbar extends Component {
         <div className={styles.one}>
           <div className={this.state.nav ? styles.nav1_active : styles.nav1}>
             <div className={this.state.nav ? styles.logo1 : styles.logo}>
-              {this.state.nav ? <img src={rasm1} /> : <img src={rasm1} />}
+              {this.state.nav ? <img src={url+this.state.logo.logo} alt=" "/> : <img src={url+this.state.logo.logo} alt=" "/>}
               <div className={styles.navbar}>
                 <span>
                   <Link to="/dashboard/uz">
@@ -117,28 +123,28 @@ export default class Navbar extends Component {
                   <Link to="/tadbirlar/uz">Tadbirlar</Link>
                 </span>
                 <span style={{ marginLeft: "40px" }}>
-                  <a href="tel:+998335093874">
+                  <a href="tel:{this.state.logo.phone}">
                     <FaPhoneAlt
                       style={{ color: "white", fontSize: "18px" }}
                     />
                   </a>
                 </span>
                 <span>
-                  <a href="http://t.me/Karshiyeva_N">
+                  <a href={this.state.logo.telegram}>
                     <FaTelegramPlane
                       style={{ color: "white", fontSize: "23px" }}
                     />
                   </a>
                 </span>
                 <span>
-                  <a href="http://t.me/Karshiyeva_N">
+                  <a href={this.state.logo.instagram}>
                     <FaInstagram
                       style={{ color: "white", fontSize: "23px" }}
                     />
                   </a>
                 </span>
                 <span>
-                  <a href="http://t.me/Karshiyeva_N">
+                  <a href={this.state.logo.facebook}>
                     <FaFacebook
                       style={{ color: "white", fontSize: "23px" }}
                     />
@@ -159,7 +165,7 @@ export default class Navbar extends Component {
         <div className={styles.second}>
           <div className={this.state.nav ? styles.nav1_active : styles.nav1}>
             <div className={this.state.nav ? styles.logo1 : styles.logo}>
-              {this.state.nav ? <img src={rasm1} /> : <img src={rasm5} />}
+              {this.state.nav ? <img src={url+this.state.logo.logo} alt=""/> : <img src={url+this.state.logo.logo} alt=""/>}
               <div
                 className={this.state.nav ? styles.openNav1 : styles.openNav}
               >

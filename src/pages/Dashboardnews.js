@@ -16,14 +16,14 @@ state={
 
 
 componentDidMount(){
-  if (Global.kg === null) {
+ 
     getBogcha()
       .then((res) => {
         Global.kg = res.data;
     this.setState({ news:res.data.yangilik})
       })
       .catch((err) => console.log(err));
-  }
+  
 
 
 }
@@ -68,7 +68,7 @@ this.state.news.map((item)=>{
     <p className={styles.card_desc}>{item.text}  <p>
   
                           </p>
-                          <Link to="/yangilik/uz">
+                          <Link to="/yangiliklar/uz">
                             <p
                               style={{
                                 color: "white",

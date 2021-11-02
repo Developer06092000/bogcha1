@@ -10,7 +10,7 @@ import {
   FaFacebookSquare,
   FaFacebook,
 } from "react-icons/fa";
-import rasm1 from "../img/ftr-logo.png";
+import {url} from "../host/Host";
 import rasm5 from "../img/logo-dark.png";
 import { BsFillTriangleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -23,8 +23,10 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import { AiOutlineClose } from "react-icons/ai";
+import { getBogcha } from "../host/Config";
 export default class Navbar extends Component {
   state = {
+    logo:[],
     nav: false,
     open: false,
     close: false,
@@ -51,6 +53,9 @@ export default class Navbar extends Component {
     });
   };
   componentDidMount() {
+    getBogcha().then((res)=>{
+      this.setState({logo:res.data.logo})
+    })
     window.addEventListener("scroll", this.change);
   }
   handleClick = (e) => {
@@ -63,7 +68,7 @@ export default class Navbar extends Component {
         <div className={styles.one} style={{backgroundColor:'#163aafc2'}} >
           <div className={this.state.nav ? styles.nav1_active : styles.nav1} style={{backgroundColor:'#163aafc2'}} >
             <div className={this.state.nav ? styles.logo1 : styles.logo} style={{backgroundColor:'#163aafc2'}} >
-              {this.state.nav ? <img src={rasm1} /> : <img src={rasm1} />}
+              {this.state.nav ? <img src={url+this.state.logo} alt=" "/> : <img src={url+this.state.logo} alt=" "/>}
               <div className={styles.navbar}  >
                 <span >
                   <Link to="/dashboard/uz">
@@ -160,7 +165,7 @@ export default class Navbar extends Component {
         <div style={{backgroundColor:'#163aafc2'}} className={styles.second}>
           <div className={this.state.nav ? styles.nav1_active : styles.nav1}>
             <div className={this.state.nav ? styles.logo1 : styles.logo} style={{backgroundColor:'#163aafc2'}} >
-              {this.state.nav ? <img src={rasm1} /> : <img src={rasm1} />}
+              {this.state.nav ? <img src={url+this.state.logo} alt=" "/> : <img src={url+this.state.logo} alt=" "/>}
               <div
                 className={this.state.nav ? styles.openNav1 : styles.openNav}
               >
@@ -282,14 +287,14 @@ export default class Navbar extends Component {
                     </Menu.Item> */}
                     <Menu.Item>
                       <span>
-                        <a href="tel:+998335093874">
+                        <a href={this.state.logo.phone}>
                           <FaPhoneAlt
                             style={{ color: "white", fontSize: "18px" }}
                           />
                         </a>
                       </span>
                       <span>
-                        <a href="http://t.me/Karshiyeva_N">
+                        <a href={this.state.logo.telegram}>
                           <FaTelegramPlane
                             style={{
                               color: "white",
@@ -300,7 +305,7 @@ export default class Navbar extends Component {
                         </a>
                       </span>
                       <span>
-                        <a href="http://t.me/Karshiyeva_N">
+                        <a href={this.state.logo.instagram}>
                           <FaInstagram
                             style={{
                               color: "white",
@@ -311,7 +316,7 @@ export default class Navbar extends Component {
                         </a>
                       </span>
                       <span>
-                        <a href="http://t.me/Karshiyeva_N">
+                        <a href={this.state.logo.facebook}>
                           <FaFacebook
                             style={{
                               color: "white",

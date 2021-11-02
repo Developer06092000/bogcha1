@@ -180,13 +180,13 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                       background:"linear-gradient(180deg, #163aaf 0%, #00000064 100%)",
                     }}
                     className={styles.card1}
-                  >
+                  ><Link style={{ color: "white" }} to="/yoga/uz">
                     <img alt=" " src={icon1} />
-                    <p>
-                      <Link style={{ color: "white" }} to="/yoga/uz">
+                    <p style={{margin:'auto',textAlign:'center',marginTop:'7px'}}>
+                      
                         Sport
-                      </Link>
-                    </p>
+                      
+                    </p></Link>
                   </Col>
                   <Col
                     lg={2}
@@ -194,13 +194,13 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                     sm={4}
                     style={{ backgroundColor: "#163aaf" }}
                     className={styles.card}
-                  >
+                  >  <Link style={{ color: "white" }} to="/musiqa/uz">
                     <img alt=" " src={icon2} />
-                    <p>
-                      <Link style={{ color: "white" }} to="/musiqa/uz">
+                    <p style={{margin:'auto',textAlign:'center',marginTop:'7px'}}>
+                    
                         Musiqa
-                      </Link>
-                    </p>
+                     
+                    </p> </Link>
                   </Col> 
                   <Col
                     lg={2}
@@ -210,15 +210,15 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                       background: "#163aaf",
                       background:
                         "linear-gradient(180deg, #163aaf 0%, #00000064 100%)",
-                    }}
+                    }} 
                     className={styles.card1}
-                  >
+                  ><Link style={{ color: "white" }} to="/garden/uz">
                     <img alt=" " src={icon3} />
-                    <p>
-                      <Link style={{ color: "white" }} to="/garden/uz">
+                    <p style={{margin:'auto',textAlign:'center',marginTop:'7px'}}>
+                     
                         Bog'
-                      </Link>
-                    </p>
+                      
+                    </p></Link>
                   </Col>
                    
                   <Col
@@ -227,13 +227,13 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                     sm={4}
                     style={{ backgroundColor: "#163aaf" }}
                     className={styles.card}
-                  >
+                  > <Link style={{ color: "white" }} to="/steam/uz">
                     <img alt="" src={icon4} />
-                    <p>
-                      <Link style={{ color: "white" }} to="/steam/uz">
+                    <p style={{margin:'auto',textAlign:'center',marginTop:'7px'}}>
+                     
                         Steam
-                      </Link>
-                    </p>
+                      
+                    </p></Link>
                   </Col>
                   <Col
                     lg={2}
@@ -245,13 +245,13 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                         "linear-gradient(180deg, #163aaf 0%, #00000064 100%)",
                     }}
                     className={styles.card1}
-                  >
+                  ><Link style={{ color: "white" }} to="/cooking/uz">
                     <img alt=" " src={icon5} />
-                    <p>
-                      <Link style={{ color: "white" }} to="/cooking/uz">
+                    <p style={{margin:'auto',textAlign:'center',marginTop:'7px'}}>
+                      
                         Shirinlik
-                      </Link>
-                    </p>
+                      
+                    </p></Link>
                   </Col>
                   <Col
                     lg={2}
@@ -259,13 +259,13 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                     sm={4}
                     style={{ backgroundColor: "#163aaf" }}
                     className={styles.card}
-                  >
+                  ><Link style={{ color: "white" }} to="/pedagogy/uz" >
                     <img alt=" " src={icon6} />
-                    <p>
-                      <Link style={{ color: "white" }} to="/pedagogy/uz">
+                    <p style={{margin:'auto',textAlign:'center',marginTop:'7px'}}>
+                     
                         Pedagogika
-                      </Link>
-                    </p>
+                      
+                    </p></Link>
                   </Col>
                   <Col lg={12} className={styles.tourCard}>
                     <button>Turni rejalashtirish</button>

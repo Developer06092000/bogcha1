@@ -32,6 +32,8 @@ import {
 } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import Navbar from "./NavbarA";
+import { getBogcha } from "../host/Config";
+import { url } from "../host/Host";
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
 export default class Location extends Component {
   state = {
@@ -39,6 +41,7 @@ export default class Location extends Component {
     nav: false,
     open: false,
     close: false,
+    address:[],
   };
   openNav = () => {
     this.setState({
@@ -65,6 +68,12 @@ export default class Location extends Component {
     }
   };
   componentDidMount() {
+
+getBogcha().then((res)=>{
+  this.setState({address:res.data})
+})
+
+
     setInterval(() => {
       this.setState({
         loader: false,
@@ -105,13 +114,13 @@ export default class Location extends Component {
                           <div>
                             <Map
                               defaultState={{
-                                center: [41.299258, 69.206181],
+                                center:this.state.address.params,
                                 zoom: 6,
                               }}
                               width="100%"
                               height='500px'
                             >
-                              <Placemark geometry={[41.299258, 69.206181]} />
+                              <Placemark geometry={this.state.address.params} />
                               <FullscreenControl options={{ float: "right" }} />
                               <GeolocationControl options={{ float: "left" }} />
                               <ZoomControl options={{ float: "right" }} />
@@ -119,22 +128,22 @@ export default class Location extends Component {
                           </div>
                         </YMaps></div>
   <div className={styles.call1}> <div className={styles.logo3}>
-                          <img src={rasm1} />
+                          <img src={url+this.state.address.logo} alt=" "/>
                         </div>
                         <div className={styles.aloqa}>
                           <p>
                             <span>
                               <img src={aloqa4} />
                             </span>
-                            <a href="tel:972-238-7833">972-238-7833</a>
+                            <a href="tel:{this.state.address.phone}">{this.state.address.phone}</a>
                           </p>
 
                           <p>
                             <span>
                               <img src={aloqa3} />
                             </span>
-                            <a href="mailto: karshiyeva.nilufar6789@gmail.com">
-                              karshiyeva.nilufar@gmail.com
+                            <a href="mailto: {this.state.address.email}">
+                            {this.state.address.email}
                             </a>
                           </p>
 
@@ -142,16 +151,16 @@ export default class Location extends Component {
                             <span>
                               <img src={aloqa2} />
                             </span>
-                            <a href="972-238-7672">972-238-7672</a>
+                            <a href="{this.state.address.phone}">{this.state.address.phone}</a>
                           </p>
                         </div>
                         <div className={styles.adres}>
                           <span>
                             <img src={aloqa1} />
                           </span>
-                          <a href="1402 Blake Dr. Richardson TX 75081">
+                          <a href="{this.state.address.address}">
                             {" "}
-                            Amir Temur shox ko'chasi, 13-uy
+                            {this.state.address.address}
                           </a>
                         </div>
                         <div className={styles.soat}>
