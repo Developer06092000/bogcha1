@@ -9,11 +9,16 @@ import kinder3 from '../img/kinder13.jpg'
 import {Container,Row,Col } from 'react-bootstrap';
 import Footer from './Footer'
 import style from "../css/loader.module.css";
+import { getBogcha } from '../host/Config';
 export default class Changing extends Component {
   state={
+    batafsil:[],
     loader:true
   }
   componentDidMount() {
+    getBogcha().then((res)=>{
+      this.setState({batafsil:res.data})
+    })
     setInterval(()=>{
         this.setState({
             loader:false
@@ -75,7 +80,8 @@ export default class Changing extends Component {
                             <Col lg={12} className={styles.text}>
                             <div style={{display:'flex',justifyContent:'center'}}><h1>Bizning dunyomizni bir vaqtning o'zida bitta bolani o'zgartirish</h1></div>
                              <h2>G'aroyib</h2>
-                             <p>Flamingo orolidagi maktabgacha tarbiya - bu sof sevgi va e'tiqod asosida yaratilgan dinamik, injiq, jo'shqin, erta yoshdagi maktab. Maktabimizning markazida bolaning ijtimoiy va hissiy salomatligi muhim tarkibiy qism ekanligini tushunishdir. Hurmat, mehr va g'amxo'rlik biz maktab sifatida juda qadrlaydigan xususiyatlardir. "Flamingo" da biz har bir talaba ichida altruistik xatti-harakatlarni rivojlantiramiz. Har bir bolaning ichidagi bu go'zal ezgulik dunyoga o'tadi.</p>
+                             <p>{this.state.batafsil.post_text4}<br/>
+                               Flamingo orolidagi maktabgacha tarbiya - bu sof sevgi va e'tiqod asosida yaratilgan dinamik, injiq, jo'shqin, erta yoshdagi maktab. Maktabimizning markazida bolaning ijtimoiy va hissiy salomatligi muhim tarkibiy qism ekanligini tushunishdir. Hurmat, mehr va g'amxo'rlik biz maktab sifatida juda qadrlaydigan xususiyatlardir. "Flamingo" da biz har bir talaba ichida altruistik xatti-harakatlarni rivojlantiramiz. Har bir bolaning ichidagi bu go'zal ezgulik dunyoga o'tadi.</p>
                             </Col>
                         </Row>
                     </Container>

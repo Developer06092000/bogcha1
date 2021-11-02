@@ -10,12 +10,17 @@ import {Container,Row,Col } from 'react-bootstrap';
 import Footer from './Footer'
 import PacmanLoader from "react-spinners/PacmanLoader";
 import style from '../css/loader.module.css'
+import { getBogcha } from '../host/Config';
 
 export default class Loving extends Component {
   state={
-    loader:true
+    loader:true,
+    batafsil:[],
 }
 componentDidMount() {
+  getBogcha().then((res)=>{
+    this.setState({batafsil:res.data})
+  })
   setInterval(()=>{
       this.setState({
           loader:false
@@ -77,7 +82,8 @@ componentDidMount() {
                             <Col lg={12} className={styles.text}>
                             <div style={{display:'flex',justifyContent:'center'}}><h1>Mehribon va tarbiyalovchi muhit</h1></div>
                              <h2>Oilalar bilan hamkorlik</h2>
-                             <p>Flamingo orolidagi ta'lim o'qituvchilar, ota-onalar va o'quvchilar mehribon va mehribon, ilmiy jihatdan boy muhitda hamkorlik qiladigan go'zal raqsga o'xshaydi. Biz har bir oila bilan hamkorlik aloqalarini o'rnatish va har bir bolaning o'ziga xos kelib chiqishi haqida bilib olishdan boshlaymiz.</p>
+                             
+                             <p>{this.state.batafsil.post_text1}<br/>Flamingo orolidagi ta'lim o'qituvchilar, ota-onalar va o'quvchilar mehribon va mehribon, ilmiy jihatdan boy muhitda hamkorlik qiladigan go'zal raqsga o'xshaydi. Biz har bir oila bilan hamkorlik aloqalarini o'rnatish va har bir bolaning o'ziga xos kelib chiqishi haqida bilib olishdan boshlaymiz.</p>
                              <h2>Holistik yondashuv</h2>
                              <p>Barkamol yondashuv - bu bolaning o'ziga xos shaxsiyati, kelib chiqishi va qiziqishlari mazmunli bo'lib, ularning o'quv tajribasini boyitishi mumkin. Flamingo-da bola o'sadigan poydevor - bu sevgi, g'amxo'rlik, ishonch va hurmat.</p>
                             </Col>

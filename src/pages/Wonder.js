@@ -10,12 +10,17 @@ import {Container,Row,Col } from 'react-bootstrap';
 import Footer from './Footer'
 import PacmanLoader from "react-spinners/PacmanLoader";
 import style from '../css/loader.module.css'
+import { getBogcha } from '../host/Config';
 
 export default class Wonder extends Component {
   state={
-    loader:true
+    loader:true,
+    batafsil:[],
 }
 componentDidMount() {
+  getBogcha().then((res)=>{
+    this.setState({batafsil:res.data})
+  })
   setInterval(()=>{
       this.setState({
           loader:false
@@ -78,7 +83,8 @@ componentDidMount() {
                             <Col lg={12} className={styles.text}>
                             <div style={{display:'flex',justifyContent:'center'}}><h1>Ajoyib / qiziquvchanlik</h1></div>
                              <h2>Qutichani tashqarida deb o'ylang</h2>
-                             <p>Flamingo o'ylamasdan o'ylashga bo'lgan munosabatni rag'batlantiradi. Ilmiy, texnologiya, muhandislik, san'at va matematikaga e'tiborni qaratib, yosh bolalarga an'anaviy ta'lim usullarini XXI asr loyihalari asosida aralashtirish imkoniyatlari beriladi. O'qish va yozish faqat ish sahifalaridan tashqariga chiqadigan asosiy domenlardir. Musiqa, yoga, bog'dorchilik va uy xo'jaligini birlashtirish ham Flamingo talabalarining har tomonlama barkamolligini oshiradi.</p>
+                             <p>{this.state.batafsil.post_text2}<br/>
+                               Flamingo o'ylamasdan o'ylashga bo'lgan munosabatni rag'batlantiradi. Ilmiy, texnologiya, muhandislik, san'at va matematikaga e'tiborni qaratib, yosh bolalarga an'anaviy ta'lim usullarini XXI asr loyihalari asosida aralashtirish imkoniyatlari beriladi. O'qish va yozish faqat ish sahifalaridan tashqariga chiqadigan asosiy domenlardir. Musiqa, yoga, bog'dorchilik va uy xo'jaligini birlashtirish ham Flamingo talabalarining har tomonlama barkamolligini oshiradi.</p>
                              <h2>Qo'llanilishini o'rganish</h2>
                              <p>Flamingo o'qituvchilari o'quv muhitini yaratadilar, bu o'quvchilarga tanqidiy fikrlash va muammolarni hal qilishni rivojlantirish uchun keng imkoniyatlar yaratadi. Bizning fikrimizcha, bolalar ta'lim olish yo'llarida noyobdir. Talabalar uchun yangi kontseptsiyalarni o'rganish uchun bir nechta va noyob usullarni taqdim etish ajoyib va quvonchli maktab tajribasini oshiradi. Eskirgan yangi tushunchalar an'anaviy qalam va qog'oz bilan hissiyotlarni jalb qilishni yoki sinfda birgalikda hikoyani namoyish qilishni anglatishi mumkin.</p>
                             </Col>

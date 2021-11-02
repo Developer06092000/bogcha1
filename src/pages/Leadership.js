@@ -10,11 +10,16 @@ import {Container,Row,Col } from 'react-bootstrap';
 import Footer from './Footer'
 import PacmanLoader from "react-spinners/PacmanLoader";
 import style from '../css/loader.module.css'
+import { getBogcha } from '../host/Config';
 export default class Leadership extends Component {
   state={
-    loader:true
+    loader:true,
+    batafsil:[],
 }
 componentDidMount() {
+  getBogcha().then((res)=>{
+    this.setState({batafsil:res.data})
+  })
   setInterval(()=>{
       this.setState({
           loader:false
@@ -76,7 +81,8 @@ componentDidMount() {
                             <Col lg={12} className={styles.text}>
                             <div style={{display:'flex',justifyContent:'center'}}><h1>G'ayrat. Nishon. Etakchilik.</h1></div>
                              <h2>Rivojlanish uchun imkoniyatlar</h2>
-                             <p>Flamingo o'quvchilarni hozirgi bilim va ko'nikmalarga asoslanib, ularning yoshiga va o'qish darajalariga mos keladigan standartlarga mos keladi. Biz bolaning qiziqishini hisobga olgan holda va yoshiga mos akademiklarni ta'minlash orqali o'quv jarayonini quvonchli holga keltiramiz. Yodda tutish va burg'ulash jadvallari Flamingo sinflarida joy yo'q.</p>
+                             <p>{this.state.batafsil.post_text3}<br/>
+                               Flamingo o'quvchilarni hozirgi bilim va ko'nikmalarga asoslanib, ularning yoshiga va o'qish darajalariga mos keladigan standartlarga mos keladi. Biz bolaning qiziqishini hisobga olgan holda va yoshiga mos akademiklarni ta'minlash orqali o'quv jarayonini quvonchli holga keltiramiz. Yodda tutish va burg'ulash jadvallari Flamingo sinflarida joy yo'q.</p>
                              <h2>Muvofiq o'qitish metdokikasi</h2>
                              <p>Biz hissiyotlar orqali teginish, o'ynash va kashfiyot orqali o'rganishni rag'batlantiradigan nihoyatda amaliy maktabmiz. Mehnatsevarlik, fidoyilik va qat'iyatlilik bizni ulug'laydigan fazilatlardir. Yosh bolalarga odob-axloqli, yosh etakchilar bo'lib o'sishi va o'sishi uchun juda katta yordam ko'rsatilmoqda. Biz ochiq suhbatlarni, mustaqillikni va tavakkal qilishni tavsiya qilamiz. Biz yaratayotgan g'amxo'r o'quv jamoatchiligi bolani yangi marralarni zabt etganda xavf-xatarni his qilishiga imkon beradi.</p>
                             </Col>
