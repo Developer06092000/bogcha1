@@ -8,7 +8,7 @@ import kinder2 from '../img/kinder5.jpg'
 import kinder3 from '../img/kinder6.png'
 import {Container,Row,Col } from 'react-bootstrap';
 import Footer from './Footer'
-import PacmanLoader from "react-spinners/PacmanLoader";
+import style from '../css/loader.module.css'
 
 export default class Musiqa extends Component {
   state={
@@ -44,9 +44,14 @@ componentDidMount() {
         return (
             <div>
               {
-        this.state.loader ?
-        <div className={styles.loader}><PacmanLoader  size={20} color={'#FF8080'}  loading={this.state.loader} /></div>
-         :
+           this.state.loader ? (
+            <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+            <div className={style.loader}>
+    <span></span>
+    <span></span>
+    <span></span>
+            </div></div>)
+         :(
          <div>
 <Navbar/>
                 <Carousel
@@ -71,13 +76,13 @@ componentDidMount() {
                         <Row>
                             <Col lg={12} className={styles.text}>
                             <div style={{display:'flex',justifyContent:'center'}}><h1>Musiqa</h1></div>
-                             <h2>RITMANI HIS QILING</h2>
+                             <h2>RITMNI HIS QILING</h2>
                              <p>Maktabimiz bo'ylab yaxshi tebranishlarni yuborish: musiqani Flamingo Island maktabgacha ta'lim muassasasida hamma joyda topish mumkin. Haftada 3 marotaba talabalar qo'shiq kuylash, raqsga tushish, tebranish va odatdagi bolalar qo'shiqlari, jazz, rok va shu bilan bog'liq bo'lgan hamma narsalarga sakrash, raqsga tushish, tebranish va sakrash bo'yicha birlashtirilgan musiqa sinflarini o'tkazdilar. Musiqa kichik onglarni boyitadi, bolalarni ritm, ritmga moslashtiradi va hatto bolaning aqliy qobiliyatini oshirishi mumkin.</p>
                             </Col>
                         </Row>
                     </Container>
                     <Footer/>
-        </div>                            
+        </div>  )                          
                }
             </div>
         )

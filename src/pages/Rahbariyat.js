@@ -8,8 +8,9 @@ import educators3 from "../img/educators3.jpg";
 import educators4 from "../img/educators4.jpg";
 import educators5 from "../img/educators5.jpg";
 import  style from '../css/loader.module.css'
-import PacmanLoader from "react-spinners/PacmanLoader";
+import {getBogcha} from '../host/Config'
 import Navbar from "./Navbar";
+import { url } from "../host/Host";
 import Footer from "./Footer";
 import {
   MDBCard,
@@ -33,6 +34,9 @@ export default class Rahbariyat extends Component {
         loader: false,
       });
     }, 2000);
+    getBogcha().then((res)=>{
+      this.setState({raxbar:res.data.rahbariyat})
+    })
   }
   render() {
     const responsive = {
@@ -93,6 +97,11 @@ export default class Rahbariyat extends Component {
                     <h1>Rahbariyat</h1>
                   </div>
                   <Row>
+
+{ this.state.raxbar.map((item)=>{
+  return(
+
+ 
                     <Col lg={12}>
                       <MDBCard
                         style={{ maxWidth: "100%", marginBottom: "60px" }}
@@ -105,26 +114,26 @@ export default class Rahbariyat extends Component {
                                 height: "100%",
                                 objectFit: "cover",
                               }}
-                              src={educators3}
+                              src={url+item.image}
                               alt="..."
                               fluid
                             />
                             <div className={styles.contact}>
                               <div className={styles.text}>
                                 <div className={styles.textbg}>
-                                  <a href="+99893 555 00 55">
-                                    <i class="fas fa-phone"></i>
+                                  <a href={item.phone}>
+                                    <i class="fa fa-phone"></i>
                                   </a>
                                 </div>
                                 <div className={styles.textbg}>
                                   {" "}
-                                  <a href="megachild@gmail.com">
-                                    <i class="fas fa-envelope-open"></i>
+                                  <a href={item.email}>
+                                    <i class="fa fa-envelope-open"></i>
                                   </a>
                                 </div>
                                 <div className={styles.textbg}>
-                                  <a href="@megachuld">
-                                    <i class="fas fa-paper-plane"></i>
+                                  <a href={item.telegram}>
+                                    <i class="fa fa-paper-plane"></i>
                                   </a>
                                 </div>
                               </div>
@@ -133,47 +142,40 @@ export default class Rahbariyat extends Component {
                           <MDBCol md="6" style={{ paddingLeft: "20px" }}>
                             <MDBCardBody>
                               <MDBCardTitle>
-                                <h1 className={styles.title1}>Direktor</h1>
+                                <h1 className={styles.title1}>{item.lavozim}</h1>
                               </MDBCardTitle>
                               <MDBCardText>
                                 <p>
-                                  <strong>F.I.O: </strong>Abdurahmonova Shohida
-                                  Abdumalik qizi
+                                  <strong>F.I.O: </strong>{item.full_name}
                                 </p>
                                 <p>
                                   <strong>Tug'ilgan sana: </strong>{" "}
                                   <i
                                     style={{ color: "#FF8080" }}
-                                    class="fas fa-calendar-alt"
+                                    class="fa fa-calendar-alt"
                                   ></i>{" "}
-                                  06/12/1995
+                                  {item.date}
                                 </p>
                                 <p>
-                                  <strong>Mutaxasislik: </strong>Ingliz tili
-                                  mutaxasisi
+                                  <strong>Mutaxasislik: </strong>{item.mutaxassislik}
                                 </p>
                                 <p>
-                                  <strong>Oliygoh: </strong>Jahon tillari
-                                  universiteti
+                                  <strong>Oliygoh: </strong>{item.otm}
                                 </p>
                               </MDBCardText>
                               <MDBCardText>
                                 <i
                                   style={{ color: "#FF8080" }}
-                                  class="fas fa-quote-left"
+                                  class="fa fa-quote-left"
                                 ></i>
                                 <br />
                                 <small className="text-muted">
-                                  Men "Erta bolalik ta'limi" darajasiga va
-                                  ingliz tili bo'yicha yuqori darajadagi
-                                  sertifikatga egaman. Men 2002 yildan beri
-                                  bolalar bog'chasida Ingliz tili o'qituvchi
-                                  sifatida ishlayman.{" "}
+                                {item.about}
                                 </small>
                                 <br />
                                 <i
                                   style={{ color: "#FF8080", float: "right" }}
-                                  class="fas fa-quote-right"
+                                  class="fa fa-quote-right"
                                 ></i>
                               </MDBCardText>
                             </MDBCardBody>
@@ -181,186 +183,10 @@ export default class Rahbariyat extends Component {
                         </MDBRow>
                       </MDBCard>
                     </Col>
-                    <Col lg={12}>
-                      <MDBCard
-                        style={{ maxWidth: "100%", marginBottom: "60px" }}
-                      >
-                        <MDBRow className="g-0">
-                          <MDBCol md="6" style={{ paddingLeft: "20px" }}>
-                            <MDBCardBody>
-                              <MDBCardTitle>
-                                <h1 className={styles.title1}>
-                                  Direktor o'rin bosari
-                                </h1>
-                              </MDBCardTitle>
-                              <MDBCardText>
-                                <p>
-                                  <strong>F.I.O: </strong>Abdurahmonova Shohida
-                                  Abdumalik qizi
-                                </p>
-                                <p>
-                                  <strong>Tug'ilgan sana: </strong>{" "}
-                                  <i
-                                    style={{ color: "#FF8080" }}
-                                    class="fas fa-calendar-alt"
-                                  ></i>{" "}
-                                  06/12/1995
-                                </p>
-                                <p>
-                                  <strong>Mutaxasislik: </strong>Ingliz tili
-                                  mutaxasisi
-                                </p>
-                                <p>
-                                  <strong>Oliygoh: </strong>Jahon tillari
-                                  universiteti
-                                </p>
-                              </MDBCardText>
-                              <MDBCardText>
-                                <i
-                                  style={{ color: "#FF8080" }}
-                                  class="fas fa-quote-left"
-                                ></i>
-                                <br />
-                                <small className="text-muted">
-                                  Men "Erta bolalik ta'limi" darajasiga va
-                                  ingliz tili bo'yicha yuqori darajadagi
-                                  sertifikatga egaman. Men 2002 yildan beri
-                                  bolalar bog'chasida Ingliz tili o'qituvchi
-                                  sifatida ishlayman.{" "}
-                                </small>
-                                <br />
-                                <i
-                                  style={{ color: "#FF8080", float: "right" }}
-                                  class="fas fa-quote-right"
-                                ></i>
-                              </MDBCardText>
-                            </MDBCardBody>
-                          </MDBCol>
-                          <MDBCol md="6" className={styles.container}>
-                            <MDBCardImage
-                              style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                              }}
-                              src={educators4}
-                              alt="..."
-                              fluid
-                            />
-                            <div className={styles.contact}>
-                              <div className={styles.text}>
-                                <div className={styles.textbg}>
-                                  <a href="+99893 555 00 55">
-                                    <i class="fas fa-phone"></i>
-                                  </a>
-                                </div>
-                                <div className={styles.textbg}>
-                                  {" "}
-                                  <a href="megachild@gmail.com">
-                                    <i class="fas fa-envelope-open"></i>
-                                  </a>
-                                </div>
-                                <div className={styles.textbg}>
-                                  <a href="@megachuld">
-                                    <i class="fas fa-paper-plane"></i>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </MDBCol>
-                        </MDBRow>
-                      </MDBCard>
-                    </Col>
-                    <Col lg={12}>
-                      <MDBCard
-                        style={{ maxWidth: "100%", marginBottom: "60px" }}
-                      >
-                        <MDBRow className="g-0">
-                          <MDBCol md="6" className={styles.container}>
-                            <MDBCardImage
-                              style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                              }}
-                              src={educators5}
-                              alt="..."
-                              fluid
-                            />
-                            <div className={styles.contact}>
-                              <div className={styles.text}>
-                                <div className={styles.textbg}>
-                                  <a href="+99893 555 00 55">
-                                    <i class="fas fa-phone"></i>
-                                  </a>
-                                </div>
-                                <div className={styles.textbg}>
-                                  {" "}
-                                  <a href="megachild@gmail.com">
-                                    <i class="fas fa-envelope-open"></i>
-                                  </a>
-                                </div>
-                                <div className={styles.textbg}>
-                                  <a href="@megachuld">
-                                    <i class="fas fa-paper-plane"></i>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </MDBCol>
-                          <MDBCol md="6" style={{ paddingLeft: "20px" }}>
-                            <MDBCardBody>
-                              <MDBCardTitle>
-                                <h1 className={styles.title1}>
-                                  Bosh buxgalter
-                                </h1>
-                              </MDBCardTitle>
-                              <MDBCardText>
-                                <p>
-                                  <strong>F.I.O: </strong>Abdurahmonova Shohida
-                                  Abdumalik qizi
-                                </p>
-                                <p>
-                                  <strong>Tug'ilgan sana: </strong>{" "}
-                                  <i
-                                    style={{ color: "#FF8080" }}
-                                    class="fas fa-calendar-alt"
-                                  ></i>{" "}
-                                  06/12/1995
-                                </p>
-                                <p>
-                                  <strong>Mutaxasislik: </strong>Ingliz tili
-                                  mutaxasisi
-                                </p>
-                                <p>
-                                  <strong>Oliygoh: </strong>Jahon tillari
-                                  universiteti
-                                </p>
-                              </MDBCardText>
-                              <MDBCardText>
-                                <i
-                                  style={{ color: "#FF8080" }}
-                                  class="fas fa-quote-left"
-                                ></i>
-                                <br />
-                                <small className="text-muted">
-                                  Men "Erta bolalik ta'limi" darajasiga va
-                                  ingliz tili bo'yicha yuqori darajadagi
-                                  sertifikatga egaman. Men 2002 yildan beri
-                                  bolalar bog'chasida Ingliz tili o'qituvchi
-                                  sifatida ishlayman.{" "}
-                                </small>
-                                <br />
-                                <i
-                                  style={{ color: "#FF8080", float: "right" }}
-                                  class="fas fa-quote-right"
-                                ></i>
-                              </MDBCardText>
-                            </MDBCardBody>
-                          </MDBCol>
-                        </MDBRow>
-                      </MDBCard>
-                    </Col>
+
+ )
+})}
+                   
                   </Row>
                 </div>
               </body>

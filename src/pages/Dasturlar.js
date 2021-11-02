@@ -14,12 +14,15 @@ import { Menu } from 'antd';
 import 'antd/dist/antd.css';
 import {Link} from 'react-router-dom'
 import Header from "./Header"
+import { getBogcha } from "../host/Config"
+import { url } from "../host/Host"
 
 export default class Dasturlar extends Component {
     state = {
         nav: false,
         open:false,
-        close:false
+        close:false,
+        dastur:[],
     }
     change = () => {
         if (window.scrollY >= 200) {
@@ -43,6 +46,9 @@ export default class Dasturlar extends Component {
         })
     }
     componentDidMount() {
+        getBogcha().then((res)=>{
+            this.setState({dastur:res.data})
+        })
         window.addEventListener("scroll", this.change);
     }
     handleClick = e => {
@@ -154,16 +160,14 @@ export default class Dasturlar extends Component {
                 <div style={{ width: "200px", height: "2px", margin: "auto", backgroundColor: "blue" }}></div>
                 <div className={style.oyna}>
                     <div className={style.rasm}>
-                        <img src={img1} />
+                        <img src={url+this.state.dastur.program1_img} alt=" " />
                     </div>
                    
                     <div className={style.content} style={{padding:'30px'}}>
                         <h4 style={{fontFamily:'Courier',fontWeight:'600'}}>1-bosqich</h4>
                        
                         <p style={{fontFamily:'Courier'}}>
-                            The sweetest and youngest of all at Flamingo are approximately 12 months- 24 months.
-                            At this stage in our learning journey, everything is an amazing discovery.
-                            From Old MacDonald songs to our puppets during circle time, learning is truly a joy!
+                           {this.state.dastur.program1}
                         </p>
                         <span><Link to="/dastur_1/uz">Batafsil</Link></span>
                     </div>
@@ -173,31 +177,27 @@ export default class Dasturlar extends Component {
                         <h4  style={{fontFamily:'Courier',fontWeight:'600'}}>2-bosqich</h4>
                        
                         <p style={{fontFamily:'Courier',fontSize:'20px'}}>
-                        Oﬀ like a rocket at 2-years old, our toddler classroom is all about exploration. 
-                        Sensory activities are a huge part of our everyday learning. 
-                        This classroom is created to promote independence and encourages discovery as a child realizes there's a huge world out there!
+                        {this.state.dastur.program2}
                         </p>
                         <span><Link to="/dastur_2/uz">Batafsil</Link></span>
 
                     </div>
                    
                     <div className={style.rasm}>
-                        <img src={img2} />
+                        <img src={url+this.state.dastur.program2_img} alt=" " />
                     </div>
 
                 </div>
                 <div className={style.oyna}>
                     <div className={style.rasm}>
-                        <img src={img3} />
+                        <img src={url+this.state.dastur.program3_img} alt=" " />
                     </div>
                    
                     <div className={style.content}>
                         <h4 style={{fontFamily:'Courier',fontWeight:'600'}}>3-bosqich</h4>
                        
                         <p style={{fontFamily:'Courier'}}>
-                        A world of monsters and fairies await when we enter our 3’s class. 
-                        Pretend play rules this age group from the fearless Batman to a newfound fear of the dark. 
-                        At Flamingo, we are all now fully potty-trained and focused on higher level academics such as geography, writing, and gardening!
+                        {this.state.dastur.program3}
                         </p>
                         <span><Link to="/dastur_3/uz">Batafsil</Link></span>
 

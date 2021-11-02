@@ -6,40 +6,49 @@ import aloqa4 from "../img/footer-phone.png";
 import styles from "../css/Footer.module.css";
 import rasm1 from "../img/ftr-logo.png";
 import {
-  FaHome,
   FaPhoneAlt,
   FaInstagram,
   FaTelegramPlane,
   FaFacebook,
 } from "react-icons/fa";
+import { getBogcha } from "../host/Config";
+import { url } from "../host/Host";
 
 export default class Footer extends Component {
+  state={
+    mail:[]
+  }
+  componentDidMount(){
+    getBogcha().then((res)=>{
+      this.setState({mail:res.data})
+    })
+  }
   render() {
     return (
       <div>
         <div className={styles.footer}>
           <h1>Biz bilan bog'laning</h1>
           <h2>Aloqada bo'lish</h2>
-          <img src={rasm1} />
+          <img src={url+this.state.mail.logo} />
           <div className={styles.aloqa}>
             <span>
-              <a href="tel:+998335093874">
+              <a href={this.state.mail.phone}>
                 <img src={aloqa4} style={{ width: "30px" }} />
               </a>
             </span>
-            <span>+998335093874</span>
+            <span>{this.state.mail.phone}</span>
             <span>|</span>
             <span>
-              <a href="mailto:karshiyeva.nilufar6789@gamil.com">
+              <a href="mailto:{this.state.mail.email}">
                 <img src={aloqa3} style={{ width: "30px" }} />
               </a>
             </span>
-            <span>karshiyeva.nilufar6789@gmail.com</span>
+            <span>{this.state.mail.email}</span>
             <span> |</span>
             <span className={styles.tel}>
               <img src={aloqa1} style={{ width: "30px" }} />
             </span>
-            <span>972-238-7672</span>
+            <span>{this.state.mail.phone}</span>
           </div>
           <div className={styles.adres}>
             <span>

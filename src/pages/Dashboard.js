@@ -28,9 +28,11 @@ import her5 from "../img/h5.png";
 import her6 from "../img/h6.png";
 import {getBogcha} from "../host/Config"
 import Global from "../host/Global";
+import { url } from "../host/Host";
 export default class Dashboard extends Component {
   state = {
     loader: true,
+    post:[],
   };
   componentDidMount() {
     setInterval(() => {
@@ -41,6 +43,7 @@ export default class Dashboard extends Component {
   getBogcha()
         .then((res) => {
           Global.kg = res.data;
+     this.setState({post:res.data})
         })
         .catch((err) => console.log(err));
     
@@ -178,7 +181,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                     }}
                     className={styles.card1}
                   >
-                    <img alt="" src={icon1} />
+                    <img alt=" " src={icon1} />
                     <p>
                       <Link style={{ color: "white" }} to="/yoga/uz">
                         Sport
@@ -192,7 +195,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                     style={{ backgroundColor: "#163aaf" }}
                     className={styles.card}
                   >
-                    <img alt="" src={icon2} />
+                    <img alt=" " src={icon2} />
                     <p>
                       <Link style={{ color: "white" }} to="/musiqa/uz">
                         Musiqa
@@ -210,7 +213,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                     }}
                     className={styles.card1}
                   >
-                    <img alt="" src={icon3} />
+                    <img alt=" " src={icon3} />
                     <p>
                       <Link style={{ color: "white" }} to="/garden/uz">
                         Bog'
@@ -243,7 +246,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                     }}
                     className={styles.card1}
                   >
-                    <img alt="" src={icon5} />
+                    <img alt=" " src={icon5} />
                     <p>
                       <Link style={{ color: "white" }} to="/cooking/uz">
                         Shirinlik
@@ -257,7 +260,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                     style={{ backgroundColor: "#163aaf" }}
                     className={styles.card}
                   >
-                    <img alt="" src={icon6} />
+                    <img alt=" " src={icon6} />
                     <p>
                       <Link style={{ color: "white" }} to="/pedagogy/uz">
                         Pedagogika
@@ -282,18 +285,12 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="2000" >
                       <Col lg={7} style={{ padding: "0" }}>
-                        <img alt="" src={rasm6} style={{ width: "100%",borderRadius:'10px', }} />
+                        <img alt=" " src={url+this.state.post.post_image1} style={{ width: "100%",borderRadius:'10px', }} />
                       </Col>
                       <Col lg={5} className={styles.heading}>
                         <h1>Mehribon va tarbiyalovchi muhit</h1>
                         <p>
-                          Flamingo orolidagi ta'lim o'qituvchilar, ota-onalar va
-                          o'quvchilar mehribon va mehribon, ilmiy jihatdan boy
-                          muhitda hamkorlik qiladigan go'zal raqsga o'xshaydi.
-                          Har bir talabaning o'ziga xos kuchli, zaif tomonlari
-                          va sovg'alari bizni katta va kichik yangi marralarni
-                          birgalikda nishonlash paytida qabul qilinadi va
-                          qo'llab-quvvatlanadi.
+                      {this.state.post.post_text1}
                         </p>
                         <span>
                           <Link
@@ -325,14 +322,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                       <Col lg={5} className={styles.heading1}>
                         <h1>Ajoyib / qiziquvchanlik</h1>
                         <p>
-                          Young children are born with an innate curiosity of
-                          the world around them. Flamingo nurtures this natural
-                          wonder and joy for learning. Our learning activities
-                          integrate wonder and curiosity on a daily basis.
-                          Searching for worms and building a house for a beetle
-                          are monumental moments in a child’s day! We nurture
-                          young perspectives to embrace and support inquiry and
-                          discovery.
+                         {this.state.post.post_text2}
                         </p>
                         <span>
                           <Link
@@ -351,7 +341,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                       </Col>
 
                       <Col lg={7} style={{ padding: "0" }}>
-                        <img alt="" src={rasm3} style={{ width: "100%",borderRadius:'10px' }} />
+                        <img alt=" " src={url+this.state.post.post_image2} style={{ width: "100%",borderRadius:'10px' }} />
                       </Col>
                     </Row></Container>
                   </Col>
@@ -367,21 +357,12 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                    <Container>
                     <Row style={{ border: "1px solid rgba(0,0,0,0.1)",borderRadius:'10px',}}>
                       <Col lg={7} style={{ padding: "0" }}>
-                        <img alt="" src={rasm4} style={{ width: "100%",borderRadius:'10px' }} />
+                        <img alt=" " src={url+this.state.post.post_image3} style={{ width: "100%",borderRadius:'10px' }} />
                       </Col>
                       <Col lg={5} className={styles.heading}>
                         <h1>G'ayrat. Nishon. Etakchilik</h1>
                         <p>
-                          Flamingo orolida o'rganish hech qachon qiyin ish emas.
-                          O'rganish quvonchli, ijodiy, egiluvchan va hattoki
-                          noyob bolalar qiziqishlari atrofida moslashtirilgan.
-                          Bundan ham muhimi, "Flamingo" da ta'lim mazmunli va
-                          farzandingizning kelajagi uchun juda foydali. Bu
-                          eshiklarni, imkoniyatlarni ochadi va bolangizni ta'lim
-                          safariga olib boradi. "Daryolarda siz tegizadigan suv
-                          o'tganlarning oxirgi va kelayotganlarning
-                          birinchisidir; hozirgi zamon bilan ham." Leonardo da
-                          Vinchi
+                        {this.state.post.post_text3}
                         </p>
                         <span>
                           <Link
@@ -417,17 +398,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                           o'zgartirish
                         </h1>
                         <p>
-                          Flamingo oroli toza sevgi va imondan yaratilgan.
-                          Maktabimizning markazida ijtimoiy va emotsional
-                          salomatlik bola poydevori va kelajagi uchun ajralmas
-                          tarkibiy qism ekanligini tushunishdir. Flamingo
-                          talabalari altruistik xususiyatlarni rivojlantiradilar
-                          va ularga o'z jamoalari va dunyo etakchilari bo'lish
-                          uchun vositalar berishadi. "Agar biz o'zimizni
-                          o'zgartira olsak, dunyodagi tendentsiyalar ham
-                          o'zgargan bo'lar edi. Inson o'z tabiatini
-                          o'zgartirishi bilan, dunyoning unga bo'lgan munosabati
-                          ham o'zgaradi." Gandi
+                        {this.state.post.post_text4}
                         </p>
                         <span>
                           <Link
@@ -445,7 +416,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                        
                       </Col>
                       <Col lg={7} style={{ padding: "0" }}>
-                        <img alt="" src={rasm7} style={{ width: "100%",borderRadius:'10px' }} />
+                        <img alt=" " src={url+this.state.post.post_image4} style={{ width: "100%",borderRadius:'10px' }} />
                       </Col>
                     </Row></Container>
                   </Col>
@@ -478,7 +449,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                       style={{ backgroundColor: "white" }}
                     >
                       <a href="https://president.uz/oz" target="_blank">
-                        <img alt="" src={school} />
+                        <img alt=" " src={school} />
                       </a>
                     </div>
                     <p>
@@ -498,7 +469,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                       style={{ backgroundColor: "white" }}
                     >
                       <a href="https://www.gov.uz/uz" target="_blank">
-                        <img alt="" src={her2} />
+                        <img alt=" " src={her2} />
                       </a>
                     </div>
                     <p>O'zbekiston Respublikasining Hukumat portali</p>
@@ -516,7 +487,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                       style={{ backgroundColor: "white" }}
                     >
                       <a href="https://lex.uz/" target="_blank">
-                        <img alt="" src={her3} />
+                        <img alt=" " src={her3} />
                       </a>
                     </div>
                     <p>
@@ -536,7 +507,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                       style={{ backgroundColor: "white" }}
                     >
                       <a href="https://my.gov.uz/oz" target="_blank">
-                        <img alt="" src={her4} />
+                        <img alt=" " src={her4} />
                       </a>
                     </div>
                     <p>Interaktiv davlat xizmatlarining Yagona portali</p>
@@ -554,7 +525,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                       style={{ backgroundColor: "white" }}
                     >
                       <a href="https://www.uzedu.uz/" target="_blank">
-                        <img alt="" src={her5} />
+                        <img alt=" " src={her5} />
                       </a>
                     </div>
                     <p>O'zbekiston Respublikasi xalq ta'limi vazirligi</p>
@@ -572,7 +543,7 @@ src="https://www.youtube.com/embed/Pyb0z_YQjjI?controls=0&autoplay=1&mute=1&loop
                       style={{ backgroundColor: "white" }}
                     >
                       <a href="https://ittower.uz/" target="_blank">
-                        <img alt="" src={her6} style={{ width: "100%",borderRadius:'10px' }} />
+                        <img alt=" " src={her6} style={{ width: "100%",borderRadius:'10px' }} />
                       </a>
                     </div>
                     <p>IT Tower firmasi </p>

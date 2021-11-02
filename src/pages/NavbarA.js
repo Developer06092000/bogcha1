@@ -101,23 +101,10 @@ export default class Navbar extends Component {
                   </p>
                 </div>
                 <span style={{ fontSize: "25px" }}>|</span>
-                <span className={styles.sub2}>
+                <span>
                   <Link to="/dasturlar/uz">Dasturlar</Link>
                 </span>
-                <div className={styles.subNav2}>
-                  <span>
-                    <BsFillTriangleFill className={styles.icon2} />
-                  </span>
-                  <p>
-                    <Link to="/dastur_1/uz">1-bosqich</Link>
-                  </p>
-                  <p>
-                    <Link to="/dastur_2/uz">2-bosqich</Link>
-                  </p>
-                  <p>
-                    <Link to="/dastur_3/uz">3-bosqich</Link>
-                  </p>
-                </div>
+                
                 <span style={{ fontSize: "25px" }}>|</span>
                 <span>
                   <Link to="/curriculm/uz">Qabul</Link>

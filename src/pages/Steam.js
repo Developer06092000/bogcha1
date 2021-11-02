@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Carousel } from "react-bootstrap";
 import style from "../css/Steam.module.css"
+import styles from '../css/loader.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -11,10 +12,25 @@ import img4 from "../img/r4.jpeg"
 import img5 from "../img/r5.jpeg"
 
 export default class Steam extends Component {
-
+state={
+    loader:true,
+}
+componentDidMount() {
+    setInterval(()=>{
+        this.setState({
+            loader:false
+        })
+    },2000)
+  }
 
     render() {
-        return (
+        return (<div>
+            {this.state.loader===true?(  <div style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:' rgba(0, 0, 255, 0.596)',width:'100%',height:'100vh'}}>
+            <div className={styles.loader}>
+    <span></span>
+    <span></span>
+    <span></span>
+            </div></div>):(
             <div className={style.mat}>
                 <Navbar />
                 <Carousel variant="dark" className={style.bow} nextLabel="" prevLabel="" interval="3000">
@@ -129,7 +145,7 @@ export default class Steam extends Component {
                 </div>
                 <br/>
                 <Footer/>
-            </div>
+            </div>)}</div>
         )
     }
 }

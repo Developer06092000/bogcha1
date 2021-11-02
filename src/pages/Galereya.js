@@ -16,9 +16,12 @@ import PacmanLoader from "react-spinners/PacmanLoader";
 import Dashboardnews from "./Dashboardnews";
 import style from '../css/loader.module.css'
 import Dashboardtadbir from "./Dashboardtadbir";
+import { getBogcha } from "../host/Config";
+import { url } from "../host/Host";
 export default class Galereya extends Component {
   state = {
     loader: true,
+    foto:[],
   };
   componentDidMount() {
     setInterval(() => {
@@ -26,6 +29,9 @@ export default class Galereya extends Component {
         loader: false,
       });
     }, 2000);
+    getBogcha().then((res)=>{
+      this.setState({foto:res.data.media})
+    })
   }
   render() {
     const responsive = {
@@ -90,41 +96,37 @@ export default class Galereya extends Component {
             
             <div className={styles.rasmlar}>
     <Row style={{justifyContent:'center'}}>
+ 
+
+
   <Col style={{padding:"10px"}} lg={4} md={6} sm={12}>
-         <img src={about1} />
+         <img src={url+this.state.foto.image} />
      </Col>
 
+ 
+
  <Col style={{padding:"10px"}} lg={4} md={6} sm={12}>
-         <img src={about2} />
+         <img src={url+this.state.foto.image1}  />
      </Col>
   <Col style={{padding:"10px"}} lg={4} md={6} sm={12}>
-         <img src={about3}/>
+         <img src={url+this.state.foto.image2} />
      </Col>
     <Col style={{padding:"10px"}} lg={4} md={6} sm={12}>
-         <img src={about3}/>
+         <img src={url+this.state.foto.image3} />
      </Col>
     <Col style={{padding:"10px"}} lg={4} md={6} sm={12}>
-         <img src={about3}/>
+         <img src={url+this.state.foto.image4} />
      </Col>
   
    <Col style={{padding:"10px"}} lg={4} md={6} sm={12}>
-         <img src={about3}/>
+         <img src={url+this.state.foto.image5} />
      </Col>
    <Col style={{padding:"10px"}} lg={4} md={6} sm={12}>
-         <img src={about3}/>
+         <img src={url+this.state.foto.image6} />
      </Col>
     <Col style={{padding:"10px"}} lg={4} md={6} sm={12}>
-         <img src={about3}/>
+         <img src={url+this.state.foto.image7} />
      </Col>
-     <Col style={{padding:"10px"}} lg={4} md={6} sm={12}>
-         <img src={about3}/>
-     </Col>
-    <Col style={{padding:"10px"}} lg={4} md={6} sm={12}>
-         <img src={about3}/>
-     </Col>
-  
-  
-        
     </Row>
 </div>
 

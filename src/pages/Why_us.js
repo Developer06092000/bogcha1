@@ -13,9 +13,11 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import style from '../css/loader.module.css'
 import story1 from "../img/ourstory3.jpg";
+import { getBogcha } from '../host/Config';
 export default class Why_us extends Component {
   state={
-    loader:true
+    loader:true,
+    us:'',
 }
 componentDidMount() {
   setInterval(()=>{
@@ -23,6 +25,9 @@ componentDidMount() {
           loader:false
       })
   },2000)
+  getBogcha().then((res)=>{
+    this.setState({us:res.data.why_us})
+  })
 }
     render() {
       const responsive = {
@@ -85,7 +90,7 @@ componentDidMount() {
                 <div className={styles.body}>
  <div className={styles.container}>
 <h1 style={{borderBottom:'1px solid blue'}} className={styles.satrh1}>Nega biz</h1>
-<p className={styles.satrA}>Flamingoning talabalari juda yaxshi ko'rishadi. Biz o'zimizni bolalar, o'qituvchilar va ma'murlardan iborat g'amxo'r o'quv jamoasini yaratishga bag'ishlaymiz. Bizning ajoyib o'qituvchilar jamoasi sizning kichkintoyingiz bilan abadiy aloqada bo'ladi va uni yulduzlarga intilishga undaydi. Bizning g'amxo'r ma'murlarimiz mijozlarga ajoyib xizmat ko'rsatishadi, chunki mehmondo'stlik biz uchun juda muhimdir. Biz har kuni ertalab / kechqurun oilangizni maktabimizga qabul qilamiz va sizga yordam kerak bo'lsa, shaxsiy narsalaringiz bilan yordam beramiz.
+<p className={styles.satrA}>{this.state.us}
                         </p>
                       <img style={{width:'80%',margin:'10%',textAlign:'center',borderRadius:'10px'}} src={story1}/>
 

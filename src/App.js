@@ -10,9 +10,6 @@ import Location from "./pages/Location";
 import Whyus from "./pages/Why_us";
 import Ourstory from "./pages/Our_story";
 import Aboutus from "./pages/About_us";
-import Bosqich1 from "./pages/1_bosqich";
-import Bosqich2 from "./pages/2_bosqich";
-import Bosqich3 from "./pages/3_bosqich";
 import Educators from "./pages/Educators";
 import Dasturlar from "./pages/Dasturlar";
 import Oshxona from "./pages/oshxona";
@@ -74,15 +71,7 @@ function App() {
         <Route exact path="/tarbiyachilar/uz">
           <Educators />
         </Route>
-        <Route exact path="/dastur_1/uz">
-          <Bosqich1 />
-        </Route>
-        <Route exact path="/dastur_2/uz">
-          <Bosqich2 />
-        </Route>
-        <Route exact path="/dastur_3/uz">
-          <Bosqich3 />
-        </Route>
+       
         <Route exact path="/dasturlar/uz">
           <Dasturlar />
         </Route>
