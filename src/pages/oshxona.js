@@ -7,18 +7,29 @@ import style from '../css/loader.module.css'
 import kinder1 from'../img/meal1.jpg'
 import kinder2 from '../img/meal2.jpg'
 import kinder3 from '../img/meal3.jpg'
-import {Container,Row,Col } from 'react-bootstrap';
+import {Container,Row,Col, Table  } from 'react-bootstrap';
 import Footer from './Footer'
 import PacmanLoader from "react-spinners/PacmanLoader";
+import { getBogcha } from '../host/Config';
 
 export default class Oshxona extends Component {
   state={
-    loader:true
+    loader:true,
+    oshxonaGet:[],
+    Menu:[],
 }
 componentDidMount() {
+  getBogcha()
+  .then((res) => {
+    this.setState({
+      oshxonaGet: res.data.oshxona,
+      Menu: res.data.menu,
+    });
+  })
+
   setInterval(()=>{
       this.setState({
-          loader:false
+          loader:false,
       })
   },2000)
 }
@@ -82,65 +93,73 @@ componentDidMount() {
 
 Quyidagi namunaviy taomlardan faqat umumiy ko'rsatmalar sifatida foydalaning. Ovqatlanish va atıştırmalıklarni har kuni bir vaqtning o'zida rejalashtiring, shunda ovqatlanish vaqti kelganida bolangiz och qoladi.</p>
                             <h2>Maktabgacha yoshdagi bolalar uchun namunaviy ovqatlanish: 3 yoshdan 5 yoshgacha</h2>
-                            <h2 className={styles.heading}>Namuna menyusi 1</h2>
-                            <hr style={{backgroundColor:'#F76B6A',height:'2px'}}/>
-                            <div className={styles.cardchalar}>
-                             <div>Nonushta</div>
-                             <div style={{marginLeft:'200px'}}>Mini qo'ziqorinli omletlar yoki nonushta stakanlari
-Qulupnay va banan bo'laklari
-Sut</div>
-                            </div>
-                            <hr style={{backgroundColor:'#F76B6A',height:'2px'}}/>
-                            <div className={styles.cardchalar}>
-                             <div>Ertalabki tamaddi</div>
-                             <div style={{marginLeft:'150px'}}>Quark va reza mevalari, Suv</div>
-                            </div>
-                            <hr style={{backgroundColor:'#F76B6A',height:'2px'}}/>
-                            <div className={styles.cardchalar}>
-                             <div>Tushlik</div>
-                             <div style={{marginLeft:'210px'}}>Parsnip va sabzi sho'rvasining qaymog'i
-100% to'liq bug'doy tuzsiz kraker yoki pita non
-Cho'mish uchun salat kiyimi bilan xom sabzavotlar (sabzi, selderey tayoqchalari, qizil qalampir bo'laklari)
-Sut</div>
-                            </div>
-                            <hr style={{backgroundColor:'#F76B6A',height:'2px'}}/>
-                            <div className={styles.cardchalar}>
-                             <div>Peshindan keyin tamaddi</div>
-                             <div style={{marginLeft:'100px'}}>Yong'oq moyi yoki keddar pishloqli olma bo'laklari
-Suv</div>
-                            </div>
-                        <hr style={{backgroundColor:'#F76B6A',height:'2px'}}/>
+                         
+                   
+         
+    {
+                    this.state.oshxonaGet.map((item) => {
+                        return (
+                          <div className={styles.MenuGroup}>
+                            <Table striped bordered hover>
+                              <thead>
+                                <tr
+                                  variant="dark"
+                                  style={{
+                                    backgroundColor: "black",
+                                    color: "white",
+                                  }}
+                                >
+                                  <th
+                                    colSpan="5"
+                                    style={{ textAlign: "center" }}
+                                  >
+                                    {item.name}
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <th>T/r</th>
+                                  <th>Menu nomi</th>
+                                  <th>Menu tarkibi</th>
+                                  {/* <th>2-ovqat</th>
+                                  <th>3-ovqat</th> */}
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {this.state.Menu !== null
+                                  ? this.state.Menu.map((item1, key) => {
+                                      return item.id === item1.oshxona ? (
+                                        <tr>
+                                          <td>{key + 1}</td>
+                                          <td>{item1.name}</td>
+                                          <td>{item1.tarkib}</td>
+                                        </tr>
+                                      ) : (
+                                        ""
+                                      );
+                                    })
+                                  : ""}
+                              </tbody>
+                            </Table>
+                          </div>
+                        );
+                      })
+                    }
 
-
-                        <h2 className={styles.heading}>Namuna menyusi 2</h2>
-                            <hr style={{backgroundColor:'#F76B6A',height:'2px'}}/>
-                            <div className={styles.cardchalar}>
-                             <div>Nonushta</div>
-                             <div style={{marginLeft:'200px'}}>Olma sousi bilan jo'xori uni krep
-Sut</div>
-                            </div>
-                            <hr style={{backgroundColor:'#F76B6A',height:'2px'}}/>
-                            <div className={styles.cardchalar}>
-                             <div>Ertalabki tamaddi</div>
-                             <div style={{marginLeft:'150px'}}>Yogurt va mevali smuzi</div>
-                            </div>
-                            <hr style={{backgroundColor:'#F76B6A',height:'2px'}}/>
-                            <div className={styles.cardchalar}>
-                             <div>Tushlik</div>
-                             <div style={{marginLeft:'210px'}}>Ko'p donli non yoki bug'doy krakerida orkinos pishirilgan pishloq yoki mini sendvich
-Qovurilgan bodring bo'laklari
-To'q rangli takozlar
-Sut</div>
-                            </div>
-                            <hr style={{backgroundColor:'#F76B6A',height:'2px'}}/>
-                            <div className={styles.cardchalar}>
-                             <div>Peshindan keyin tamaddi</div>
-                             <div style={{marginLeft:'100px'}}>Xom sabzavotli sabzi (sabzi, selderey tayoqchalari, qizil qalampir bo'laklari) pishirilgan tortilla chiplari yoki bug'doy pita noni
-Suv</div>
-                            </div>
-                        
+         
                             </Col>
                         </Row>
+
+
+
+
+                    
+
+
+
+
+
+
+
                     </Container>
                     <Footer/>
         </div>                            
